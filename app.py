@@ -2,34 +2,10 @@ import streamlit as st
 import pandas as pd
 st.set_page_config(page_title="Helpdesk KPI Dashboard", layout="wide")
 st.title("📊 Helpdesk KPI Dashboard - 1000 Tickets")
-st.markdown("Built with Power BI, Python, SQL | by Sajid Manzoor")
-
-@st.cache_data
-def load_data():
-    df = pd.read_excel("Helpdesk_Tickets_Dataset_1000.xlsx", sheet_name="Tickets_Raw")
-    # Force 1000 if file small
-    if len(df) < 1000:
-        df = pd.concat([df]*20, ignore_index=True).head(1000)
-        df['Ticket_ID'] = ['TKT-'+str(1000+i) for i in range(len(df))]
-    return df
-
-df = load_data()
-
-col1, col2, col3, col4, col5 = st.columns(5)
-col1.metric("Total Tickets", f"{len(df)}")
-col2.metric("SLA Adherence", f"{(1-df['SLA_Breach'].mean())*100:.1f}%")
-col3.metric("Avg CSAT", f"{df['CSAT_Score'].mean():.2f}/5")
-col4.metric("Avg MTTR", f"{df['Resolution_Time_Hours'].mean():.1f} hrs")
-col5.metric("Repeat Rate", f"{df['Is_Repeat_Ticket'].mean()*100:.1f}%")
-
-st.divider()
-c1, c2 = st.columns(2)
-with c1:
-    st.subheader("Tickets by Priority")
-    st.bar_chart(df['Priority'].value_counts())
-with c2:
-    st.subheader("CSAT Distribution")
-    st.bar_chart(df['CSAT_Score'].value_counts().sort_index())
-
-st.subheader("Raw Data Preview - 1000 rows")
-st.dataframe(df.head(100), use_container_width=True)
+df = pd.read_excel("Helpdesk_Tickets_Dataset_1000.xlsx", sheet_name="Tickets_Raw")
+df = df.drop_duplicates('Ticket_ID').head(1000)
+st.metric("Total Tickets", len(df))
+st.metric("SLA", f"{(1-df['SLA_Breach'].mean())*100:.1f}%")
+st.metric("CSAT", f"{df['CSAT_Score'].mean():.2f}")
+st.bar_chart(df['Priority'].value_counts())
+st.dataframe(df.head(100))
