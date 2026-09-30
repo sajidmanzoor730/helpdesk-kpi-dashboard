@@ -1,56 +1,47 @@
 """
-clean_tickets.py
-Loads the raw helpdesk ticket dataset, profiles data quality issues,
-cleans the data, flags SLA breaches, and calculates key KPIs.
+Clean the simulated helpdesk ticket export.
 
-Usage:
-    python clean_tickets.py
+Steps: remove duplicate tickets, fill blank category/agent, parse dates,
+check resolved time is after created time, and report data quality.
+
+Run:  python clean_tickets.py
+Out:  Helpdesk_Tickets_Clean.csv
 """
 import pandas as pd
 
-FILE_PATH = "Helpdesk_Tickets_Dataset_1000.xlsx"
+RAW_FILE = "Helpdesk_Tickets_Dataset_Raw.xlsx"
+CLEAN_FILE = "Helpdesk_Tickets_Clean.csv"
 
-# ---------- 1. Load ----------
-df = pd.read_excel(FILE_PATH, sheet_name="Tickets_Raw")
 
-print("=" * 50)
-print("DATA QUALITY PROFILE (before cleaning)")
-print("=" * 50)
-print(f"Total rows: {len(df)}")
-print(f"Duplicate Ticket_IDs: {df.duplicated(subset='Ticket_ID').sum()}")
-print("\nNull values per column:")
-print(df.isnull().sum()[df.isnull().sum() > 0])
+def load_and_clean(path=RAW_FILE):
+    raw = pd.read_excel(path, parse_dates=["Created_At", "Resolved_At"])
+    report = {"raw_rows": len(raw)}
 
-# ---------- 2. Clean ----------
-df_clean = df.drop_duplicates(subset=["Ticket_ID"]).copy()
+    df = raw.drop_duplicates(subset="Ticket_ID", keep="first").copy()
+    report["duplicates_removed"] = report["raw_rows"] - len(df)
 
-df_clean["CSAT_Score"] = df_clean["CSAT_Score"].fillna(df_clean["CSAT_Score"].median())
-df_clean["Category"] = df_clean["Category"].fillna("Unknown")
+    report["blank_category"] = int(df["Category"].isna().sum())
+    report["blank_agent"] = int(df["Agent"].isna().sum())
+    df["Category"] = df["Category"].fillna("Unknown")
+    df["Agent"] = df["Agent"].fillna("Unassigned")
 
-print("\n" + "=" * 50)
-print("DATA QUALITY PROFILE (after cleaning)")
-print("=" * 50)
-print(f"Total rows: {len(df_clean)}")
-print(f"Remaining nulls:\n{df_clean.isnull().sum()[df_clean.isnull().sum() > 0]}")
+    bad_dates = df["Resolved_At"].notna() & (df["Resolved_At"] < df["Created_At"])
+    report["bad_dates_removed"] = int(bad_dates.sum())
+    df = df[~bad_dates]
 
-# ---------- 3. Flag P1 SLA breaches ----------
-p1_breaches = df_clean[(df_clean["Priority"] == "P1") & (df_clean["SLA_Breach"] == 1)]
-print(f"\nFlagged P1 SLA breaches: {len(p1_breaches)}")
+    df["Month"] = df["Created_At"].dt.to_period("M").astype(str)
+    df["Week"] = df["Created_At"].dt.to_period("W").dt.start_time
+    df["Hour"] = df["Created_At"].dt.hour
 
-# ---------- 4. KPIs ----------
-sla_adherence_pct = (1 - df_clean["SLA_Breach"].mean()) * 100
-avg_csat = df_clean["CSAT_Score"].mean()
-avg_mttr = df_clean["Resolution_Time_Hours"].mean()
-repeat_pct = df_clean["Is_Repeat_Ticket"].mean() * 100
+    issues = report["duplicates_removed"] + report["blank_category"] + report["blank_agent"]
+    report["clean_rows"] = len(df)
+    report["data_quality_pct"] = round(100 * (1 - issues / report["raw_rows"]), 1)
+    return df.reset_index(drop=True), report
 
-print("\n" + "=" * 50)
-print("KEY PERFORMANCE INDICATORS")
-print("=" * 50)
-print(f"SLA Adherence %: {sla_adherence_pct:.1f}%")
-print(f"Avg CSAT: {avg_csat:.2f} / 5")
-print(f"Avg MTTR (Resolution Time): {avg_mttr:.1f} hours")
-print(f"Repeat Ticket %: {repeat_pct:.1f}%")
 
-# ---------- 5. Save cleaned output ----------
-df_clean.to_excel("Tickets_Cleaned.xlsx", index=False)
-print("\nCleaned file saved as Tickets_Cleaned.xlsx")
+if __name__ == "__main__":
+    clean, rep = load_and_clean()
+    clean.to_csv(CLEAN_FILE, index=False)
+    for k, v in rep.items():
+        print(f"{k}: {v}")
+    print(f"Saved {CLEAN_FILE}")
