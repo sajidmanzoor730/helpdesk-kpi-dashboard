@@ -15,6 +15,8 @@ An end-to-end business intelligence demonstration for support operations. The pr
 | SQL | `sql_analysis.sql` | KPIs, trends, rankings and exceptions |
 | Data model | `data_model.sql` | Star-schema table design |
 | Power BI | `powerbi_model_spec.md` | Semantic model, measures and report pages |
+| BI validation | `bi_validation_and_monitoring.md` | KPI reconciliation, QA gates and monitoring design |
+| Data dictionary | `data_dictionary.md` | Source and derived field definitions |
 | Dashboard | `app.py` | Interactive Streamlit reporting |
 | Generator | `generate_dataset.py` | Reproducible source-data generation |
 | Portfolio case study | GitHub Pages | Visual case study and project walkthrough |
@@ -133,6 +135,16 @@ surrounded by:
 
 See `powerbi_model_spec.md` for the relationships, reusable DAX measures, report pages and data-quality design.
 
+## BI validation and monitoring
+
+The project includes a practical validation layer covering source-to-report KPI reconciliation, data-quality gates, refresh metrics and report-performance practices. These controls are documented for the portfolio implementation; no production gateway, scheduled refresh service or alerting system is claimed.
+
+See `bi_validation_and_monitoring.md`.
+
+## Data dictionary
+
+See `data_dictionary.md` for the source fields, derived ETL fields and data-quality behavior.
+
 ## Interactive dashboard
 
 Run locally:
@@ -163,6 +175,8 @@ quality_checks.py                  automated QA checks
 sql_analysis.sql                   analytical SQL
 data_model.sql                     dimensional model
 powerbi_model_spec.md              Power BI design
+bi_validation_and_monitoring.md     BI validation and monitoring
+data_dictionary.md                 field definitions
 app.py                             Streamlit dashboard
 bi_requirements.md                 business requirements
 README.md                          project documentation
