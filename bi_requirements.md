@@ -4,7 +4,7 @@
 
 The dashboard is designed for a support operations manager who needs a consistent view of ticket volume, SLA performance, resolution efficiency, customer satisfaction, repeat demand, and workload patterns.
 
-The source is a realistic demonstration helpdesk export. It does not contain customer or employer production data.
+The source is a synthetic demonstration export modeled on a typical enterprise helpdesk feed. It does not contain customer or employer production data.
 
 ## Business questions
 
@@ -68,6 +68,9 @@ The intended reporting model follows a dimensional structure:
 - **DimAgent** — agent/team attributes.
 - **DimCategory** — support category.
 - **DimPriority** — priority and SLA target attributes.
+- **DimChannel** — intake channel.
+- **DimSegment** — customer/account segment.
+- **DimRegion** — operating region.
 
 This structure separates transactional facts from reusable reporting dimensions and is suitable for a Power BI tabular/semantic model.
 
