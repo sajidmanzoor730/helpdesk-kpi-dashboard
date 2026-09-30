@@ -113,7 +113,13 @@ Date, Priority, Team, Category, Channel, Customer Segment and Region.
 - Validate KPI totals against SQL after refresh.
 - Monitor refresh duration and visual/query response time.
 
-## 8. Business question → BI output
+## 8. KPI validation and reconciliation
+
+After a model refresh, compare the core measures with the SQL analytical baseline for the same filter context. At minimum validate ticket count, resolved/closed count, SLA adherence, average resolution hours, average CSAT, repeat rate and escalation rate. Investigate material differences before publishing a report update.
+
+See `bi_validation_and_monitoring.md` for the practical control workflow.
+
+## 9. Business question → BI output
 
 | Business need | BI output |
 |---|---|
@@ -126,7 +132,7 @@ Date, Priority, Team, Category, Channel, Customer Segment and Region.
 | Why are SLAs missed? | Breach Reason analysis |
 | Are source issues affecting reporting? | Data-quality page |
 
-## 9. Implementation note
+## 10. Implementation note
 This repository documents the semantic-model and Power BI design for a portfolio demonstration.
 It does not claim enterprise Power BI deployment, a production data warehouse, OLAP cube,
 or live scheduled refresh infrastructure unless those components are actually implemented.
