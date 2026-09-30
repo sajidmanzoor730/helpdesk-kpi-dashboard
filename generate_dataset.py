@@ -1,114 +1,156 @@
-"""
-Generate a SIMULATED helpdesk ticket dataset (about 5,000 tickets, 6 months).
+"""Generate a realistic synthetic helpdesk export for the portfolio BI project.
 
-The data is synthetic. It is built to follow typical helpdesk patterns:
-weekday and business-hour peaks, priority mix, longer resolution for
-low priority, more SLA breaches on P1, lower CSAT after a breach, and a
-few deliberate data problems (duplicates, blanks) for the cleaning step.
+The dataset is demonstration data only. It models a typical enterprise support
+export with natural workload variation, operational fields and controlled
+data-quality issues.
 
-Run:  python generate_dataset.py
-Out:  Helpdesk_Tickets_Dataset_Raw.csv
-      Helpdesk_Tickets_Dataset_Raw.xlsx
+Outputs:
+  Helpdesk_Tickets_Dataset_Raw.csv
+  Helpdesk_Tickets_Dataset_Raw.xlsx
 """
+
 import numpy as np
 import pandas as pd
 
-rng = np.random.default_rng(42)
-N = 5000
-START, END = pd.Timestamp("2026-03-01"), pd.Timestamp("2026-08-31")
+rng = np.random.default_rng(260930)
+N = 3600
+START, END = pd.Timestamp("2026-03-01"), pd.Timestamp("2026-08-31 23:59")
 
-# ---- created time: weekday and business-hour heavy --------------------
-days = pd.date_range(START, END, freq="D")
-day_w = np.array([1.0 if d.weekday() < 5 else 0.25 for d in days])
-day_w *= 1 + 0.15 * np.sin(np.linspace(0, 3 * np.pi, len(days)))  # mild waves
-day_w /= day_w.sum()
-hour_w = np.array([0.5, 0.3, 0.2, 0.2, 0.3, 0.6, 1.2, 2.5, 5, 7, 7.5, 7,
-                   5.5, 6, 7, 6.5, 5.5, 4, 3, 2.2, 1.5, 1.2, 0.9, 0.6])
-hour_w /= hour_w.sum()
-
-created = (
-    rng.choice(days, N, p=day_w)
-    + rng.choice(24, N, p=hour_w).astype("timedelta64[h]")
-    + rng.integers(0, 60, N).astype("timedelta64[m]")
-)
-
-# ---- attributes -------------------------------------------------------
-priority = rng.choice(["P1", "P2", "P3", "P4"], N, p=[0.05, 0.15, 0.45, 0.35])
-category = rng.choice(
-    ["Network", "Software", "Hardware", "Access/Password", "Email", "VPN", "Other"],
-    N, p=[0.14, 0.24, 0.12, 0.22, 0.12, 0.10, 0.06])
-channel = rng.choice(["Email", "Phone", "Chat", "Portal"], N, p=[0.30, 0.25, 0.25, 0.20])
-
-agents = {
-    "L1": ["Aisha K.", "Rohan M.", "Priya S.", "Imran D.", "Neha T.", "Karan V."],
-    "L2": ["Sana R.", "Vikram P.", "Meera J."],
-    "Network": ["Arjun B.", "Farah L."],
-    "Infra": ["Deepak N.", "Zoya H."],
+categories = {
+    "Access & Identity": ["Password reset", "MFA issue", "Account locked", "Permission request"],
+    "Email & Collaboration": ["Mailbox", "Calendar", "Teams/Meetings", "Distribution list"],
+    "Network": ["LAN connectivity", "Wi-Fi", "DNS/DHCP", "Switch port"],
+    "VPN & Remote Access": ["VPN login", "VPN disconnect", "Remote desktop", "Split tunnel"],
+    "Hardware": ["Laptop", "Monitor", "Docking station", "Keyboard/Mouse"],
+    "Software & Applications": ["Application error", "Installation", "License", "Version issue"],
+    "Endpoint Security": ["EDR alert", "Device compliance", "Malware check", "Security policy"],
+    "Printing & Peripherals": ["Printer offline", "Print queue", "Scanner", "Peripheral setup"],
+    "Telephony": ["Softphone", "Headset", "Extension", "Call quality"],
+    "Account Provisioning": ["New starter", "Role change", "Offboarding", "Access package"],
+    "Performance": ["Slow device", "High CPU", "High memory", "Disk space"],
+    "Cloud & SaaS": ["SSO", "Application outage", "Integration", "Subscription"],
 }
-team = np.where(np.isin(priority, ["P1", "P2"]),
-                rng.choice(["L2", "Network", "Infra"], N, p=[0.4, 0.35, 0.25]),
-                rng.choice(["L1", "L2"], N, p=[0.85, 0.15]))
-agent = np.array([rng.choice(agents[t]) for t in team])
+priorities = ["P1", "P2", "P3", "P4"]
+sla_targets = {"P1": 4, "P2": 8, "P3": 24, "P4": 72}
+channels = ["Portal", "Email", "Chat", "Phone"]
+segments = ["Enterprise", "Mid-Market", "SMB", "Internal"]
+regions = ["North America", "EMEA", "APAC"]
+teams = ["Service Desk L1", "Service Desk L2", "Network Ops",
+         "Endpoint Ops", "Identity & Access", "Business Apps"]
+agents = ["Aisha Khan", "Rohan Mehta", "Priya Shah", "Imran Dar",
+          "Neha Thomas", "Karan Verma", "Sana Rahman", "Vikram Patel",
+          "Meera Joseph", "Arjun Bhat", "Farah Latif", "Deepak Nair",
+          "Zoya Hussain", "Adil Mir", "Nadia Ali", "Kabir Singh",
+          "Maya Rao", "Omar Malik"]
 
-# ---- SLA and resolution time (hours) ----------------------------------
-sla_target = pd.Series(priority).map({"P1": 4, "P2": 8, "P3": 24, "P4": 72}).to_numpy()
-median_frac = pd.Series(priority).map({"P1": 0.55, "P2": 0.5, "P3": 0.4, "P4": 0.35}).to_numpy()
-sigma = pd.Series(priority).map({"P1": 0.75, "P2": 0.6, "P3": 0.55, "P4": 0.55}).to_numpy()
-res_hours = sla_target * median_frac * rng.lognormal(0, sigma)
-res_hours = np.round(res_hours, 1)
-breach = res_hours > sla_target
+days = pd.date_range(START.normalize(), END.normalize(), freq="D")
+rows = []
 
-# ---- status and resolved time -----------------------------------------
-status = rng.choice(["Resolved", "Closed", "Pending", "Open"], N, p=[0.55, 0.37, 0.05, 0.03])
-open_mask = np.isin(status, ["Pending", "Open"])
-resolved_at = created + (res_hours * 60).astype("timedelta64[m]")
-resolved_at = pd.Series(resolved_at)
-resolved_at[open_mask] = pd.NaT
-res_hours_out = pd.Series(res_hours)
-res_hours_out[open_mask] = np.nan
-breach_out = pd.Series(np.where(breach, "Yes", "No"))
-breach_out[open_mask] = "No"
+for i in range(N):
+    day = rng.choice(days)
+    while day.weekday() >= 5 and rng.random() > 0.12:
+        day = rng.choice(days)
 
-# ---- CSAT: lower after a breach, about 30% left blank ------------------
-csat = np.where(breach,
-                rng.choice([1, 2, 3, 4, 5], N, p=[0.15, 0.25, 0.30, 0.20, 0.10]),
-                rng.choice([1, 2, 3, 4, 5], N, p=[0.02, 0.05, 0.18, 0.40, 0.35])).astype(float)
-csat[rng.random(N) < 0.30] = np.nan
-csat[open_mask] = np.nan
+    hour = rng.choice(
+        [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+        p=[.04, .08, .11, .12, .11, .10, .10, .10, .08, .06, .04, .025, .015, .005],
+    )
+    created = day + pd.Timedelta(hours=int(hour), minutes=int(rng.integers(60)))
 
-is_repeat = np.where(rng.random(N) < 0.11, "Yes", "No")
+    priority = rng.choice(priorities, p=[.045, .16, .48, .315])
+    category = rng.choice(list(categories))
+    subcategory = rng.choice(categories[category])
+    channel = rng.choice(channels, p=[.34, .28, .22, .16])
+    segment = rng.choice(segments, p=[.28, .32, .25, .15])
+    region = rng.choice(regions, p=[.38, .34, .28])
 
-df = pd.DataFrame({
-    "Ticket_ID": [f"TKT-{100000 + i}" for i in range(N)],
-    "Created_At": created,
-    "Resolved_At": resolved_at,
-    "Priority": priority,
-    "Category": category,
-    "Channel": channel,
-    "Team": team,
-    "Agent": agent,
-    "Status": status,
-    "SLA_Target_Hours": sla_target,
-    "Resolution_Hours": res_hours_out,
-    "SLA_Breach": breach_out,
-    "CSAT": csat,
-    "Is_Repeat": is_repeat,
-}).sort_values("Created_At").reset_index(drop=True)
+    if category in {"Network", "VPN & Remote Access"}:
+        team = rng.choice(["Network Ops", "Service Desk L2"], p=[.72, .28])
+    elif category in {"Access & Identity", "Account Provisioning", "Endpoint Security"}:
+        team = rng.choice(["Identity & Access", "Service Desk L1", "Endpoint Ops"], p=[.62, .23, .15])
+    elif category == "Telephony":
+        team = rng.choice(["Service Desk L2", "Network Ops"], p=[.70, .30])
+    elif category in {"Software & Applications", "Cloud & SaaS"}:
+        team = rng.choice(["Business Apps", "Service Desk L2", "Service Desk L1"], p=[.55, .30, .15])
+    else:
+        team = rng.choice(teams, p=[.38, .18, .08, .16, .08, .12])
 
-# ---- deliberate data problems for the cleaning step --------------------
-dups = df.sample(int(0.02 * N), random_state=1)
-df = pd.concat([df, dups], ignore_index=True)
-df.loc[df.sample(frac=0.015, random_state=2).index, "Category"] = np.nan
-df.loc[df.sample(frac=0.01, random_state=3).index, "Agent"] = np.nan
-df = df.sample(frac=1, random_state=4).reset_index(drop=True)
+    team_agents = agents[:6] if team == "Service Desk L1" else (
+        agents[6:10] if team == "Service Desk L2" else
+        agents[9:13] if team == "Network Ops" else
+        agents[4:8] if team == "Endpoint Ops" else
+        agents[10:15] if team == "Identity & Access" else agents[2:7]
+    )
+    agent = rng.choice(team_agents)
+
+    status = rng.choice(["Resolved", "Closed", "Pending", "Open"], p=[.57, .30, .09, .04])
+    target = sla_targets[priority]
+    complexity = {"P1": 1.15, "P2": 1.08, "P3": 1.0, "P4": .92}[priority]
+    first_response = int(rng.integers(3, 22) if priority == "P1" else
+                        rng.integers(8, 65) if priority == "P2" else
+                        rng.integers(12, 180) if priority == "P3" else
+                        rng.integers(20, 360))
+
+    resolution = round(target * (.16 + rng.random() ** 1.8 * .72) * complexity, 2)
+    if status in {"Pending", "Open"}:
+        resolution = np.nan
+
+    breach = bool(pd.notna(resolution) and resolution > target)
+    resolved_at = created + pd.Timedelta(hours=float(resolution)) if pd.notna(resolution) else pd.NaT
+
+    csat = np.nan
+    if pd.notna(resolution) and rng.random() >= .13:
+        base = 3.2 if breach else 4.2
+        csat = float(np.clip(round(base + rng.uniform(-.8, .8)), 1, 5))
+
+    rows.append({
+        "Ticket_ID": f"HD-{created:%y%m%d}-{i + 1001:05d}",
+        "Created_At": created,
+        "First_Response_Minutes": first_response,
+        "Resolved_At": resolved_at,
+        "Priority": priority,
+        "Category": category,
+        "Subcategory": subcategory,
+        "Channel": channel,
+        "Customer_Segment": segment,
+        "Team": team,
+        "Agent": agent,
+        "Status": status,
+        "SLA_Target_Hours": target,
+        "Resolution_Hours": resolution,
+        "SLA_Breach": "Yes" if breach else "No",
+        "Breach_Reason": rng.choice(
+            ["High queue volume", "Dependency delay", "Vendor response",
+             "Escalation delay", "Complex investigation", "After-hours coverage"]
+        ) if breach else "None",
+        "Reopen_Count": int(rng.choice([0, 1, 2, 3], p=[.72, .20, .06, .02])),
+        "Escalated": "Yes" if rng.random() < (.28 if priority in {"P1", "P2"} else .08) else "No",
+        "CSAT": csat,
+        "Is_Repeat": "Yes" if rng.random() < .095 else "No",
+        "Contact_Reason": rng.choice(
+            ["Incident", "Service request", "Access request", "How-to", "Performance issue"],
+            p=[.39, .25, .15, .11, .10],
+        ),
+        "Root_Cause": rng.choice(
+            ["User error", "Configuration", "Software defect", "Network condition",
+             "Access policy", "Hardware fault", "Capacity", "Vendor issue", "Unknown"],
+            p=[.18, .17, .14, .12, .11, .10, .07, .06, .05],
+        ),
+        "Region": region,
+    })
+
+df = pd.DataFrame(rows)
+
+# Deliberate source-data issues for the ETL exercise.
+duplicates = df.sample(72, random_state=17)
+df = pd.concat([df, duplicates], ignore_index=True)
+df.loc[df.sample(frac=.018, random_state=18).index, "Category"] = pd.NA
+df.loc[df.sample(frac=.012, random_state=19).index, "Agent"] = pd.NA
+df = df.sample(frac=1, random_state=20).reset_index(drop=True)
 
 df.to_csv("Helpdesk_Tickets_Dataset_Raw.csv", index=False)
 df.to_excel("Helpdesk_Tickets_Dataset_Raw.xlsx", index=False)
 
-closed = df.drop_duplicates("Ticket_ID")
-closed = closed[closed["Status"].isin(["Resolved", "Closed"])]
-print(f"Rows written: {len(df)} (unique tickets: {df['Ticket_ID'].nunique()})")
-print(f"SLA adherence (resolved/closed): {(closed['SLA_Breach'] == 'No').mean():.1%}")
-print(f"Avg CSAT: {closed['CSAT'].mean():.2f}")
-print(f"Repeat rate: {(closed['Is_Repeat'] == 'Yes').mean():.1%}")
-print(closed.groupby('Priority')['SLA_Breach'].apply(lambda s: (s == 'Yes').mean()).round(3))
+print(f"Raw rows: {len(df):,}")
+print(f"Unique tickets: {df['Ticket_ID'].nunique():,}")
+print("Source export generated successfully.")
