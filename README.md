@@ -2,8 +2,6 @@
 
 A small end-to-end analytics project: clean a messy helpdesk ticket export, calculate support KPIs with Python and SQL, and show them in an interactive dashboard.
 
-**Live demo:** https://hedesk-dashboard.streamlit.app/
-
 > **Note:** The dataset is synthetic. I generated it to look like a real helpdesk export, including deliberate duplicates and missing values, so the cleaning steps are realistic.
 
 ![Dashboard](dashboard.jpg)
@@ -70,4 +68,4 @@ streamlit run app.py
 ## Author
 
 Sajid Manzoor | Technical Support / Operations
-LinkedIn: [add your correct profile link]
+LinkedIn: https://linkedin.com/in/sajid-manzoor-77x
