@@ -43,7 +43,7 @@ HD-260302-01947,2026-03-02 09:21,342,2026-03-05 00:49,P4,Access & Identity,Permi
 HD-260424-04308,2026-04-24 11:58,116,2026-04-24 18:11,P3,Access & Identity,MFA issue,Phone,Enterprise,Service Desk L1,Neha Thomas,Resolved,24,6.23,No,None,1,No,3,No,Incident,Capacity,EMEA
 HD-260728-01743,2026-07-28 16:26,178,,P3,Cloud & SaaS,Subscription,Phone,Enterprise,Business Apps,Priya Shah,Pending,24,,No,None,0,No,,No,How-to,Access policy,North America
 HD-260504-01127,2026-05-04 08:35,102,2026-05-04 14:05,P3,Printing & Peripherals,Scanner,Email,Enterprise,Service Desk L1,Karan Verma,Resolved,24,5.51,No,None,0,Yes,5,No,Service request,User error,APAC
-HD-260424-01243,2026-04-24 15:03,328,2026-04-26 02:21,P4,Account Provisioning,Access package,Email,Internal,Identity & Access,Adil Mir,Closed,72,35.3,No,None,0,No,4,No,Incident,Software defect,EMEA
+HD-260424-01243,2026-04-24 15:03,328,2026-04-28 03:17,P4,Account Provisioning,Access package,Email,Internal,Identity & Access,Adil Mir,Closed,72,84.24,Yes,High queue volume,0,No,4,No,Incident,Software defect,EMEA
 HD-260320-03605,2026-03-20 14:53,108,,P3,Printing & Peripherals,Scanner,Chat,Mid-Market,Identity & Access,Farah Latif,Pending,24,,No,None,1,No,,No,Service request,Software defect,APAC
 HD-260527-02865,2026-05-27 10:57,329,2026-05-28 09:15,P4,Software & Applications,Installation,Chat,Mid-Market,Service Desk L1,,Closed,72,22.31,No,None,1,No,4,No,Service request,User error,APAC
 HD-260518-01296,2026-05-18 08:55,39,2026-05-18 23:14,P3,Cloud & SaaS,Subscription,Email,Enterprise,Business Apps,Karan Verma,Resolved,24,14.32,No,None,2,No,3,No,Service request,Configuration,North America
@@ -86,7 +86,7 @@ HD-260715-04258,2026-07-15 21:34,150,2026-07-16 08:05,P3,Software & Applications
 HD-260319-03962,2026-03-19 09:50,93,2026-03-20 19:11,P4,Telephony,Headset,Email,Mid-Market,Service Desk L2,Sana Rahman,Resolved,72,33.36,No,None,0,No,4,No,Incident,Hardware fault,EMEA
 HD-260722-04406,2026-07-22 16:20,82,2026-07-23 19:18,P4,Account Provisioning,Access package,Portal,Enterprise,Service Desk L1,Rohan Mehta,Resolved,72,26.98,No,None,0,Yes,5,No,Incident,Software defect,APAC
 HD-260828-04148,2026-08-28 11:12,222,,P4,Hardware,Monitor,Phone,Mid-Market,Network Ops,Deepak Nair,Pending,72,,No,None,1,No,,Yes,Service request,Configuration,EMEA
-HD-260303-02388,2026-03-03 14:34,275,2026-03-05 10:46,P4,Email & Collaboration,Calendar,Chat,Mid-Market,Network Ops,Deepak Nair,Resolved,72,44.21,No,None,0,No,4,No,Service request,Vendor issue,EMEA
+HD-260303-02388,2026-03-03 14:34,275,2026-03-06 21:02,P4,Email & Collaboration,Calendar,Chat,Mid-Market,Network Ops,Deepak Nair,Resolved,72,78.48,Yes,High queue volume,0,No,4,No,Service request,Vendor issue,EMEA
 HD-260825-01560,2026-08-25 10:40,59,2026-08-26 00:37,P3,Account Provisioning,Role change,Portal,Mid-Market,Service Desk L1,Neha Thomas,Closed,24,13.95,No,None,0,No,2,No,Service request,Vendor issue,North America
 HD-260317-02558,2026-03-17 11:41,105,2026-03-19 07:53,P4,Account Provisioning,New starter,Chat,Mid-Market,Identity & Access,Farah Latif,Closed,72,44.2,No,None,0,No,3,No,Incident,Hardware fault,APAC
 HD-260722-03444,2026-07-22 09:13,113,2026-07-23 02:07,P3,Printing & Peripherals,Print queue,Portal,SMB,Network Ops,Arjun Bhat,Resolved,24,16.91,No,None,1,No,3,No,Incident,Vendor issue,EMEA
@@ -143,7 +143,7 @@ HD-260627-01941,2026-06-27 10:38,165,2026-06-27 19:10,P3,Cloud & SaaS,Integratio
 HD-260521-03298,2026-05-21 12:12,89,,P3,Email & Collaboration,Teams/Meetings,Phone,Enterprise,Service Desk L1,Priya Shah,Pending,24,,No,None,0,No,,No,Incident,Network condition,EMEA
 HD-260811-01751,2026-08-11 09:13,158,,P3,Email & Collaboration,Teams/Meetings,Portal,Mid-Market,Service Desk L2,Arjun Bhat,Open,24,,No,None,0,No,,No,Incident,Access policy,North America
 HD-260729-01538,2026-07-29 16:48,174,2026-07-30 10:32,P3,Telephony,Softphone,Email,Enterprise,Service Desk L2,Arjun Bhat,Closed,24,17.74,No,None,1,No,4,No,Incident,User error,EMEA
-HD-260526-02521,2026-05-26 09:35,49,2026-05-27 14:03,P4,Performance,High CPU,Email,SMB,Service Desk L2,Sana Rahman,Resolved,72,28.47,No,None,3,Yes,5,No,Service request,Configuration,APAC
+HD-260526-02521,2026-05-26 09:35,49,2026-05-30 00:42,P4,Performance,High CPU,Email,SMB,Service Desk L2,Sana Rahman,Resolved,72,87.12,Yes,High queue volume,3,Yes,5,No,Service request,Configuration,APAC
 HD-260309-02193,2026-03-09 15:52,122,2026-03-10 07:08,P4,Printing & Peripherals,Scanner,Chat,Enterprise,Identity & Access,Deepak Nair,Resolved,72,15.27,No,None,0,No,,No,Incident,Network condition,North America
 HD-260715-03640,2026-07-15 14:06,17,2026-07-16 05:09,P3,Performance,Slow device,Phone,Internal,Service Desk L1,Imran Dar,Closed,24,15.05,No,None,0,No,4,No,Access request,User error,APAC
 HD-260319-03238,2026-03-19 13:50,19,2026-03-19 17:32,P2,Network,Wi-Fi,Email,SMB,Network Ops,Deepak Nair,Closed,8,3.71,No,None,1,Yes,4,Yes,Service request,Software defect,EMEA
@@ -192,7 +192,7 @@ HD-260529-01948,2026-05-29 18:49,340,2026-06-01 00:20,P4,Email & Collaboration,C
 HD-260624-04038,2026-06-24 11:19,156,2026-06-25 06:24,P3,Hardware,Docking station,Portal,Mid-Market,Service Desk L2,Vikram Patel,Resolved,24,19.09,No,None,1,No,3,Yes,Service request,Access policy,North America
 HD-260519-02044,2026-05-19 14:05,39,2026-05-19 22:06,P2,Telephony,Extension,Email,Enterprise,Service Desk L2,Vikram Patel,Resolved,8,8.02,Yes,Escalation delay,1,No,3,No,Service request,Software defect,North America
 HD-260607-01166,2026-06-07 12:55,277,2026-06-08 03:19,P4,Account Provisioning,Access package,Email,Internal,Service Desk L1,Rohan Mehta,Closed,72,14.41,No,None,0,No,4,No,How-to,Network condition,EMEA
-HD-260611-02472,2026-06-11 16:30,223,2026-06-13 05:42,P4,Telephony,Headset,Portal,Enterprise,Service Desk L2,Sana Rahman,Resolved,72,37.2,No,None,0,No,4,No,How-to,Configuration,North America
+HD-260611-02472,2026-06-11 16:30,223,2026-06-15 01:51,P4,Telephony,Headset,Portal,Enterprise,Service Desk L2,Sana Rahman,Resolved,72,81.36,Yes,High queue volume,0,No,4,No,How-to,Configuration,North America
 HD-260707-04362,2026-07-07 12:39,7,2026-07-07 13:58,P1,Hardware,Laptop,Portal,Internal,Service Desk L1,Imran Dar,Closed,4,1.32,No,None,0,No,4,Yes,Access request,Unknown,North America
 HD-260513-01474,2026-05-13 13:18,11,2026-05-13 16:21,P2,Cloud & SaaS,Integration,Chat,SMB,Service Desk L1,Karan Verma,Resolved,8,3.06,No,None,1,No,4,No,Incident,Vendor issue,EMEA
 HD-260811-01366,2026-08-11 12:29,159,2026-08-11 20:05,P3,Email & Collaboration,Calendar,Email,SMB,Service Desk L1,Aisha Khan,Resolved,24,7.6,No,None,0,No,4,No,Incident,User error,APAC
@@ -236,7 +236,7 @@ HD-260414-03702,2026-04-14 15:28,5,2026-04-14 18:24,P1,Cloud & SaaS,Application 
 HD-260502-03989,2026-05-02 16:50,15,2026-05-02 22:33,P3,Email & Collaboration,Mailbox,Email,SMB,Identity & Access,Zoya Hussain,Resolved,24,5.72,No,None,0,No,4,No,Service request,Access policy,EMEA
 HD-260622-04430,2026-06-22 12:43,63,2026-06-22 21:01,P3,Cloud & SaaS,SSO,Chat,Mid-Market,Service Desk L2,Meera Joseph,Resolved,24,8.3,No,None,0,No,,No,Access request,Access policy,North America
 HD-260424-04310,2026-04-24 11:48,298,,P4,Software & Applications,Version issue,Chat,Internal,Business Apps,Sana Rahman,Pending,72,,No,None,1,No,,No,Performance issue,Capacity,APAC
-HD-260629-02987,2026-06-29 18:32,360,2026-06-30 23:33,P4,Access & Identity,Permission request,Portal,Mid-Market,Identity & Access,Nadia Ali,Closed,72,29.02,No,None,1,No,4,No,Access request,User error,North America
+HD-260629-02987,2026-06-29 18:32,360,2026-07-02 22:08,P4,Access & Identity,Permission request,Portal,Mid-Market,Identity & Access,Nadia Ali,Closed,72,75.6,Yes,High queue volume,1,No,4,No,Access request,User error,North America
 HD-260521-01980,2026-05-21 09:47,63,2026-05-21 12:01,P2,Endpoint Security,Security policy,Phone,Enterprise,Identity & Access,Zoya Hussain,Resolved,8,2.24,No,None,0,No,5,Yes,Service request,Software defect,APAC
 HD-260622-01408,2026-06-22 12:55,54,2026-06-23 03:28,P4,Email & Collaboration,Teams/Meetings,Portal,Enterprise,Network Ops,Arjun Bhat,Closed,72,14.56,No,None,0,No,5,No,Performance issue,Vendor issue,EMEA
 HD-260325-04147,2026-03-25 15:25,45,2026-03-26 06:16,P4,Printing & Peripherals,Peripheral setup,Chat,Enterprise,Endpoint Ops,Karan Verma,Resolved,72,14.86,No,None,3,No,4,No,Performance issue,Hardware fault,APAC
@@ -294,7 +294,7 @@ HD-260407-02471,2026-04-07 16:37,122,2026-04-08 05:51,P3,Access & Identity,Accou
 HD-260717-02352,2026-07-17 16:09,157,2026-07-18 00:18,P3,Performance,Slow device,Portal,Enterprise,Service Desk L2,Meera Joseph,Resolved,24,8.16,No,None,0,No,4,No,Performance issue,Vendor issue,EMEA
 HD-260422-03046,2026-04-22 11:34,6,2026-04-22 16:35,P1,Hardware,Docking station,Chat,Mid-Market,Business Apps,Sana Rahman,Resolved,4,5.02,Yes,High queue volume,0,Yes,3,No,Incident,Unknown,North America
 HD-260527-01409,2026-05-27 12:31,14,,P2,Endpoint Security,EDR alert,Portal,Internal,Service Desk L1,Neha Thomas,Pending,8,,No,None,1,Yes,,No,Access request,Hardware fault,APAC
-HD-260805-02002,2026-08-05 11:51,210,2026-08-06 23:21,P4,Printing & Peripherals,Print queue,Email,Mid-Market,Network Ops,Zoya Hussain,Closed,72,35.5,No,None,0,No,5,No,Incident,Configuration,APAC
+HD-260805-02002,2026-08-05 11:51,210,2026-08-09 00:05,P4,Printing & Peripherals,Print queue,Email,Mid-Market,Network Ops,Zoya Hussain,Closed,72,84.24,Yes,High queue volume,0,No,5,No,Incident,Configuration,APAC
 HD-260415-04075,2026-04-15 20:49,55,2026-04-18 17:14,P4,Access & Identity,MFA issue,Chat,Enterprise,Identity & Access,Farah Latif,Resolved,72,68.42,No,None,1,No,3,No,Service request,User error,EMEA
 HD-260828-03832,2026-08-28 13:07,50,2026-08-28 15:37,P2,Telephony,Extension,Portal,SMB,Service Desk L2,Sana Rahman,Resolved,8,2.5,No,None,0,No,5,No,Performance issue,Software defect,APAC
 HD-260526-02237,2026-05-26 16:22,23,,P4,Email & Collaboration,Mailbox,Portal,Enterprise,Service Desk L1,Imran Dar,Pending,72,,No,None,0,No,,No,How-to,Software defect,APAC
@@ -333,7 +333,7 @@ HD-260310-02754,2026-03-10 12:52,319,2026-03-11 03:16,P4,VPN & Remote Access,VPN
 HD-260622-02349,2026-06-22 09:06,64,,P3,Cloud & SaaS,SSO,Portal,SMB,Business Apps,Neha Thomas,Pending,24,,No,None,0,No,,No,Service request,Unknown,North America
 HD-260701-04494,2026-07-01 13:44,142,2026-07-01 22:51,P3,Account Provisioning,New starter,Portal,Enterprise,Service Desk L1,Imran Dar,Resolved,24,9.12,No,None,0,No,5,No,Incident,Configuration,APAC
 HD-260327-04577,2026-03-27 10:33,17,2026-03-27 17:19,P3,Software & Applications,Installation,Portal,Mid-Market,Service Desk L1,Aisha Khan,Resolved,24,6.78,No,None,0,No,,No,Incident,User error,EMEA
-HD-260805-01935,2026-08-05 18:47,282,2026-08-06 11:58,P4,Performance,High memory,Portal,Internal,Service Desk L2,Vikram Patel,Resolved,72,17.19,No,None,0,No,5,No,Incident,Vendor issue,APAC
+HD-260805-01935,2026-08-05 18:47,282,2026-08-09 01:15,P4,Performance,High memory,Portal,Internal,Service Desk L2,Vikram Patel,Resolved,72,78.48,Yes,High queue volume,0,No,5,No,Incident,Vendor issue,APAC
 HD-260707-02760,2026-07-07 09:37,23,,P3,Endpoint Security,EDR alert,Chat,Enterprise,Identity & Access,Zoya Hussain,Open,24,,No,None,0,No,,No,Service request,User error,North America
 HD-260420-04052,2026-04-20 15:21,10,2026-04-20 18:54,P2,Account Provisioning,Role change,Phone,SMB,Identity & Access,Farah Latif,Resolved,8,3.55,No,None,0,Yes,3,No,Incident,Configuration,APAC
 HD-260804-03528,2026-08-04 13:21,19,2026-08-04 14:40,P1,Endpoint Security,Security policy,Phone,SMB,Service Desk L1,Priya Shah,Closed,4,1.33,No,None,0,No,4,No,Service request,Configuration,EMEA
@@ -375,7 +375,7 @@ HD-260428-03107,2026-04-28 10:08,156,2026-04-28 15:42,P3,Telephony,Extension,Por
 HD-260731-04126,2026-07-31 21:09,98,2026-08-01 22:09,P3,Hardware,Laptop,Phone,Mid-Market,Identity & Access,Farah Latif,Resolved,24,25.01,Yes,High queue volume,0,No,3,No,Incident,Hardware fault,North America
 HD-260605-01765,2026-06-05 14:54,106,2026-06-06 17:36,P4,Access & Identity,Permission request,Chat,Enterprise,Identity & Access,Zoya Hussain,Closed,72,26.71,No,None,0,No,3,No,Incident,Configuration,EMEA
 HD-260521-01067,2026-05-21 18:13,143,2026-05-22 06:25,P3,Account Provisioning,New starter,Email,SMB,Identity & Access,Deepak Nair,Closed,24,12.2,No,None,0,No,4,Yes,Performance issue,Configuration,EMEA
-HD-260323-01899,2026-03-23 09:49,240,2026-03-24 02:13,P4,Account Provisioning,Role change,Chat,SMB,Service Desk L1,Rohan Mehta,Resolved,72,16.4,No,None,0,No,3,No,How-to,Vendor issue,EMEA
+HD-260323-01899,2026-03-23 09:49,240,2026-03-27 00:56,P4,Account Provisioning,Role change,Chat,SMB,Service Desk L1,Rohan Mehta,Resolved,72,87.12,Yes,High queue volume,0,No,3,No,How-to,Vendor issue,EMEA
 HD-260508-01305,2026-05-08 12:05,14,2026-05-09 10:14,P3,Account Provisioning,Role change,Email,SMB,Service Desk L1,Rohan Mehta,Resolved,24,22.16,No,None,0,No,4,No,Incident,User error,North America
 HD-260427-01587,2026-04-27 18:58,113,2026-04-28 16:18,P3,,Extension,Email,Enterprise,Service Desk L2,Arjun Bhat,Resolved,24,21.34,No,None,2,No,3,No,Incident,Vendor issue,EMEA
 HD-260603-03128,2026-06-03 15:14,20,2026-06-03 23:24,P3,Email & Collaboration,Mailbox,Phone,Mid-Market,Service Desk L1,Imran Dar,Resolved,24,8.17,No,None,0,No,5,No,Service request,Hardware fault,APAC
@@ -426,7 +426,7 @@ HD-260317-03121,2026-03-17 15:44,86,2026-03-18 07:42,P3,Cloud & SaaS,Application
 HD-260728-01900,2026-07-28 15:05,42,2026-07-28 22:51,P3,Email & Collaboration,Teams/Meetings,Email,SMB,Network Ops,Farah Latif,Closed,24,7.78,No,None,0,No,5,No,Access request,Network condition,APAC
 HD-260407-01685,2026-04-07 14:50,118,2026-04-08 08:18,P3,Telephony,Headset,Portal,Internal,Service Desk L2,Sana Rahman,Closed,24,17.48,No,None,0,No,3,No,Performance issue,User error,EMEA
 HD-260811-03758,2026-08-11 13:25,229,2026-08-13 07:55,P4,Hardware,Docking station,Portal,Enterprise,Service Desk L2,Vikram Patel,Resolved,72,42.51,No,None,1,Yes,,No,Service request,User error,EMEA
-HD-260710-04555,2026-07-10 14:00,214,2026-07-12 07:30,P4,Software & Applications,Application error,Portal,Mid-Market,Business Apps,Imran Dar,Closed,72,41.51,No,None,1,No,5,No,Performance issue,Vendor issue,EMEA
+HD-260710-04555,2026-07-10 14:00,214,2026-07-13 23:21,P4,Software & Applications,Application error,Portal,Mid-Market,Business Apps,Imran Dar,Closed,72,81.36,Yes,High queue volume,1,No,5,No,Performance issue,Vendor issue,EMEA
 HD-260717-03384,2026-07-17 10:50,141,,P3,Printing & Peripherals,Print queue,Chat,Internal,Endpoint Ops,Karan Verma,Pending,24,,No,None,0,No,,No,Incident,Unknown,APAC
 HD-260610-03190,2026-06-10 11:31,58,,P2,Network,LAN connectivity,Portal,Mid-Market,Network Ops,Deepak Nair,Pending,8,,No,None,0,No,,No,Incident,Network condition,EMEA
 HD-260510-02945,2026-05-10 11:30,152,2026-05-10 19:23,P3,VPN & Remote Access,VPN login,Email,Enterprise,Network Ops,Farah Latif,Resolved,24,7.89,No,None,1,No,,No,Incident,User error,APAC
@@ -480,7 +480,7 @@ HD-260612-02454,2026-06-12 13:05,56,2026-06-12 15:32,P2,VPN & Remote Access,Spli
 HD-260324-03916,2026-03-24 12:15,160,2026-03-24 23:20,P3,Cloud & SaaS,Integration,Phone,Enterprise,Service Desk L2,Sana Rahman,Resolved,24,11.09,No,None,0,No,4,No,Service request,Configuration,APAC
 HD-260728-02181,2026-07-28 08:50,54,2026-07-29 06:03,P3,Hardware,Monitor,Phone,SMB,Service Desk L2,Arjun Bhat,Resolved,24,21.23,No,None,0,Yes,4,No,Incident,Access policy,North America
 HD-260304-03993,2026-03-04 12:41,29,2026-03-04 17:26,P2,Access & Identity,Account locked,Chat,Mid-Market,Service Desk L1,Priya Shah,Closed,8,4.76,No,None,1,No,4,No,Incident,Vendor issue,North America
-HD-260430-04188,2026-04-30 15:16,352,2026-05-01 13:57,P4,Performance,High CPU,Portal,Mid-Market,Service Desk L1,Priya Shah,Closed,72,22.69,No,None,0,No,5,No,Access request,Access policy,North America
+HD-260430-04188,2026-04-30 15:16,352,2026-05-03 18:52,P4,Performance,High CPU,Portal,Mid-Market,Service Desk L1,Priya Shah,Closed,72,75.6,Yes,High queue volume,0,No,5,No,Access request,Access policy,North America
 HD-260519-04454,2026-05-19 15:43,127,2026-05-20 05:13,P3,Account Provisioning,Role change,Portal,Mid-Market,Identity & Access,Nadia Ali,Resolved,24,13.5,No,None,0,No,3,No,Access request,User error,APAC
 HD-260627-02773,2026-06-27 15:21,9,2026-06-27 20:15,P2,Hardware,Docking station,Portal,SMB,Service Desk L1,Priya Shah,Closed,8,4.9,No,None,0,Yes,3,Yes,Access request,Configuration,EMEA
 HD-260604-01576,2026-06-04 15:30,90,2026-06-05 07:28,P4,Email & Collaboration,Mailbox,Phone,Internal,Service Desk L1,Priya Shah,Resolved,72,15.97,No,None,0,No,4,No,Access request,Unknown,APAC
@@ -517,7 +517,7 @@ HD-260508-03399,2026-05-08 17:22,33,2026-05-08 20:07,P2,Access & Identity,Passwo
 HD-260324-04573,2026-03-24 08:06,31,2026-03-24 16:19,P3,Printing & Peripherals,Scanner,Email,SMB,Service Desk L2,Meera Joseph,Resolved,24,8.22,No,None,0,No,5,Yes,Access request,Configuration,North America
 HD-260417-01033,2026-04-17 14:53,16,2026-04-17 21:28,P2,VPN & Remote Access,Split tunnel,Chat,SMB,Network Ops,Arjun Bhat,Closed,8,6.59,No,None,0,Yes,4,No,How-to,Capacity,EMEA
 HD-260424-02159,2026-04-24 17:24,5,2026-04-24 19:55,P1,Account Provisioning,New starter,Phone,Enterprise,Service Desk L1,Imran Dar,Closed,4,2.53,No,None,0,No,4,No,Incident,Unknown,APAC
-HD-260803-01940,2026-08-03 15:30,284,2026-08-04 18:29,P4,Telephony,Headset,Email,Mid-Market,Service Desk L2,Vikram Patel,Closed,72,26.99,No,None,0,No,3,No,Incident,Access policy,EMEA
+HD-260803-01940,2026-08-03 15:30,284,2026-08-07 03:44,P4,Telephony,Headset,Email,Mid-Market,Service Desk L2,Vikram Patel,Closed,72,84.24,Yes,High queue volume,0,No,3,No,Incident,Access policy,EMEA
 HD-260601-02787,2026-06-01 13:08,68,2026-06-01 19:38,P3,Cloud & SaaS,Integration,Email,Mid-Market,Business Apps,Imran Dar,Resolved,24,6.5,No,None,1,No,4,No,Performance issue,Configuration,North America
 HD-260511-01982,2026-05-11 10:59,68,2026-05-12 03:45,P3,Performance,High memory,Chat,SMB,Service Desk L1,Priya Shah,Closed,24,16.77,No,None,1,No,3,No,Incident,User error,North America
 HD-260401-01316,2026-04-01 14:21,12,2026-04-01 22:50,P2,Hardware,Laptop,Chat,Mid-Market,Endpoint Ops,Neha Thomas,Resolved,8,8.49,Yes,High queue volume,0,Yes,4,Yes,Service request,Software defect,North America
@@ -600,7 +600,7 @@ HD-260731-04493,2026-07-31 16:38,173,2026-07-31 21:56,P3,Telephony,Extension,Ema
 HD-260812-01802,2026-08-12 11:25,26,,P2,Telephony,Softphone,Chat,Internal,Network Ops,Zoya Hussain,Pending,8,,No,None,0,Yes,,No,Incident,Network condition,North America
 HD-260423-01647,2026-04-23 15:15,17,2026-04-23 17:04,P1,Performance,Slow device,Portal,SMB,Service Desk L1,Rohan Mehta,Closed,4,1.83,No,None,0,No,3,No,How-to,Network condition,North America
 HD-260529-04179,2026-05-29 15:58,180,2026-05-30 05:39,P3,Printing & Peripherals,Print queue,Portal,Mid-Market,Service Desk L1,Priya Shah,Closed,24,13.69,No,None,0,No,,No,Service request,User error,North America
-HD-260504-03117,2026-05-04 11:23,260,2026-05-05 17:08,P4,Printing & Peripherals,Scanner,Phone,Mid-Market,Service Desk L1,Neha Thomas,Resolved,72,29.76,No,None,3,No,4,No,Access request,Network condition,North America
+HD-260504-03117,2026-05-04 11:23,260,2026-05-07 17:51,P4,Printing & Peripherals,Scanner,Phone,Mid-Market,Service Desk L1,Neha Thomas,Resolved,72,78.48,Yes,High queue volume,3,No,4,No,Access request,Network condition,North America
 HD-260302-02490,2026-03-02 08:41,104,2026-03-03 11:55,P4,Printing & Peripherals,Scanner,Phone,Mid-Market,Identity & Access,Adil Mir,Closed,72,27.24,No,None,0,No,4,No,Service request,Access policy,EMEA
 HD-260325-02210,2026-03-25 11:05,27,2026-03-28 06:14,P4,VPN & Remote Access,Split tunnel,Phone,SMB,Network Ops,Zoya Hussain,Closed,72,67.15,No,None,0,No,,No,Incident,Network condition,EMEA
 HD-260811-01465,2026-08-11 13:15,163,2026-08-12 05:58,P3,Cloud & SaaS,Subscription,Email,SMB,Business Apps,Imran Dar,Closed,24,16.72,No,None,0,No,3,No,Service request,Capacity,APAC
@@ -643,7 +643,7 @@ HD-260501-03900,2026-05-01 13:41,119,2026-05-04 08:15,P4,Performance,Disk space,
 HD-260414-02511,2026-04-14 15:33,142,,P3,Cloud & SaaS,Integration,Portal,Mid-Market,Business Apps,Sana Rahman,Pending,24,,No,None,1,No,,No,Performance issue,Vendor issue,APAC
 HD-260410-01323,2026-04-10 14:16,35,,P3,Endpoint Security,Malware check,Portal,SMB,Identity & Access,Farah Latif,Pending,24,,No,None,0,No,,No,Performance issue,Hardware fault,EMEA
 HD-260525-02488,2026-05-25 14:00,29,2026-05-26 10:26,P3,Hardware,Monitor,Portal,Enterprise,Service Desk L1,Neha Thomas,Resolved,24,20.44,No,None,0,No,3,No,How-to,Software defect,EMEA
-HD-260825-01426,2026-08-25 11:31,326,2026-08-27 07:56,P4,Software & Applications,Installation,Phone,Mid-Market,Service Desk L1,Aisha Khan,Resolved,72,44.42,No,None,1,No,4,No,Access request,Configuration,North America
+HD-260825-01426,2026-08-25 11:31,326,2026-08-29 02:38,P4,Software & Applications,Installation,Phone,Mid-Market,Service Desk L1,Aisha Khan,Resolved,72,87.12,Yes,High queue volume,1,No,4,No,Access request,Configuration,North America
 HD-260728-02137,2026-07-28 09:39,195,,P4,VPN & Remote Access,Remote desktop,Portal,Mid-Market,Network Ops,Arjun Bhat,Open,72,,No,None,1,No,,No,Incident,Configuration,EMEA
 HD-260612-03601,2026-06-12 19:27,33,2026-06-13 04:21,P2,Network,LAN connectivity,Chat,Mid-Market,Network Ops,Farah Latif,Resolved,8,8.91,Yes,High queue volume,0,Yes,4,No,Incident,Software defect,North America
 HD-260315-01101,2026-03-15 12:43,168,2026-03-15 22:15,P3,Software & Applications,Application error,Chat,SMB,Business Apps,Sana Rahman,Resolved,24,9.54,No,None,0,No,3,No,Access request,Unknown,APAC
@@ -697,7 +697,7 @@ HD-260813-04368,2026-08-13 11:42,37,2026-08-13 14:54,P2,Printing & Peripherals,P
 HD-260817-02998,2026-08-17 15:20,7,2026-08-17 18:02,P1,Printing & Peripherals,Printer offline,Portal,Enterprise,Endpoint Ops,Neha Thomas,Resolved,4,2.71,No,None,1,No,3,No,Service request,User error,APAC
 HD-260312-02422,2026-03-12 15:45,75,2026-03-13 05:13,P3,Printing & Peripherals,Print queue,Chat,Mid-Market,Business Apps,Neha Thomas,Resolved,24,13.47,No,None,0,No,4,No,Incident,Capacity,APAC
 HD-260430-02051,2026-04-30 16:45,55,2026-05-01 13:02,P3,Telephony,Headset,Chat,Internal,Service Desk L2,Arjun Bhat,Closed,24,20.29,No,None,0,No,3,No,Service request,Software defect,APAC
-HD-260325-02279,2026-03-25 12:23,79,2026-03-26 04:12,P4,Email & Collaboration,Teams/Meetings,Portal,SMB,Service Desk L2,Vikram Patel,Closed,72,15.82,No,None,0,No,5,No,How-to,Hardware fault,North America
+HD-260325-02279,2026-03-25 12:23,79,2026-03-28 21:44,P4,Email & Collaboration,Teams/Meetings,Portal,SMB,Service Desk L2,Vikram Patel,Closed,72,81.36,Yes,High queue volume,0,No,5,No,How-to,Hardware fault,North America
 HD-260326-01679,2026-03-26 16:49,23,2026-03-26 20:25,P2,Telephony,Headset,Portal,Mid-Market,Service Desk L2,Arjun Bhat,Resolved,8,3.6,No,None,1,No,4,Yes,Incident,Vendor issue,EMEA
 HD-260812-01792,2026-08-12 12:27,42,2026-08-12 20:10,P2,,Split tunnel,Portal,Enterprise,Network Ops,Zoya Hussain,Resolved,8,7.73,No,None,0,Yes,3,No,Incident,Capacity,EMEA
 HD-260430-03713,2026-04-30 16:13,173,2026-05-02 11:29,P4,Account Provisioning,Role change,Phone,Enterprise,Identity & Access,Nadia Ali,Resolved,72,43.27,No,None,0,No,,No,Access request,Network condition,EMEA
@@ -749,7 +749,7 @@ HD-260415-03497,2026-04-15 17:22,114,2026-04-16 02:56,P3,Hardware,Keyboard/Mouse
 HD-260630-04176,2026-06-30 11:44,89,2026-07-01 03:42,P3,Account Provisioning,New starter,Portal,Enterprise,Identity & Access,Farah Latif,Closed,24,15.97,No,None,1,No,4,No,Performance issue,Access policy,APAC
 HD-260306-01930,2026-03-06 09:32,76,2026-03-08 04:36,P4,Printing & Peripherals,Printer offline,Phone,Enterprise,Service Desk L2,Sana Rahman,Resolved,72,43.08,No,None,0,No,3,No,Service request,Hardware fault,EMEA
 HD-260728-01690,2026-07-28 17:48,102,2026-07-29 06:21,P3,Access & Identity,MFA issue,Chat,Mid-Market,Identity & Access,Adil Mir,Closed,24,12.56,No,None,0,No,3,No,Incident,Hardware fault,APAC
-HD-260504-03167,2026-05-04 14:21,201,2026-05-06 19:32,P4,VPN & Remote Access,Split tunnel,Email,Mid-Market,Network Ops,Farah Latif,Resolved,72,53.19,No,None,1,No,4,No,Service request,User error,EMEA
+HD-260504-03167,2026-05-04 14:21,201,2026-05-07 17:57,P4,VPN & Remote Access,Split tunnel,Email,Mid-Market,Network Ops,Farah Latif,Resolved,72,75.6,Yes,High queue volume,1,No,4,No,Service request,User error,EMEA
 HD-260625-04163,2026-06-25 19:07,55,2026-06-26 05:23,P2,Account Provisioning,Access package,Email,Internal,Identity & Access,Zoya Hussain,Resolved,8,10.28,Yes,Dependency delay,0,No,,No,Incident,Capacity,APAC
 HD-260416-03877,2026-04-16 13:46,88,2026-04-16 22:59,P3,Cloud & SaaS,Integration,Portal,Enterprise,Service Desk L2,Arjun Bhat,Closed,24,9.22,No,None,0,No,4,No,Service request,Vendor issue,APAC
 HD-260525-02345,2026-05-25 21:32,37,,P3,VPN & Remote Access,Remote desktop,Email,Mid-Market,Service Desk L2,Meera Joseph,Pending,24,,No,None,1,No,,No,Incident,Configuration,North America
@@ -812,7 +812,7 @@ HD-260604-01022,2026-06-04 13:07,124,2026-06-05 11:40,P3,Performance,High memory
 HD-260723-01142,2026-07-23 17:42,41,2026-07-23 21:54,P2,Telephony,Extension,Portal,Mid-Market,Network Ops,Arjun Bhat,Resolved,8,4.21,No,None,0,No,4,No,Incident,Network condition,APAC
 HD-260819-01375,2026-08-19 14:51,62,2026-08-20 14:57,P3,Cloud & SaaS,SSO,Portal,Enterprise,Service Desk L2,Arjun Bhat,Closed,24,24.1,Yes,Vendor response,2,No,,No,Service request,Software defect,North America
 HD-260319-02950,2026-03-19 15:51,5,2026-03-19 17:16,P1,Performance,Slow device,Email,Enterprise,Service Desk L1,Aisha Khan,Closed,4,1.42,No,None,0,No,4,No,Incident,Configuration,APAC
-HD-260416-03653,2026-04-16 16:53,123,2026-04-18 02:09,P4,VPN & Remote Access,VPN disconnect,Email,Internal,Network Ops,Arjun Bhat,Closed,72,33.28,No,None,1,No,4,No,Incident,Configuration,EMEA
+HD-260416-03653,2026-04-16 16:53,123,2026-04-20 05:07,P4,VPN & Remote Access,VPN disconnect,Email,Internal,Network Ops,Arjun Bhat,Closed,72,84.24,Yes,High queue volume,1,No,4,No,Incident,Configuration,EMEA
 HD-260419-01215,2026-04-19 12:53,11,2026-04-19 15:09,P1,Hardware,Keyboard/Mouse,Portal,Enterprise,Service Desk L1,Rohan Mehta,Closed,4,2.27,No,None,0,No,,No,How-to,User error,APAC
 HD-260506-03844,2026-05-06 10:10,107,2026-05-06 21:27,P3,Cloud & SaaS,SSO,Portal,Enterprise,Business Apps,Neha Thomas,Resolved,24,11.29,No,None,1,No,4,No,Service request,Access policy,EMEA
 HD-260710-02217,2026-07-10 16:57,51,2026-07-11 11:49,P4,Telephony,Softphone,Portal,Mid-Market,Service Desk L2,Sana Rahman,Closed,72,18.88,No,None,0,No,,No,Access request,Configuration,EMEA
@@ -849,7 +849,7 @@ HD-260728-02928,2026-07-28 08:51,144,2026-07-29 01:24,P3,Cloud & SaaS,Subscripti
 HD-260303-01525,2026-03-03 09:59,42,,P3,Telephony,Call quality,Chat,SMB,Service Desk L2,Meera Joseph,Open,24,,No,None,1,No,,No,Incident,User error,EMEA
 HD-260814-01779,2026-08-14 10:34,15,2026-08-14 12:54,P1,Email & Collaboration,Teams/Meetings,Portal,Enterprise,Network Ops,Deepak Nair,Closed,4,2.34,No,None,2,No,4,No,Access request,Vendor issue,EMEA
 HD-260721-04252,2026-07-21 08:40,9,2026-07-21 10:26,P1,Email & Collaboration,Distribution list,Portal,SMB,Service Desk L1,Priya Shah,Resolved,4,1.77,No,None,0,No,4,No,Access request,Software defect,APAC
-HD-260408-03627,2026-04-08 10:17,301,2026-04-09 05:31,P4,Cloud & SaaS,Subscription,Email,Mid-Market,Service Desk L2,Arjun Bhat,Resolved,72,19.24,No,None,0,No,3,No,Incident,Configuration,APAC
+HD-260408-03627,2026-04-08 10:17,301,2026-04-11 16:45,P4,Cloud & SaaS,Subscription,Email,Mid-Market,Service Desk L2,Arjun Bhat,Resolved,72,78.48,Yes,High queue volume,0,No,3,No,Incident,Configuration,APAC
 HD-260327-01726,2026-03-27 12:18,5,2026-03-27 16:51,P1,Software & Applications,Application error,Portal,Enterprise,Service Desk L2,Sana Rahman,Resolved,4,4.56,Yes,After-hours coverage,0,Yes,4,No,Access request,Unknown,APAC
 HD-260429-01656,2026-04-29 17:37,158,2026-04-30 04:06,P3,Access & Identity,MFA issue,Chat,Mid-Market,Identity & Access,Farah Latif,Resolved,24,10.49,No,None,0,No,3,No,Incident,User error,EMEA
 HD-260505-02477,2026-05-05 21:52,17,2026-05-06 04:01,P1,Access & Identity,Permission request,Chat,SMB,Service Desk L1,,Resolved,4,6.15,Yes,Escalation delay,0,No,3,No,Incident,Capacity,APAC
@@ -898,7 +898,7 @@ HD-260317-03328,2026-03-17 14:10,156,2026-03-18 12:37,P3,VPN & Remote Access,Spl
 HD-260613-02052,2026-06-13 11:36,17,2026-06-13 14:54,P2,Email & Collaboration,Distribution list,Portal,Mid-Market,Service Desk L1,Karan Verma,Resolved,8,3.31,No,None,0,Yes,5,No,How-to,User error,APAC
 HD-260527-02606,2026-05-27 15:22,217,,P4,Network,DNS/DHCP,Portal,Internal,Service Desk L2,Meera Joseph,Open,72,,No,None,1,No,,No,Incident,User error,APAC
 HD-260629-03124,2026-06-29 14:57,37,2026-06-29 18:39,P2,Email & Collaboration,Mailbox,Phone,SMB,Endpoint Ops,Neha Thomas,Closed,8,3.71,No,None,0,No,3,No,Incident,Hardware fault,APAC
-HD-260523-03321,2026-05-23 11:39,50,2026-05-24 13:37,P4,Endpoint Security,Security policy,Portal,SMB,Identity & Access,Deepak Nair,Resolved,72,25.98,No,None,0,No,4,No,Incident,User error,North America
+HD-260523-03321,2026-05-23 11:39,50,2026-05-27 02:46,P4,Endpoint Security,Security policy,Portal,SMB,Identity & Access,Deepak Nair,Resolved,72,87.12,Yes,High queue volume,0,No,4,No,Incident,User error,North America
 HD-260331-01562,2026-03-31 15:33,172,2026-04-01 04:30,P3,Account Provisioning,Role change,Chat,Internal,Service Desk L1,,Resolved,24,12.96,No,None,0,No,4,No,Service request,Access policy,North America
 HD-260411-02718,2026-04-11 11:55,25,2026-04-11 15:31,P2,Hardware,Keyboard/Mouse,Chat,Enterprise,Identity & Access,Adil Mir,Resolved,8,3.61,No,None,0,No,5,No,Service request,Access policy,EMEA
 HD-260508-03630,2026-05-08 11:57,99,2026-05-09 00:47,P3,Account Provisioning,Offboarding,Phone,Enterprise,Service Desk L1,Neha Thomas,Resolved,24,12.84,No,None,0,No,5,No,Incident,Vendor issue,North America
@@ -936,7 +936,7 @@ HD-260402-03552,2026-04-02 17:48,219,2026-04-04 05:25,P4,Telephony,Extension,Pho
 HD-260710-04321,2026-07-10 13:06,74,2026-07-11 23:37,P4,Email & Collaboration,Mailbox,Phone,Internal,Service Desk L1,Rohan Mehta,Resolved,72,34.53,No,None,0,No,,No,Service request,Configuration,EMEA
 HD-260420-02864,2026-04-20 20:01,16,,P2,Account Provisioning,New starter,Portal,SMB,Identity & Access,Farah Latif,Pending,8,,No,None,0,No,,No,How-to,Network condition,North America
 HD-260324-02154,2026-03-24 12:05,101,2026-03-27 08:18,P4,Software & Applications,License,Portal,Mid-Market,Business Apps,Neha Thomas,Resolved,72,68.22,No,None,0,No,3,No,Access request,User error,EMEA
-HD-260416-01604,2026-04-16 21:57,104,2026-04-17 21:06,P4,Account Provisioning,Role change,Chat,Enterprise,Identity & Access,Deepak Nair,Resolved,72,23.15,No,None,0,No,,No,Incident,Capacity,North America
+HD-260416-01604,2026-04-16 21:57,104,2026-04-20 07:18,P4,Account Provisioning,Role change,Chat,Enterprise,Identity & Access,Deepak Nair,Resolved,72,81.36,Yes,High queue volume,0,No,,No,Incident,Capacity,North America
 HD-260710-03141,2026-07-10 14:26,28,2026-07-11 08:30,P3,Printing & Peripherals,Peripheral setup,Chat,Enterprise,Service Desk L2,Vikram Patel,Closed,24,18.07,No,None,0,No,3,No,Service request,Configuration,APAC
 HD-260813-04391,2026-08-13 15:29,139,2026-08-14 12:27,P3,Cloud & SaaS,SSO,Chat,Enterprise,Service Desk L1,Imran Dar,Resolved,24,20.98,No,None,0,No,3,No,Access request,Software defect,APAC
 HD-260729-01770,2026-07-29 11:20,86,2026-07-30 11:51,P3,VPN & Remote Access,Remote desktop,Portal,Enterprise,Network Ops,Deepak Nair,Resolved,24,24.52,Yes,Vendor response,0,No,4,No,Incident,Capacity,North America
@@ -999,7 +999,7 @@ HD-260427-03942,2026-04-27 15:49,143,2026-04-30 10:28,P4,Email & Collaboration,C
 HD-260416-02880,2026-04-16 12:13,77,2026-04-16 17:34,P3,Account Provisioning,Role change,Email,Mid-Market,Identity & Access,Zoya Hussain,Resolved,24,5.35,No,None,0,No,5,No,Access request,User error,EMEA
 HD-260423-04131,2026-04-23 11:51,50,2026-04-24 02:31,P4,Performance,Disk space,Portal,Enterprise,Business Apps,Sana Rahman,Resolved,72,14.67,No,None,0,Yes,4,No,Incident,Hardware fault,EMEA
 HD-260604-01226,2026-06-04 18:10,99,,P3,Account Provisioning,Role change,Portal,Internal,Service Desk L1,Karan Verma,Open,24,,No,None,1,No,,No,How-to,Unknown,APAC
-HD-260308-02257,2026-03-08 12:41,159,2026-03-09 17:29,P4,Access & Identity,Permission request,Portal,Mid-Market,Identity & Access,Zoya Hussain,Resolved,72,28.81,No,None,0,No,,No,Incident,Configuration,EMEA
+HD-260308-02257,2026-03-08 12:41,159,2026-03-11 16:17,P4,Access & Identity,Permission request,Portal,Mid-Market,Identity & Access,Zoya Hussain,Resolved,72,75.6,Yes,High queue volume,0,No,,No,Incident,Configuration,EMEA
 HD-260831-03958,2026-08-31 08:30,174,2026-08-31 20:14,P3,Access & Identity,MFA issue,Portal,Mid-Market,Service Desk L1,Imran Dar,Closed,24,11.74,No,None,0,No,4,No,Incident,Configuration,EMEA
 HD-260304-01181,2026-03-04 15:15,139,2026-03-05 05:31,P3,Hardware,Laptop,Chat,Mid-Market,Service Desk L2,Vikram Patel,Closed,24,14.27,No,None,2,No,2,No,Incident,Configuration,EMEA
 HD-260312-01435,2026-03-12 15:51,75,2026-03-15 04:53,P4,Telephony,Call quality,Portal,Internal,Network Ops,Deepak Nair,Resolved,72,61.04,No,None,0,No,4,No,Incident,Configuration,EMEA
@@ -1054,7 +1054,7 @@ HD-260819-01430,2026-08-19 14:57,12,2026-08-19 23:06,P3,Email & Collaboration,Ma
 HD-260825-02887,2026-08-25 10:41,140,2026-08-25 20:17,P3,Telephony,Softphone,Email,SMB,Service Desk L2,Meera Joseph,Resolved,24,9.61,No,None,0,No,,No,Incident,Capacity,EMEA
 HD-260330-01050,2026-03-30 14:36,230,2026-04-01 01:46,P4,,Switch port,Chat,Enterprise,Service Desk L2,Meera Joseph,Resolved,72,35.17,No,None,0,No,3,No,Service request,Hardware fault,EMEA
 HD-260501-03674,2026-05-01 10:49,173,2026-05-02 02:07,P3,Performance,High CPU,Chat,SMB,Service Desk L1,Aisha Khan,Closed,24,15.31,No,None,0,Yes,4,Yes,Incident,Capacity,APAC
-HD-260424-02064,2026-04-24 12:47,271,2026-04-25 10:55,P4,Network,DNS/DHCP,Phone,Mid-Market,Network Ops,Deepak Nair,Closed,72,22.14,No,None,1,No,4,Yes,Service request,Software defect,North America
+HD-260424-02064,2026-04-24 12:47,271,2026-04-28 01:01,P4,Network,DNS/DHCP,Phone,Mid-Market,Network Ops,Deepak Nair,Closed,72,84.24,Yes,High queue volume,1,No,4,Yes,Service request,Software defect,North America
 HD-260502-04386,2026-05-02 10:42,57,2026-05-02 15:18,P2,VPN & Remote Access,Remote desktop,Phone,Mid-Market,Network Ops,Farah Latif,Resolved,8,4.61,No,None,1,No,5,No,Access request,User error,EMEA
 HD-260504-03648,2026-05-04 10:22,278,2026-05-05 20:08,P4,Cloud & SaaS,SSO,Chat,Enterprise,Business Apps,Neha Thomas,Closed,72,33.77,No,None,0,No,4,No,Performance issue,Unknown,APAC
 HD-260703-03245,2026-07-03 20:52,8,,P2,Hardware,Monitor,Email,Enterprise,Service Desk L1,Imran Dar,Open,8,,No,None,0,No,,No,Incident,User error,APAC
@@ -1107,7 +1107,7 @@ HD-260519-03589,2026-05-19 20:20,47,2026-05-20 06:21,P2,Email & Collaboration,Di
 HD-260719-02682,2026-07-19 11:21,31,2026-07-20 16:57,P4,Account Provisioning,Offboarding,Email,Mid-Market,Identity & Access,Zoya Hussain,Resolved,72,29.61,No,None,1,No,3,No,How-to,Configuration,APAC
 HD-260707-03440,2026-07-07 12:43,273,2026-07-08 10:13,P4,Network,DNS/DHCP,Portal,Internal,Network Ops,Zoya Hussain,Resolved,72,21.51,No,None,1,Yes,4,No,Incident,Capacity,EMEA
 HD-260811-03425,2026-08-11 09:02,193,2026-08-12 17:32,P4,Telephony,Softphone,Chat,Mid-Market,Service Desk L2,Arjun Bhat,Closed,72,32.5,No,None,0,No,4,No,Performance issue,Software defect,APAC
-HD-260403-03570,2026-04-03 13:28,315,2026-04-06 02:43,P4,Cloud & SaaS,Application outage,Phone,SMB,Business Apps,Priya Shah,Resolved,72,61.26,No,None,0,No,3,No,Access request,Hardware fault,APAC
+HD-260403-03570,2026-04-03 13:28,315,2026-04-06 19:56,P4,Cloud & SaaS,Application outage,Phone,SMB,Business Apps,Priya Shah,Resolved,72,78.48,Yes,High queue volume,0,No,3,No,Access request,Hardware fault,APAC
 HD-260609-03789,2026-06-09 11:40,54,2026-06-09 16:25,P2,Performance,Slow device,Phone,Enterprise,Business Apps,Sana Rahman,Resolved,8,4.76,No,None,0,No,4,Yes,Incident,Configuration,EMEA
 HD-260714-02647,2026-07-14 11:52,64,2026-07-14 14:16,P2,Email & Collaboration,Teams/Meetings,Portal,Internal,Service Desk L1,Imran Dar,Closed,8,2.4,No,None,1,No,5,No,Incident,Vendor issue,EMEA
 HD-260415-02588,2026-04-15 11:29,3,2026-04-15 12:50,P1,Printing & Peripherals,Print queue,Email,Internal,Identity & Access,Adil Mir,Closed,4,1.35,No,None,0,No,4,No,Incident,Capacity,North America
@@ -1171,7 +1171,7 @@ HD-260429-01817,2026-04-29 09:15,290,2026-04-30 15:03,P4,Performance,High memory
 HD-260828-04130,2026-08-28 10:46,114,2026-08-28 16:26,P3,Cloud & SaaS,Integration,Email,SMB,Business Apps,Neha Thomas,Resolved,24,5.68,No,None,1,No,5,No,Service request,Configuration,APAC
 HD-260414-03090,2026-04-14 12:19,51,2026-04-14 20:23,P3,Software & Applications,Version issue,Phone,Mid-Market,Service Desk L1,Neha Thomas,Resolved,24,8.07,No,None,0,Yes,4,No,Incident,Configuration,APAC
 HD-260803-03491,2026-08-03 11:18,8,2026-08-03 14:18,P1,Software & Applications,Version issue,Email,SMB,Service Desk L1,Neha Thomas,Resolved,4,3,No,None,0,No,4,No,Incident,Software defect,EMEA
-HD-260414-01937,2026-04-14 15:46,277,2026-04-15 12:13,P4,Account Provisioning,Offboarding,Portal,Mid-Market,Identity & Access,Farah Latif,Resolved,72,20.45,No,None,0,No,5,No,Incident,Software defect,North America
+HD-260414-01937,2026-04-14 15:46,277,2026-04-18 06:53,P4,Account Provisioning,Offboarding,Portal,Mid-Market,Identity & Access,Farah Latif,Resolved,72,87.12,Yes,High queue volume,0,No,5,No,Incident,Software defect,North America
 HD-260629-01758,2026-06-29 12:43,56,2026-06-30 07:30,P3,Printing & Peripherals,Printer offline,Chat,Mid-Market,Service Desk L1,Karan Verma,Resolved,24,18.79,No,None,1,No,2,No,Incident,Capacity,North America
 HD-260703-02917,2026-07-03 14:57,133,2026-07-04 04:16,P3,,Calendar,Portal,Mid-Market,Service Desk L1,Rohan Mehta,Resolved,24,13.32,No,None,0,No,4,No,How-to,User error,APAC
 HD-260630-02816,2026-06-30 15:09,40,2026-07-01 00:16,P3,Access & Identity,Account locked,Email,SMB,Service Desk L1,Aisha Khan,Resolved,24,9.12,No,None,0,No,5,No,Service request,Configuration,EMEA
@@ -1220,7 +1220,7 @@ HD-260309-04047,2026-03-09 12:32,158,,P3,Hardware,Monitor,Chat,SMB,Service Desk 
 HD-260721-03625,2026-07-21 14:51,14,2026-07-21 23:58,P2,Hardware,Keyboard/Mouse,Portal,SMB,Service Desk L2,Sana Rahman,Resolved,8,9.12,Yes,High queue volume,1,Yes,4,No,Performance issue,User error,North America
 HD-260402-03496,2026-04-02 17:41,122,2026-04-03 16:46,P3,Access & Identity,MFA issue,Portal,SMB,Identity & Access,Zoya Hussain,Closed,24,23.09,No,None,0,No,4,No,Performance issue,User error,North America
 HD-260615-02535,2026-06-15 11:51,167,2026-06-15 17:20,P3,Software & Applications,Version issue,Email,Mid-Market,Service Desk L2,Vikram Patel,Resolved,24,5.49,No,None,1,No,5,No,Access request,Access policy,APAC
-HD-260710-01996,2026-07-10 16:16,143,2026-07-11 16:45,P4,Telephony,Headset,Portal,Enterprise,Service Desk L2,Meera Joseph,Closed,72,24.49,No,None,1,No,4,No,Access request,Configuration,APAC
+HD-260710-01996,2026-07-10 16:16,143,2026-07-14 01:37,P4,Telephony,Headset,Portal,Enterprise,Service Desk L2,Meera Joseph,Closed,72,81.36,Yes,High queue volume,1,No,4,No,Access request,Configuration,APAC
 HD-260824-01823,2026-08-24 10:11,142,2026-08-25 05:36,P3,Network,Wi-Fi,Email,Enterprise,Network Ops,Zoya Hussain,Closed,24,19.43,No,None,0,Yes,4,No,Service request,Software defect,APAC
 HD-260410-01839,2026-04-10 10:45,55,2026-04-10 13:03,P2,Access & Identity,Account locked,Chat,SMB,Identity & Access,Nadia Ali,Closed,8,2.31,No,None,0,No,4,No,Access request,Hardware fault,North America
 HD-260520-02499,2026-05-20 11:13,20,2026-05-20 13:35,P2,Telephony,Call quality,Portal,Mid-Market,Service Desk L2,Meera Joseph,Resolved,8,2.37,No,None,0,No,4,No,Incident,Unknown,North America
@@ -1256,7 +1256,7 @@ HD-260609-01943,2026-06-09 14:10,32,2026-06-09 21:28,P3,Telephony,Headset,Email,
 HD-260520-01820,2026-05-20 21:33,26,2026-05-21 03:58,P2,Hardware,Keyboard/Mouse,Email,SMB,Endpoint Ops,Vikram Patel,Closed,8,6.42,No,None,2,Yes,4,No,Incident,Software defect,APAC
 HD-260423-03654,2026-04-23 16:07,97,2026-04-24 06:27,P4,Software & Applications,License,Chat,Internal,Service Desk L2,Vikram Patel,Resolved,72,14.34,No,None,1,No,4,No,Service request,Vendor issue,North America
 HD-260311-04009,2026-03-11 14:53,226,2026-03-12 08:31,P4,,Wi-Fi,Email,SMB,Network Ops,Farah Latif,Closed,72,17.64,No,None,0,No,4,No,Access request,Hardware fault,APAC
-HD-260304-01129,2026-03-04 15:21,175,2026-03-06 15:48,P4,Printing & Peripherals,Print queue,Phone,Enterprise,Business Apps,Sana Rahman,Resolved,72,48.46,No,None,1,No,3,Yes,Incident,Configuration,APAC
+HD-260304-01129,2026-03-04 15:21,175,2026-03-07 18:57,P4,Printing & Peripherals,Print queue,Phone,Enterprise,Business Apps,Sana Rahman,Resolved,72,75.6,Yes,High queue volume,1,No,3,Yes,Incident,Configuration,APAC
 HD-260616-01912,2026-06-16 11:26,234,2026-06-17 09:18,P4,Software & Applications,Installation,Email,Mid-Market,Service Desk L2,Meera Joseph,Resolved,72,21.87,No,None,0,No,3,No,Incident,Hardware fault,APAC
 HD-260814-03033,2026-08-14 13:28,144,2026-08-14 21:20,P3,Hardware,Docking station,Portal,Enterprise,Service Desk L1,Aisha Khan,Closed,24,7.88,No,None,0,Yes,,No,Service request,User error,APAC
 HD-260722-01016,2026-07-22 14:16,33,,P2,Telephony,Softphone,Portal,SMB,Network Ops,Deepak Nair,Open,8,,No,None,0,No,,No,Incident,Access policy,EMEA
@@ -1292,7 +1292,7 @@ HD-260319-01495,2026-03-19 10:04,266,2026-03-20 00:55,P4,Email & Collaboration,C
 HD-260520-01593,2026-05-20 11:30,40,2026-05-21 09:03,P3,Access & Identity,MFA issue,Chat,Mid-Market,Identity & Access,Nadia Ali,Resolved,24,21.55,No,None,1,No,4,No,Incident,Network condition,North America
 HD-260406-02075,2026-04-06 12:27,13,2026-04-06 14:49,P1,Printing & Peripherals,Scanner,Portal,SMB,Endpoint Ops,Vikram Patel,Resolved,4,2.38,No,None,0,No,3,No,Access request,Software defect,North America
 HD-260519-04444,2026-05-19 14:18,48,2026-05-21 03:43,P4,Software & Applications,Application error,Phone,Enterprise,Business Apps,Priya Shah,Resolved,72,37.43,No,None,0,No,4,No,How-to,Network condition,North America
-HD-260810-02319,2026-08-10 14:35,176,2026-08-12 20:15,P4,Endpoint Security,EDR alert,Phone,Enterprise,Endpoint Ops,Neha Thomas,Resolved,72,53.67,No,None,0,No,4,Yes,Incident,User error,EMEA
+HD-260810-02319,2026-08-10 14:35,176,2026-08-14 02:49,P4,Endpoint Security,EDR alert,Phone,Enterprise,Endpoint Ops,Neha Thomas,Resolved,72,84.24,Yes,High queue volume,0,No,4,Yes,Incident,User error,EMEA
 HD-260710-03260,2026-07-10 12:28,20,,P2,Email & Collaboration,Calendar,Portal,Mid-Market,Service Desk L1,Aisha Khan,Pending,8,,No,None,1,No,,No,Service request,Capacity,North America
 HD-260515-01024,2026-05-15 09:19,39,2026-05-15 17:16,P3,Hardware,Docking station,Phone,SMB,Identity & Access,Zoya Hussain,Closed,24,7.95,No,None,0,No,4,No,Incident,Configuration,North America
 HD-260423-01610,2026-04-23 10:13,15,2026-04-23 14:00,P1,Endpoint Security,EDR alert,Chat,Enterprise,Service Desk L1,Priya Shah,Closed,4,3.79,No,None,0,No,3,No,Service request,Software defect,EMEA
@@ -1333,7 +1333,7 @@ HD-260407-04409,2026-04-07 16:37,185,2026-04-08 20:11,P4,Endpoint Security,EDR a
 HD-260515-02084,2026-05-15 09:02,121,2026-05-16 05:48,P3,Telephony,Call quality,Portal,Mid-Market,Service Desk L2,Meera Joseph,Resolved,24,20.78,No,None,1,No,3,No,How-to,Network condition,EMEA
 HD-260722-01545,2026-07-22 14:42,56,,P4,Access & Identity,Account locked,Portal,SMB,Service Desk L1,Rohan Mehta,Pending,72,,No,None,1,No,,No,Access request,Access policy,North America
 HD-260525-03718,2026-05-25 11:50,156,2026-05-26 08:33,P4,Access & Identity,MFA issue,Portal,Mid-Market,Endpoint Ops,Neha Thomas,Resolved,72,20.72,No,None,1,No,4,No,Service request,Network condition,EMEA
-HD-260609-04253,2026-06-09 10:25,166,2026-06-12 04:43,P4,Telephony,Call quality,Portal,Enterprise,Service Desk L2,Sana Rahman,Resolved,72,66.31,No,None,0,No,,No,Service request,Software defect,North America
+HD-260609-04253,2026-06-09 10:25,166,2026-06-12 16:53,P4,Telephony,Call quality,Portal,Enterprise,Service Desk L2,Sana Rahman,Resolved,72,78.48,Yes,High queue volume,0,No,,No,Service request,Software defect,North America
 HD-260427-03304,2026-04-27 08:05,112,2026-04-27 22:45,P4,Endpoint Security,Malware check,Portal,Mid-Market,Identity & Access,Farah Latif,Resolved,72,14.67,No,None,1,Yes,,No,Incident,Configuration,EMEA
 HD-260601-01196,2026-06-01 15:02,216,,P4,Email & Collaboration,Mailbox,Phone,Internal,Service Desk L2,Vikram Patel,Pending,72,,No,None,1,No,,No,Performance issue,Hardware fault,EMEA
 HD-260310-01981,2026-03-10 12:21,108,2026-03-11 05:31,P3,Performance,Slow device,Email,SMB,Service Desk L1,Rohan Mehta,Closed,24,17.18,No,None,1,No,3,Yes,How-to,Unknown,EMEA
@@ -1393,7 +1393,7 @@ HD-260617-01609,2026-06-17 16:08,318,2026-06-18 07:59,P4,Printing & Peripherals,
 HD-260514-01514,2026-05-14 17:29,55,2026-05-16 23:22,P4,Network,Switch port,Email,SMB,Network Ops,Arjun Bhat,Closed,72,53.89,No,None,0,No,,No,Incident,Hardware fault,North America
 HD-260413-01797,2026-04-13 15:15,307,2026-04-14 23:01,P4,Cloud & SaaS,Application outage,Email,Internal,Business Apps,Priya Shah,Resolved,72,31.78,No,None,1,No,3,Yes,Service request,Software defect,North America
 HD-260611-02019,2026-06-11 11:25,254,2026-06-13 04:52,P4,Account Provisioning,Offboarding,Phone,Enterprise,Endpoint Ops,Sana Rahman,Resolved,72,41.46,No,None,1,No,4,No,Incident,Capacity,EMEA
-HD-260611-03495,2026-06-11 14:55,95,2026-06-13 00:10,P4,Printing & Peripherals,Print queue,Email,Enterprise,Business Apps,Neha Thomas,Closed,72,33.26,No,None,0,No,3,No,Incident,Capacity,North America
+HD-260611-03495,2026-06-11 14:55,95,2026-06-15 06:02,P4,Printing & Peripherals,Print queue,Email,Enterprise,Business Apps,Neha Thomas,Closed,72,87.12,Yes,High queue volume,0,No,3,No,Incident,Capacity,North America
 HD-260410-03001,2026-04-10 12:53,151,2026-04-11 04:54,P3,Endpoint Security,Malware check,Portal,SMB,Endpoint Ops,Neha Thomas,Resolved,24,16.03,No,None,0,No,3,No,Service request,Unknown,North America
 HD-260707-03912,2026-07-07 13:38,157,2026-07-08 03:14,P3,Printing & Peripherals,Scanner,Chat,Internal,Service Desk L1,Imran Dar,Closed,24,13.61,No,None,0,No,4,No,Incident,Software defect,North America
 HD-260623-01381,2026-06-23 17:54,31,2026-06-24 16:30,P3,Account Provisioning,New starter,Email,SMB,Identity & Access,Adil Mir,Resolved,24,22.61,No,None,0,No,3,No,Incident,User error,North America
@@ -1452,7 +1452,7 @@ HD-260605-03465,2026-06-05 11:48,112,2026-06-06 11:59,P3,Network,Wi-Fi,Email,Mid
 HD-260402-01655,2026-04-02 18:42,82,2026-04-03 11:25,P3,Account Provisioning,Offboarding,Email,Mid-Market,Identity & Access,Farah Latif,Resolved,24,16.73,No,None,0,No,3,No,Service request,Network condition,EMEA
 HD-260701-03340,2026-07-01 13:51,146,2026-07-01 20:02,P3,Cloud & SaaS,Integration,Phone,SMB,Business Apps,Sana Rahman,Resolved,24,6.19,No,None,2,No,3,No,Performance issue,Hardware fault,North America
 HD-260414-03931,2026-04-14 14:55,25,2026-04-14 22:04,P3,Network,LAN connectivity,Phone,Enterprise,Network Ops,Arjun Bhat,Resolved,24,7.15,No,None,1,No,5,Yes,Incident,User error,North America
-HD-260611-04459,2026-06-11 09:45,45,2026-06-13 19:50,P4,Network,LAN connectivity,Phone,Mid-Market,Network Ops,Deepak Nair,Resolved,72,58.09,No,None,0,No,3,No,Service request,Unknown,North America
+HD-260611-04459,2026-06-11 09:45,45,2026-06-14 19:06,P4,Network,LAN connectivity,Phone,Mid-Market,Network Ops,Deepak Nair,Resolved,72,81.36,Yes,High queue volume,0,No,3,No,Service request,Unknown,North America
 HD-260324-04353,2026-03-24 13:38,180,2026-03-25 16:36,P4,Account Provisioning,Offboarding,Phone,Mid-Market,Identity & Access,Adil Mir,Resolved,72,26.98,No,None,0,No,4,No,Incident,Access policy,APAC
 HD-260515-04327,2026-05-15 16:36,243,2026-05-16 09:48,P4,Account Provisioning,New starter,Portal,Mid-Market,Identity & Access,Nadia Ali,Closed,72,17.21,No,None,0,No,5,No,Service request,Hardware fault,North America
 HD-260513-01778,2026-05-13 10:08,214,2026-05-14 18:36,P4,Printing & Peripherals,Peripheral setup,Email,Mid-Market,Business Apps,Sana Rahman,Closed,72,32.47,No,None,0,No,,No,Incident,Access policy,EMEA
@@ -1478,7 +1478,7 @@ HD-260626-01533,2026-06-26 10:22,268,2026-06-28 10:09,P4,Performance,Disk space,
 HD-260702-04243,2026-07-02 16:30,109,2026-07-03 12:55,P3,Email & Collaboration,Calendar,Chat,Enterprise,Identity & Access,Deepak Nair,Resolved,24,20.43,No,None,0,No,3,No,Service request,Unknown,APAC
 HD-260709-02008,2026-07-09 10:37,122,2026-07-09 16:58,P3,Network,LAN connectivity,Email,Mid-Market,Network Ops,Arjun Bhat,Resolved,24,6.35,No,None,1,No,4,No,Service request,Unknown,EMEA
 HD-260417-03268,2026-04-17 19:55,35,2026-04-18 22:13,P4,VPN & Remote Access,Remote desktop,Email,Mid-Market,Service Desk L2,Meera Joseph,Resolved,72,26.31,No,None,0,No,4,No,Incident,Configuration,EMEA
-HD-260601-01065,2026-06-01 14:19,131,2026-06-02 21:46,P4,Account Provisioning,New starter,Portal,Enterprise,Identity & Access,Zoya Hussain,Resolved,72,31.46,No,None,1,No,4,No,Incident,Configuration,North America
+HD-260601-01065,2026-06-01 14:19,131,2026-06-04 17:55,P4,Account Provisioning,New starter,Portal,Enterprise,Identity & Access,Zoya Hussain,Resolved,72,75.6,Yes,High queue volume,1,No,4,No,Incident,Configuration,North America
 HD-260326-01747,2026-03-26 19:48,22,2026-03-27 05:47,P3,Email & Collaboration,Teams/Meetings,Portal,SMB,Identity & Access,Deepak Nair,Closed,24,9.99,No,None,0,No,3,No,Service request,Configuration,North America
 HD-260506-03258,2026-05-06 13:38,51,2026-05-07 05:59,P3,Email & Collaboration,Distribution list,Email,Mid-Market,Network Ops,Arjun Bhat,Resolved,24,16.36,No,None,0,No,2,No,Incident,Unknown,North America
 HD-260710-03079,2026-07-10 16:13,77,2026-07-11 00:51,P3,Access & Identity,MFA issue,Phone,Enterprise,Identity & Access,Nadia Ali,Resolved,24,8.64,No,None,0,No,4,No,Incident,Network condition,EMEA
@@ -1518,7 +1518,7 @@ HD-260819-03191,2026-08-19 10:19,89,2026-08-20 06:36,P3,Endpoint Security,Device
 HD-260410-02721,2026-04-10 10:28,37,2026-04-11 08:49,P3,Network,Wi-Fi,Email,SMB,Service Desk L2,Meera Joseph,Closed,24,22.36,No,None,0,No,4,No,How-to,Vendor issue,North America
 HD-260610-03123,2026-06-10 14:34,109,2026-06-11 02:04,P3,Endpoint Security,Device compliance,Portal,Mid-Market,Service Desk L1,Imran Dar,Resolved,24,11.5,No,None,2,No,3,No,Access request,Configuration,North America
 HD-260708-02635,2026-07-08 16:08,324,2026-07-09 14:48,P4,Endpoint Security,Malware check,Phone,Enterprise,Endpoint Ops,Sana Rahman,Closed,72,22.68,No,None,1,No,3,No,Incident,Software defect,APAC
-HD-260811-02037,2026-08-11 13:34,143,2026-08-13 08:58,P4,Printing & Peripherals,Peripheral setup,Chat,Mid-Market,Network Ops,Farah Latif,Resolved,72,43.41,No,None,0,No,2,No,Access request,Network condition,EMEA
+HD-260811-02037,2026-08-11 13:34,143,2026-08-15 01:48,P4,Printing & Peripherals,Peripheral setup,Chat,Mid-Market,Network Ops,Farah Latif,Resolved,72,84.24,Yes,High queue volume,0,No,2,No,Access request,Network condition,EMEA
 HD-260310-03407,2026-03-10 14:43,143,2026-03-10 20:47,P3,Network,Wi-Fi,Portal,Internal,Network Ops,Arjun Bhat,Resolved,24,6.07,No,None,0,No,5,No,Incident,Vendor issue,EMEA
 HD-260623-02252,2026-06-23 13:32,126,2026-06-23 21:25,P3,Network,LAN connectivity,Phone,SMB,Network Ops,Farah Latif,Closed,24,7.89,No,None,0,No,4,No,Service request,Unknown,EMEA
 HD-260610-02753,2026-06-10 13:55,130,2026-06-10 20:14,P3,Hardware,Docking station,Portal,Internal,Network Ops,Farah Latif,Resolved,24,6.32,No,None,0,No,4,No,Access request,User error,North America
@@ -1574,7 +1574,7 @@ HD-260708-02495,2026-07-08 12:36,158,,P3,Telephony,Extension,Chat,Enterprise,Net
 HD-260812-02796,2026-08-12 11:45,149,2026-08-13 05:07,P3,Email & Collaboration,Calendar,Portal,SMB,Service Desk L1,Priya Shah,Resolved,24,17.38,No,None,0,No,3,No,Incident,User error,North America
 HD-260514-04125,2026-05-14 11:13,22,2026-05-14 14:06,P1,Telephony,Extension,Portal,Internal,Service Desk L2,Sana Rahman,Closed,4,2.89,No,None,0,Yes,,No,Incident,Network condition,EMEA
 HD-260722-02158,2026-07-22 11:13,20,2026-07-24 16:52,P4,VPN & Remote Access,Split tunnel,Phone,SMB,Service Desk L2,Arjun Bhat,Closed,72,53.66,No,None,2,No,3,No,Incident,Configuration,North America
-HD-260716-02955,2026-07-16 10:52,241,2026-07-17 09:14,P4,Performance,Slow device,Portal,SMB,Network Ops,Deepak Nair,Resolved,72,22.37,No,None,1,No,4,No,Performance issue,Configuration,APAC
+HD-260716-02955,2026-07-16 10:52,241,2026-07-19 17:20,P4,Performance,Slow device,Portal,SMB,Network Ops,Deepak Nair,Resolved,72,78.48,Yes,High queue volume,1,No,4,No,Performance issue,Configuration,APAC
 HD-260717-01588,2026-07-17 11:30,289,,P4,Performance,Slow device,Chat,Mid-Market,Identity & Access,Nadia Ali,Pending,72,,No,None,0,No,,No,Performance issue,Configuration,North America
 HD-260424-01664,2026-04-24 13:27,146,2026-04-26 16:32,P4,Performance,High CPU,Chat,Enterprise,Service Desk L1,Aisha Khan,Resolved,72,51.09,No,None,1,No,3,No,How-to,Hardware fault,North America
 HD-260607-04483,2026-06-07 10:30,83,2026-06-08 11:34,P3,Network,Wi-Fi,Phone,Enterprise,Service Desk L2,Vikram Patel,Resolved,24,25.08,Yes,Escalation delay,0,No,2,No,Incident,Hardware fault,APAC
@@ -1604,7 +1604,7 @@ HD-260416-01956,2026-04-16 09:36,34,2026-04-16 12:37,P2,Performance,Disk space,P
 HD-260424-04154,2026-04-24 15:06,312,2026-04-25 09:12,P4,Software & Applications,Installation,Phone,Mid-Market,Business Apps,Imran Dar,Closed,72,18.1,No,None,0,No,4,No,Access request,Hardware fault,North America
 HD-260811-03480,2026-08-11 14:09,334,2026-08-12 11:52,P4,Software & Applications,Application error,Chat,Internal,Service Desk L2,Sana Rahman,Resolved,72,21.72,No,None,1,No,4,No,Incident,Software defect,EMEA
 HD-260304-02729,2026-03-04 21:01,172,2026-03-05 21:31,P4,Software & Applications,Application error,Chat,Mid-Market,Service Desk L1,Priya Shah,Closed,72,24.5,No,None,1,No,4,No,Service request,Configuration,APAC
-HD-260805-03956,2026-08-05 15:55,21,2026-08-06 16:02,P4,Telephony,Extension,Email,Enterprise,Service Desk L2,Arjun Bhat,Resolved,72,24.12,No,None,0,No,4,Yes,Service request,Access policy,EMEA
+HD-260805-03956,2026-08-05 15:55,21,2026-08-09 07:02,P4,Telephony,Extension,Email,Enterprise,Service Desk L2,Arjun Bhat,Resolved,72,87.12,Yes,High queue volume,0,No,4,Yes,Service request,Access policy,EMEA
 HD-260527-03038,2026-05-27 18:10,24,2026-05-28 03:45,P2,Performance,High memory,Chat,SMB,Service Desk L2,Sana Rahman,Resolved,8,9.59,Yes,Complex investigation,0,Yes,4,No,Incident,Hardware fault,North America
 HD-260703-01858,2026-07-03 11:56,51,2026-07-03 20:21,P2,Account Provisioning,Access package,Portal,Mid-Market,Identity & Access,Zoya Hussain,Resolved,8,8.43,Yes,Vendor response,0,No,4,Yes,Incident,Software defect,APAC
 HD-260611-03361,2026-06-11 14:31,143,,P3,Software & Applications,Installation,Chat,Internal,Business Apps,Karan Verma,Pending,24,,No,None,1,No,,No,Service request,User error,EMEA
@@ -1652,7 +1652,7 @@ HD-260618-04227,2026-06-18 12:00,42,2026-06-18 16:16,P2,Printing & Peripherals,P
 HD-260609-03479,2026-06-09 11:10,53,,P3,Network,Switch port,Chat,SMB,Network Ops,Zoya Hussain,Pending,24,,No,None,0,Yes,,No,Service request,Vendor issue,North America
 HD-260703-02444,2026-07-03 11:59,117,2026-07-04 00:48,P3,Printing & Peripherals,Scanner,Portal,Enterprise,Endpoint Ops,Vikram Patel,Resolved,24,12.82,No,None,1,No,4,No,Incident,User error,North America
 HD-260722-03460,2026-07-22 14:43,151,2026-07-23 05:59,P3,Cloud & SaaS,SSO,Chat,Enterprise,Service Desk L2,Arjun Bhat,Closed,24,15.28,No,None,0,No,3,No,Incident,Capacity,APAC
-HD-260601-04326,2026-06-01 19:29,249,2026-06-03 02:23,P4,Hardware,Keyboard/Mouse,Portal,Enterprise,Service Desk L1,Neha Thomas,Closed,72,30.9,No,None,1,No,4,No,Incident,Configuration,EMEA
+HD-260601-04326,2026-06-01 19:29,249,2026-06-05 04:50,P4,Hardware,Keyboard/Mouse,Portal,Enterprise,Service Desk L1,Neha Thomas,Closed,72,81.36,Yes,High queue volume,1,No,4,No,Incident,Configuration,EMEA
 HD-260514-02973,2026-05-14 11:41,86,2026-05-15 09:57,P3,Cloud & SaaS,SSO,Chat,Mid-Market,Business Apps,Sana Rahman,Resolved,24,22.28,No,None,1,No,4,No,Service request,User error,EMEA
 HD-260327-01844,2026-03-27 12:29,111,2026-03-27 21:34,P3,Hardware,Keyboard/Mouse,Email,SMB,Identity & Access,,Closed,24,9.09,No,None,0,No,4,No,Incident,Software defect,APAC
 HD-260715-03159,2026-07-15 17:09,46,2026-07-16 01:01,P2,Cloud & SaaS,Application outage,Chat,Mid-Market,Business Apps,Sana Rahman,Resolved,8,7.87,No,None,0,No,3,No,Service request,Network condition,APAC
@@ -1700,7 +1700,7 @@ HD-260409-04105,2026-04-09 15:54,13,2026-04-10 01:40,P2,Account Provisioning,Acc
 HD-260513-04059,2026-05-13 16:05,160,2026-05-14 02:37,P3,Cloud & SaaS,Application outage,Chat,Mid-Market,Service Desk L2,Sana Rahman,Resolved,24,10.54,No,None,0,No,4,No,Service request,User error,APAC
 HD-260401-01463,2026-04-01 11:51,159,2026-04-03 09:01,P4,VPN & Remote Access,Remote desktop,Phone,Mid-Market,Network Ops,Arjun Bhat,Closed,72,45.18,No,None,0,No,3,No,Access request,Configuration,APAC
 HD-260408-01371,2026-04-08 17:10,59,2026-04-08 20:14,P2,Network,Switch port,Email,Internal,Network Ops,Deepak Nair,Resolved,8,3.07,No,None,0,No,4,No,Access request,User error,APAC
-HD-260416-01851,2026-04-16 15:45,189,2026-04-17 06:33,P4,Hardware,Monitor,Phone,Enterprise,Business Apps,Imran Dar,Closed,72,14.8,No,None,0,No,,No,Incident,Network condition,EMEA
+HD-260416-01851,2026-04-16 15:45,189,2026-04-19 19:21,P4,Hardware,Monitor,Phone,Enterprise,Business Apps,Imran Dar,Closed,72,75.6,Yes,High queue volume,0,No,,No,Incident,Network condition,EMEA
 HD-260512-04104,2026-05-12 12:17,169,2026-05-13 11:52,P3,Email & Collaboration,Mailbox,Email,Mid-Market,Service Desk L1,Aisha Khan,Closed,24,23.59,No,None,0,No,2,No,Incident,Hardware fault,EMEA
 HD-260714-03783,2026-07-14 12:17,125,2026-07-15 13:34,P3,Network,Wi-Fi,Chat,SMB,Network Ops,Arjun Bhat,Resolved,24,25.29,Yes,High queue volume,1,No,4,No,How-to,Capacity,EMEA
 HD-260820-02503,2026-08-20 20:10,312,2026-08-23 10:45,P4,Hardware,Docking station,Chat,Mid-Market,Endpoint Ops,Sana Rahman,Resolved,72,62.59,No,None,0,No,2,No,Performance issue,Access policy,EMEA
@@ -1745,7 +1745,7 @@ HD-260415-02200,2026-04-15 16:28,92,2026-04-16 10:26,P3,Network,Switch port,Chat
 HD-260505-01599,2026-05-05 13:43,12,2026-05-05 16:32,P1,Email & Collaboration,Teams/Meetings,Portal,Internal,Endpoint Ops,Karan Verma,Closed,4,2.83,No,None,0,No,3,No,Performance issue,Network condition,APAC
 HD-260306-04022,2026-03-06 16:47,77,2026-03-08 04:56,P4,Software & Applications,Installation,Email,Internal,Business Apps,Karan Verma,Closed,72,36.15,No,None,1,No,3,No,Access request,Capacity,North America
 HD-260525-01767,2026-05-25 11:01,131,2026-05-26 04:23,P3,Performance,Slow device,Chat,Enterprise,Business Apps,Priya Shah,Resolved,24,17.37,No,None,0,No,4,Yes,Service request,User error,North America
-HD-260309-01742,2026-03-09 14:21,264,2026-03-10 11:49,P4,Email & Collaboration,Mailbox,Chat,Mid-Market,Service Desk L1,Neha Thomas,Resolved,72,21.48,No,None,0,No,,No,Access request,Access policy,North America
+HD-260309-01742,2026-03-09 14:21,264,2026-03-13 02:35,P4,Email & Collaboration,Mailbox,Chat,Mid-Market,Service Desk L1,Neha Thomas,Resolved,72,84.24,Yes,High queue volume,0,No,,No,Access request,Access policy,North America
 HD-260812-04123,2026-08-12 13:15,148,2026-08-15 10:00,P4,Email & Collaboration,Mailbox,Portal,Enterprise,Service Desk L1,Aisha Khan,Closed,72,68.75,No,None,0,No,,No,Incident,Network condition,APAC
 HD-260518-03390,2026-05-18 12:40,249,2026-05-19 03:08,P4,Network,Switch port,Chat,Enterprise,Network Ops,Arjun Bhat,Resolved,72,14.48,No,None,1,No,3,No,Incident,Capacity,APAC
 HD-260721-01146,2026-07-21 17:29,50,2026-07-21 20:05,P2,Hardware,Laptop,Chat,SMB,Service Desk L1,Neha Thomas,Resolved,8,2.61,No,None,0,No,5,No,How-to,User error,North America
@@ -1787,7 +1787,7 @@ HD-260305-01764,2026-03-05 11:44,53,2026-03-06 05:24,P3,Cloud & SaaS,Application
 HD-260727-04157,2026-07-27 18:56,66,,P4,Cloud & SaaS,SSO,Email,Mid-Market,Business Apps,Imran Dar,Pending,72,,No,None,1,No,,No,Incident,User error,EMEA
 HD-260417-01884,2026-04-17 13:38,133,2026-04-17 19:45,P3,Cloud & SaaS,Integration,Portal,Mid-Market,Business Apps,Priya Shah,Resolved,24,6.12,No,None,1,Yes,5,No,Incident,Hardware fault,North America
 HD-260329-02385,2026-03-29 16:19,160,2026-03-31 06:11,P4,Access & Identity,Account locked,Portal,Enterprise,Service Desk L1,Aisha Khan,Resolved,72,37.87,No,None,1,No,4,No,Service request,Configuration,EMEA
-HD-260528-03154,2026-05-28 11:35,229,2026-05-30 13:51,P4,Email & Collaboration,Mailbox,Chat,Internal,Service Desk L2,Arjun Bhat,Resolved,72,50.28,No,None,1,No,4,No,Service request,User error,EMEA
+HD-260528-03154,2026-05-28 11:35,229,2026-05-31 18:03,P4,Email & Collaboration,Mailbox,Chat,Internal,Service Desk L2,Arjun Bhat,Resolved,72,78.48,Yes,High queue volume,1,No,4,No,Service request,User error,EMEA
 HD-260805-02406,2026-08-05 08:40,149,2026-08-06 14:37,P4,Access & Identity,Password reset,Portal,Enterprise,Identity & Access,Farah Latif,Closed,72,29.96,No,None,0,No,5,No,Incident,Vendor issue,EMEA
 HD-260812-02178,2026-08-12 13:11,116,2026-08-13 00:15,P3,Performance,Slow device,Email,Internal,Network Ops,Deepak Nair,Resolved,24,11.08,No,None,0,No,5,Yes,Incident,Hardware fault,North America
 HD-260514-01963,2026-05-14 16:45,281,2026-05-15 08:27,P4,Software & Applications,Application error,Email,Mid-Market,Service Desk L2,Vikram Patel,Resolved,72,15.71,No,None,0,No,,No,Incident,User error,APAC
@@ -1835,7 +1835,7 @@ HD-260318-04522,2026-03-18 11:09,52,,P3,Telephony,Headset,Portal,SMB,Service Des
 HD-260317-04420,2026-03-17 16:10,38,,P2,Software & Applications,Version issue,Portal,Enterprise,Business Apps,Priya Shah,Open,8,,No,None,0,No,,No,Service request,Vendor issue,APAC
 HD-260615-01580,2026-06-15 10:31,49,2026-06-15 13:44,P2,VPN & Remote Access,VPN disconnect,Portal,Mid-Market,Network Ops,Arjun Bhat,Closed,8,3.23,No,None,0,No,4,No,Incident,Configuration,APAC
 HD-260625-02778,2026-06-25 10:04,142,2026-06-25 16:47,P3,Telephony,Extension,Phone,Enterprise,Service Desk L2,Meera Joseph,Closed,24,6.72,No,None,0,No,3,No,Service request,Network condition,North America
-HD-260623-04190,2026-06-23 11:02,113,2026-06-24 08:16,P4,Telephony,Call quality,Email,Enterprise,Service Desk L2,Meera Joseph,Resolved,72,21.24,No,None,0,No,4,No,Service request,Software defect,North America
+HD-260623-04190,2026-06-23 11:02,113,2026-06-27 02:09,P4,Telephony,Call quality,Email,Enterprise,Service Desk L2,Meera Joseph,Resolved,72,87.12,Yes,High queue volume,0,No,4,No,Service request,Software defect,North America
 HD-260826-03188,2026-08-26 13:33,174,2026-08-28 00:54,P4,Performance,Disk space,Chat,Mid-Market,Service Desk L1,Neha Thomas,Resolved,72,35.36,No,None,1,No,4,No,How-to,Software defect,EMEA
 HD-260609-03251,2026-06-09 11:34,58,2026-06-09 20:23,P3,Printing & Peripherals,Peripheral setup,Portal,SMB,Service Desk L1,Neha Thomas,Resolved,24,8.82,No,None,0,No,5,No,Incident,Unknown,North America
 HD-260417-01869,2026-04-17 09:19,27,2026-04-17 15:46,P3,Endpoint Security,EDR alert,Portal,SMB,Identity & Access,Farah Latif,Resolved,24,6.46,No,None,0,No,4,No,Incident,User error,EMEA
@@ -1881,7 +1881,7 @@ HD-260416-01631,2026-04-16 11:58,146,,P3,Telephony,Call quality,Phone,SMB,Networ
 HD-260827-03671,2026-08-27 11:28,63,2026-08-27 16:47,P2,Telephony,Call quality,Portal,Internal,Service Desk L2,Vikram Patel,Resolved,8,5.32,No,None,0,No,4,No,Service request,User error,EMEA
 HD-260609-03347,2026-06-09 14:12,36,2026-06-09 19:29,P3,VPN & Remote Access,VPN login,Email,Mid-Market,Service Desk L2,Arjun Bhat,Closed,24,5.29,No,None,0,Yes,5,Yes,Incident,User error,North America
 HD-260817-03704,2026-08-17 10:50,77,2026-08-17 18:23,P3,Access & Identity,Permission request,Email,Internal,Identity & Access,Nadia Ali,Resolved,24,7.56,No,None,0,No,4,No,Service request,User error,North America
-HD-260511-03686,2026-05-11 18:51,198,2026-05-14 14:27,P4,VPN & Remote Access,VPN disconnect,Chat,Enterprise,Service Desk L2,Sana Rahman,Closed,72,67.61,No,None,1,No,4,No,Access request,Configuration,EMEA
+HD-260511-03686,2026-05-11 18:51,198,2026-05-15 04:12,P4,VPN & Remote Access,VPN disconnect,Chat,Enterprise,Service Desk L2,Sana Rahman,Closed,72,81.36,Yes,High queue volume,1,No,4,No,Access request,Configuration,EMEA
 HD-260609-02356,2026-06-09 10:50,103,2026-06-09 21:26,P3,Performance,High memory,Portal,Enterprise,Network Ops,Zoya Hussain,Resolved,24,10.6,No,None,0,No,5,No,Service request,Configuration,EMEA
 HD-260723-04338,2026-07-23 11:47,153,2026-07-24 11:45,P3,Account Provisioning,Offboarding,Chat,Enterprise,Service Desk L1,Aisha Khan,Resolved,24,23.98,No,None,1,No,3,No,Service request,Configuration,EMEA
 HD-260825-02416,2026-08-25 13:02,44,2026-08-25 19:14,P2,Printing & Peripherals,Printer offline,Email,SMB,Service Desk L1,Priya Shah,Resolved,8,6.2,No,None,0,No,2,No,Access request,Unknown,APAC
@@ -1929,7 +1929,7 @@ HD-260724-02085,2026-07-24 12:25,8,2026-07-24 13:55,P1,Network,Switch port,Email
 HD-260428-03668,2026-04-28 12:36,99,2026-04-30 01:52,P4,Printing & Peripherals,Peripheral setup,Portal,Mid-Market,Service Desk L1,Priya Shah,Resolved,72,37.27,No,None,0,No,5,No,Performance issue,Access policy,APAC
 HD-260504-04094,2026-05-04 16:31,73,2026-05-05 05:59,P3,Email & Collaboration,Teams/Meetings,Chat,SMB,Endpoint Ops,Vikram Patel,Resolved,24,13.48,No,None,0,No,4,Yes,Incident,User error,North America
 HD-260318-04218,2026-03-18 15:17,10,2026-03-18 20:41,P1,Hardware,Monitor,Phone,Enterprise,Service Desk L2,Sana Rahman,Resolved,4,5.4,Yes,Vendor response,0,No,,No,How-to,Software defect,North America
-HD-260803-02172,2026-08-03 10:23,136,2026-08-04 16:29,P4,Access & Identity,Permission request,Chat,Enterprise,Endpoint Ops,Karan Verma,Resolved,72,30.1,No,None,0,Yes,4,No,Service request,User error,EMEA
+HD-260803-02172,2026-08-03 10:23,136,2026-08-06 13:59,P4,Access & Identity,Permission request,Chat,Enterprise,Endpoint Ops,Karan Verma,Resolved,72,75.6,Yes,High queue volume,0,Yes,4,No,Service request,User error,EMEA
 HD-260313-04592,2026-03-13 13:41,275,2026-03-16 10:25,P4,Cloud & SaaS,Subscription,Email,Mid-Market,Service Desk L1,Karan Verma,Resolved,72,68.74,No,None,0,No,3,No,Incident,Network condition,EMEA
 HD-260806-04211,2026-08-06 14:10,21,2026-08-06 21:49,P2,VPN & Remote Access,VPN login,Email,Enterprise,Network Ops,Farah Latif,Resolved,8,7.66,No,None,0,No,4,No,Access request,Software defect,North America
 HD-260326-01128,2026-03-26 17:46,3,2026-03-26 23:49,P1,Software & Applications,Installation,Phone,Internal,Business Apps,Imran Dar,Closed,4,6.05,Yes,High queue volume,3,No,3,No,Access request,Hardware fault,APAC
@@ -1980,7 +1980,7 @@ HD-260827-01436,2026-08-27 15:59,297,2026-08-29 05:33,P4,Account Provisioning,Of
 HD-260511-02770,2026-05-11 09:06,102,2026-05-12 06:15,P3,Network,DNS/DHCP,Portal,SMB,Network Ops,Deepak Nair,Closed,24,21.16,No,None,0,No,2,No,Access request,Configuration,EMEA
 HD-260828-01214,2026-08-28 14:18,30,2026-08-28 17:15,P2,Email & Collaboration,Calendar,Portal,Mid-Market,Endpoint Ops,Sana Rahman,Resolved,8,2.96,No,None,0,No,4,No,Access request,Configuration,EMEA
 HD-260513-01290,2026-05-13 16:21,123,2026-05-16 11:36,P4,Printing & Peripherals,Peripheral setup,Email,Enterprise,Identity & Access,Deepak Nair,Resolved,72,67.26,No,None,0,No,3,No,Performance issue,Configuration,EMEA
-HD-260317-02286,2026-03-17 08:59,354,2026-03-18 07:35,P4,Endpoint Security,EDR alert,Email,Internal,Service Desk L1,Priya Shah,Closed,72,22.61,No,None,1,No,4,No,Incident,Software defect,North America
+HD-260317-02286,2026-03-17 08:59,354,2026-03-20 21:13,P4,Endpoint Security,EDR alert,Email,Internal,Service Desk L1,Priya Shah,Closed,72,84.24,Yes,High queue volume,1,No,4,No,Incident,Software defect,North America
 HD-260707-02836,2026-07-07 18:54,102,,P3,Hardware,Keyboard/Mouse,Chat,Mid-Market,Service Desk L1,Priya Shah,Open,24,,No,None,0,No,,Yes,Access request,Configuration,North America
 HD-260811-03818,2026-08-11 16:55,66,2026-08-12 04:43,P3,Software & Applications,Installation,Portal,Internal,Business Apps,,Resolved,24,11.81,No,None,0,No,5,No,How-to,Network condition,EMEA
 HD-260722-04277,2026-07-22 18:40,10,2026-07-22 21:56,P2,Email & Collaboration,Calendar,Portal,Mid-Market,Service Desk L2,Arjun Bhat,Resolved,8,3.28,No,None,1,No,,No,Access request,Software defect,North America
@@ -2025,7 +2025,7 @@ HD-260619-04196,2026-06-19 13:04,143,2026-06-22 01:45,P4,Performance,Disk space,
 HD-260302-03871,2026-03-02 11:15,321,,P4,Account Provisioning,Offboarding,Portal,SMB,Identity & Access,Farah Latif,Pending,72,,No,None,1,No,,No,Incident,Access policy,North America
 HD-260806-03561,2026-08-06 09:36,338,2026-08-07 18:43,P4,Email & Collaboration,Teams/Meetings,Phone,Mid-Market,Endpoint Ops,Sana Rahman,Closed,72,33.13,No,None,2,No,4,No,Access request,Access policy,APAC
 HD-260403-02264,2026-04-03 12:15,13,2026-04-03 18:19,P3,Access & Identity,MFA issue,Email,Mid-Market,Identity & Access,Zoya Hussain,Closed,24,6.08,No,None,1,No,4,Yes,Access request,Software defect,EMEA
-HD-260716-01836,2026-07-16 11:51,82,2026-07-17 03:44,P4,Network,LAN connectivity,Phone,Mid-Market,Service Desk L2,Sana Rahman,Resolved,72,15.89,No,None,0,No,,No,Incident,Hardware fault,EMEA
+HD-260716-01836,2026-07-16 11:51,82,2026-07-19 18:19,P4,Network,LAN connectivity,Phone,Mid-Market,Service Desk L2,Sana Rahman,Resolved,72,78.48,Yes,High queue volume,0,No,,No,Incident,Hardware fault,EMEA
 HD-260825-03259,2026-08-25 17:03,34,2026-08-26 23:21,P4,Network,LAN connectivity,Chat,SMB,Service Desk L2,Arjun Bhat,Resolved,72,30.3,No,None,0,No,4,No,Incident,Software defect,APAC
 HD-260330-01156,2026-03-30 15:51,27,2026-03-30 22:31,P3,Hardware,Keyboard/Mouse,Email,Mid-Market,Service Desk L1,Priya Shah,Closed,24,6.68,No,None,1,No,4,No,Performance issue,User error,North America
 HD-260321-03767,2026-03-21 08:15,298,,P4,Account Provisioning,Offboarding,Phone,Mid-Market,Service Desk L1,Neha Thomas,Pending,72,,No,None,0,No,,No,Incident,Configuration,APAC
@@ -2073,7 +2073,7 @@ HD-260502-02111,2026-05-02 15:51,173,2026-05-03 07:46,P3,Cloud & SaaS,Applicatio
 HD-260826-04329,2026-08-26 17:19,48,,P2,Printing & Peripherals,Scanner,Portal,Internal,Service Desk L2,Vikram Patel,Pending,8,,No,None,1,No,,No,Performance issue,User error,APAC
 HD-260324-01695,2026-03-24 12:03,19,2026-03-24 14:18,P2,Email & Collaboration,Teams/Meetings,Email,Enterprise,Service Desk L2,Sana Rahman,Resolved,8,2.25,No,None,1,No,5,No,Service request,Configuration,North America
 HD-260605-03060,2026-06-05 20:12,182,2026-06-07 06:01,P4,,Security policy,Portal,Enterprise,Endpoint Ops,Karan Verma,Resolved,72,33.82,No,None,0,No,4,No,Service request,Software defect,North America
-HD-260611-01421,2026-06-11 11:10,27,2026-06-12 11:43,P4,Account Provisioning,Access package,Portal,SMB,Identity & Access,Deepak Nair,Closed,72,24.56,No,None,0,Yes,5,No,Access request,Unknown,APAC
+HD-260611-01421,2026-06-11 11:10,27,2026-06-15 02:17,P4,Account Provisioning,Access package,Portal,SMB,Identity & Access,Deepak Nair,Closed,72,87.12,Yes,High queue volume,0,Yes,5,No,Access request,Unknown,APAC
 HD-260504-03594,2026-05-04 14:47,19,2026-05-04 20:18,P2,Network,LAN connectivity,Email,SMB,Network Ops,Deepak Nair,Resolved,8,5.52,No,None,0,No,3,No,Incident,Access policy,EMEA
 HD-260826-03241,2026-08-26 12:03,121,,P3,Access & Identity,Permission request,Portal,SMB,Identity & Access,Nadia Ali,Pending,24,,No,None,1,No,,No,Performance issue,User error,EMEA
 HD-260430-01359,2026-04-30 11:50,80,2026-04-30 19:14,P3,Account Provisioning,Access package,Chat,Enterprise,Service Desk L1,Neha Thomas,Closed,24,7.4,No,None,0,No,,No,Incident,Configuration,APAC
@@ -2104,7 +2104,7 @@ HD-260311-01876,2026-03-11 11:52,112,2026-03-11 20:52,P3,Endpoint Security,Malwa
 HD-260731-01800,2026-07-31 16:44,15,2026-07-31 18:08,P1,Cloud & SaaS,Integration,Portal,Mid-Market,Service Desk L2,Sana Rahman,Resolved,4,1.4,No,None,0,No,4,No,Access request,Hardware fault,North America
 HD-260517-02275,2026-05-17 16:58,111,2026-05-18 00:53,P3,Software & Applications,Version issue,Email,Enterprise,Business Apps,Priya Shah,Resolved,24,7.93,No,None,0,No,5,Yes,Access request,User error,North America
 HD-260821-02908,2026-08-21 09:35,7,2026-08-21 10:59,P1,Hardware,Docking station,Phone,Enterprise,Business Apps,Imran Dar,Resolved,4,1.4,No,None,0,Yes,3,Yes,Incident,Hardware fault,APAC
-HD-260303-01638,2026-03-03 18:30,26,2026-03-06 14:31,P4,Software & Applications,License,Portal,Internal,Service Desk L2,Vikram Patel,Resolved,72,68.02,No,None,0,No,3,No,Access request,Capacity,North America
+HD-260303-01638,2026-03-03 18:30,26,2026-03-07 03:51,P4,Software & Applications,License,Portal,Internal,Service Desk L2,Vikram Patel,Resolved,72,81.36,Yes,High queue volume,0,No,3,No,Access request,Capacity,North America
 HD-260415-02916,2026-04-15 11:49,106,2026-04-15 21:20,P3,Email & Collaboration,Distribution list,Email,Enterprise,Service Desk L1,Neha Thomas,Resolved,24,9.53,No,None,0,No,4,No,Service request,Unknown,North America
 HD-260312-01909,2026-03-12 09:50,44,2026-03-13 03:00,P4,Hardware,Monitor,Chat,Internal,Service Desk L2,Sana Rahman,Resolved,72,17.17,No,None,1,No,4,No,Service request,Hardware fault,EMEA
 HD-260402-01548,2026-04-02 19:28,17,,P2,,Disk space,Portal,Enterprise,Endpoint Ops,Karan Verma,Open,8,,No,None,0,Yes,,No,Incident,Network condition,North America
@@ -2157,7 +2157,7 @@ HD-260811-01055,2026-08-11 15:36,128,2026-08-12 04:48,P3,Hardware,Laptop,Portal,
 HD-260401-01741,2026-04-01 16:50,34,2026-04-01 22:42,P2,,Keyboard/Mouse,Email,Enterprise,Endpoint Ops,Neha Thomas,Closed,8,5.88,No,None,0,No,3,No,Service request,Capacity,North America
 HD-260413-01105,2026-04-13 14:21,73,2026-04-13 23:10,P3,Software & Applications,Installation,Chat,Enterprise,Service Desk L2,Meera Joseph,Resolved,24,8.83,No,None,1,No,3,Yes,Incident,Vendor issue,EMEA
 HD-260714-01885,2026-07-14 15:34,62,2026-07-15 09:13,P3,Performance,High memory,Email,Enterprise,Service Desk L1,Aisha Khan,Resolved,24,17.66,No,None,1,No,4,No,Service request,Network condition,North America
-HD-260609-03939,2026-06-09 15:19,353,2026-06-10 05:47,P4,VPN & Remote Access,VPN login,Portal,SMB,Service Desk L2,Arjun Bhat,Resolved,72,14.48,No,None,1,No,,No,Service request,User error,EMEA
+HD-260609-03939,2026-06-09 15:19,353,2026-06-12 18:55,P4,VPN & Remote Access,VPN login,Portal,SMB,Service Desk L2,Arjun Bhat,Resolved,72,75.6,Yes,High queue volume,1,No,,No,Service request,User error,EMEA
 HD-260624-01816,2026-06-24 14:22,94,2026-06-27 08:22,P4,Printing & Peripherals,Scanner,Chat,Internal,Service Desk L1,Aisha Khan,Closed,72,66,No,None,0,No,,No,Access request,Software defect,North America
 HD-260824-03643,2026-08-24 16:53,72,2026-08-25 00:00,P3,Access & Identity,Permission request,Email,SMB,Service Desk L1,Imran Dar,Resolved,24,7.12,No,None,0,No,4,No,Service request,Vendor issue,EMEA
 HD-260403-02756,2026-04-03 15:55,43,2026-04-04 00:49,P2,Account Provisioning,Role change,Phone,Enterprise,Service Desk L1,Imran Dar,Resolved,8,8.91,Yes,Complex investigation,2,No,3,Yes,Service request,Software defect,North America
@@ -2216,7 +2216,7 @@ HD-260403-03382,2026-04-03 10:27,20,2026-04-04 04:33,P3,Printing & Peripherals,S
 HD-260512-04490,2026-05-12 09:35,179,2026-05-13 09:56,P3,Network,Wi-Fi,Email,SMB,Network Ops,Deepak Nair,Resolved,24,24.35,Yes,Dependency delay,2,No,3,No,Access request,Network condition,North America
 HD-260320-03997,2026-03-20 14:34,72,2026-03-22 21:07,P4,Printing & Peripherals,Peripheral setup,Chat,SMB,Service Desk L1,Neha Thomas,Resolved,72,54.55,No,None,0,No,3,No,Access request,Unknown,EMEA
 HD-260325-03018,2026-03-25 13:58,19,2026-03-25 21:48,P3,Cloud & SaaS,Integration,Portal,Enterprise,Business Apps,Sana Rahman,Resolved,24,7.84,No,None,0,No,4,No,Incident,User error,APAC
-HD-260421-03183,2026-04-21 10:20,305,2026-04-23 05:40,P4,Cloud & SaaS,Subscription,Email,Enterprise,Service Desk L1,Priya Shah,Closed,72,43.34,No,None,1,No,3,No,How-to,Access policy,North America
+HD-260421-03183,2026-04-21 10:20,305,2026-04-24 22:34,P4,Cloud & SaaS,Subscription,Email,Enterprise,Service Desk L1,Priya Shah,Closed,72,84.24,Yes,High queue volume,1,No,3,No,How-to,Access policy,North America
 HD-260424-04512,2026-04-24 12:42,33,2026-04-26 12:40,P4,Network,DNS/DHCP,Phone,Mid-Market,Network Ops,Farah Latif,Resolved,72,47.97,No,None,0,No,3,No,How-to,Hardware fault,North America
 HD-260706-04049,2026-07-06 17:51,175,2026-07-07 18:17,P3,Software & Applications,Version issue,Portal,Mid-Market,Service Desk L2,Meera Joseph,Closed,24,24.44,Yes,Escalation delay,0,No,2,No,Service request,User error,APAC
 HD-260826-01549,2026-08-26 13:24,64,,P3,Access & Identity,Account locked,Email,Enterprise,Identity & Access,Farah Latif,Pending,24,,No,None,1,No,,No,Incident,Network condition,North America
@@ -2254,7 +2254,7 @@ HD-260629-02436,2026-06-29 20:56,44,2026-07-01 08:26,P4,Telephony,Call quality,C
 HD-260505-04295,2026-05-05 10:57,46,2026-05-05 20:22,P2,Printing & Peripherals,Print queue,Email,Internal,Business Apps,Sana Rahman,Closed,8,9.43,Yes,High queue volume,1,No,3,No,How-to,Configuration,APAC
 HD-260303-02291,2026-03-03 09:16,133,2026-03-03 15:51,P3,Software & Applications,Application error,Email,Mid-Market,Service Desk L1,Neha Thomas,Resolved,24,6.59,No,None,0,No,5,No,Performance issue,Network condition,North America
 HD-260324-03197,2026-03-24 09:39,13,2026-03-24 12:21,P1,Network,Wi-Fi,Portal,Enterprise,Network Ops,Farah Latif,Resolved,4,2.71,No,None,2,No,4,Yes,Incident,Hardware fault,EMEA
-HD-260605-01714,2026-06-05 12:25,141,2026-06-07 05:54,P4,VPN & Remote Access,Remote desktop,Portal,Enterprise,Network Ops,Zoya Hussain,Closed,72,41.49,No,None,1,Yes,3,No,Service request,Configuration,North America
+HD-260605-01714,2026-06-05 12:25,141,2026-06-08 18:53,P4,VPN & Remote Access,Remote desktop,Portal,Enterprise,Network Ops,Zoya Hussain,Closed,72,78.48,Yes,High queue volume,1,Yes,3,No,Service request,Configuration,North America
 HD-260305-01089,2026-03-05 18:07,99,2026-03-06 01:21,P3,Account Provisioning,Access package,Portal,Internal,Identity & Access,Zoya Hussain,Resolved,24,7.24,No,None,0,Yes,4,No,Incident,Configuration,APAC
 HD-260309-03779,2026-03-09 10:37,27,2026-03-10 03:26,P3,Telephony,Headset,Phone,Enterprise,Service Desk L2,Meera Joseph,Closed,24,16.82,No,None,1,No,3,No,Service request,User error,North America
 HD-260831-03777,2026-08-31 12:56,165,2026-08-31 21:45,P3,Hardware,Monitor,Email,SMB,Service Desk L1,Aisha Khan,Closed,24,8.82,No,None,0,No,4,No,Incident,Hardware fault,EMEA
@@ -2315,7 +2315,7 @@ HD-260701-02216,2026-07-01 12:00,48,2026-07-01 19:39,P2,Access & Identity,MFA is
 HD-260511-02522,2026-05-11 19:46,50,2026-05-12 16:59,P3,Printing & Peripherals,Print queue,Chat,SMB,Business Apps,Sana Rahman,Resolved,24,21.23,No,None,1,No,3,No,Performance issue,Configuration,EMEA
 HD-260828-02274,2026-08-28 14:10,60,2026-08-29 14:40,P3,Cloud & SaaS,SSO,Chat,Enterprise,Business Apps,Priya Shah,Closed,24,24.5,Yes,High queue volume,1,No,3,No,Incident,Hardware fault,EMEA
 HD-260803-03446,2026-08-03 15:03,63,2026-08-03 21:58,P3,Software & Applications,Version issue,Portal,Mid-Market,Business Apps,Imran Dar,Resolved,24,6.92,No,None,0,No,3,No,Service request,Access policy,North America
-HD-260421-01826,2026-04-21 12:04,102,2026-04-22 08:57,P4,VPN & Remote Access,VPN login,Portal,SMB,Network Ops,Zoya Hussain,Closed,72,20.89,No,None,0,Yes,5,No,Incident,Hardware fault,APAC
+HD-260421-01826,2026-04-21 12:04,102,2026-04-25 03:11,P4,VPN & Remote Access,VPN login,Portal,SMB,Network Ops,Zoya Hussain,Closed,72,87.12,Yes,High queue volume,0,Yes,5,No,Incident,Hardware fault,APAC
 HD-260720-02000,2026-07-20 13:30,90,2026-07-21 18:11,P4,Performance,Disk space,Email,Enterprise,Service Desk L1,Imran Dar,Closed,72,28.69,No,None,0,No,4,No,Incident,Network condition,North America
 HD-260327-02476,2026-03-27 14:36,256,2026-03-29 00:34,P4,Cloud & SaaS,Subscription,Chat,Mid-Market,Service Desk L1,Rohan Mehta,Resolved,72,33.98,No,None,1,No,5,No,Service request,Capacity,North America
 HD-260703-01860,2026-07-03 14:39,15,2026-07-04 00:21,P2,Cloud & SaaS,Application outage,Portal,Mid-Market,Business Apps,Sana Rahman,Resolved,8,9.71,Yes,Complex investigation,0,No,3,No,Performance issue,Hardware fault,APAC
@@ -2355,7 +2355,7 @@ HD-260803-04155,2026-08-03 12:59,77,2026-08-03 21:32,P3,Hardware,Monitor,Email,S
 HD-260427-03755,2026-04-27 13:03,106,2026-04-28 03:58,P3,Endpoint Security,Device compliance,Phone,Enterprise,Identity & Access,Farah Latif,Resolved,24,14.93,No,None,0,No,3,No,Access request,Software defect,APAC
 HD-260512-03368,2026-05-12 16:48,11,2026-05-12 22:50,P1,Access & Identity,MFA issue,Email,SMB,Endpoint Ops,Sana Rahman,Resolved,4,6.04,Yes,Dependency delay,0,No,4,No,Incident,Capacity,EMEA
 HD-260622-04546,2026-06-22 16:57,140,2026-06-24 07:36,P4,,Mailbox,Phone,Enterprise,Endpoint Ops,Neha Thomas,Resolved,72,38.66,No,None,0,No,5,No,Service request,Capacity,North America
-HD-260413-01009,2026-04-13 16:27,42,2026-04-15 04:27,P4,Cloud & SaaS,SSO,Chat,Enterprise,Business Apps,Karan Verma,Resolved,72,36,No,None,0,Yes,4,No,How-to,Unknown,APAC
+HD-260413-01009,2026-04-13 16:27,42,2026-04-17 01:48,P4,Cloud & SaaS,SSO,Chat,Enterprise,Business Apps,Karan Verma,Resolved,72,81.36,Yes,High queue volume,0,Yes,4,No,How-to,Unknown,APAC
 HD-260629-01212,2026-06-29 20:26,116,2026-06-30 18:41,P3,VPN & Remote Access,Remote desktop,Phone,Enterprise,Network Ops,Arjun Bhat,Resolved,24,22.26,No,None,0,No,4,No,How-to,User error,North America
 HD-260806-03045,2026-08-06 13:26,159,2026-08-07 09:56,P4,,EDR alert,Chat,SMB,Service Desk L1,Aisha Khan,Resolved,72,20.5,No,None,0,No,4,Yes,Service request,User error,North America
 HD-260528-03181,2026-05-28 11:08,177,2026-05-29 01:36,P4,Telephony,Call quality,Chat,Enterprise,Service Desk L2,Vikram Patel,Closed,72,14.48,No,None,2,No,4,No,Service request,Capacity,North America
@@ -2403,7 +2403,7 @@ HD-260831-02645,2026-08-31 14:27,20,2026-09-01 08:07,P3,Software & Applications,
 HD-260421-03631,2026-04-21 11:12,151,2026-04-21 16:50,P3,Email & Collaboration,Distribution list,Phone,SMB,Service Desk L1,Priya Shah,Resolved,24,5.64,No,None,0,No,4,No,Access request,Capacity,APAC
 HD-260715-02033,2026-07-15 15:45,279,2026-07-16 07:13,P4,VPN & Remote Access,VPN login,Portal,Mid-Market,Service Desk L2,Sana Rahman,Resolved,72,15.47,No,None,0,No,,No,Incident,Software defect,EMEA
 HD-260615-01404,2026-06-15 08:16,168,2026-06-16 07:40,P3,Performance,Slow device,Email,SMB,Business Apps,Priya Shah,Resolved,24,23.41,No,None,0,No,3,No,Access request,Configuration,North America
-HD-260725-02442,2026-07-25 15:10,120,2026-07-26 09:52,P4,Performance,High CPU,Chat,Enterprise,Endpoint Ops,Vikram Patel,Resolved,72,18.7,No,None,1,No,3,No,Performance issue,Network condition,APAC
+HD-260725-02442,2026-07-25 15:10,120,2026-07-28 18:46,P4,Performance,High CPU,Chat,Enterprise,Endpoint Ops,Vikram Patel,Resolved,72,75.6,Yes,High queue volume,1,No,3,No,Performance issue,Network condition,APAC
 HD-260331-03687,2026-03-31 09:27,35,,P4,Cloud & SaaS,Application outage,Phone,SMB,Service Desk L1,Rohan Mehta,Open,72,,No,None,1,No,,No,Incident,Configuration,North America
 HD-260723-01070,2026-07-23 18:49,17,2026-07-23 20:16,P1,Access & Identity,Password reset,Phone,Internal,Identity & Access,Nadia Ali,Closed,4,1.46,No,None,1,Yes,,No,How-to,Capacity,North America
 HD-260831-04265,2026-08-31 16:44,43,2026-09-01 16:46,P4,Printing & Peripherals,Scanner,Phone,Mid-Market,Network Ops,Deepak Nair,Resolved,72,24.04,No,None,0,No,5,No,Incident,Configuration,North America
@@ -2450,7 +2450,7 @@ HD-260723-03633,2026-07-23 13:28,73,2026-07-24 08:59,P3,Access & Identity,Accoun
 HD-260412-02631,2026-04-12 12:05,39,2026-04-14 21:59,P4,Access & Identity,Password reset,Portal,Internal,Service Desk L1,Neha Thomas,Resolved,72,57.91,No,None,0,No,,No,Incident,Configuration,North America
 HD-260327-02079,2026-03-27 16:00,28,2026-03-28 15:00,P4,Telephony,Call quality,Portal,Mid-Market,Service Desk L2,Vikram Patel,Resolved,72,23.01,No,None,0,No,5,No,Incident,Unknown,EMEA
 HD-260416-01922,2026-04-16 16:25,150,,P4,Endpoint Security,Security policy,Portal,Mid-Market,Identity & Access,Zoya Hussain,Pending,72,,No,None,1,No,,No,Incident,User error,North America
-HD-260407-01433,2026-04-07 13:52,21,2026-04-08 17:37,P4,Access & Identity,Permission request,Chat,Internal,Identity & Access,Nadia Ali,Closed,72,27.76,No,None,1,No,3,Yes,Incident,Capacity,North America
+HD-260407-01433,2026-04-07 13:52,21,2026-04-11 02:06,P4,Access & Identity,Permission request,Chat,Internal,Identity & Access,Nadia Ali,Closed,72,84.24,Yes,High queue volume,1,No,3,Yes,Incident,Capacity,North America
 HD-260521-01950,2026-05-21 17:37,220,2026-05-23 12:32,P4,Network,Switch port,Portal,SMB,Network Ops,Arjun Bhat,Closed,72,42.93,No,None,0,No,4,No,Incident,Network condition,EMEA
 HD-260819-02220,2026-08-19 16:36,41,2026-08-20 08:19,P3,Cloud & SaaS,Application outage,Email,Enterprise,Business Apps,Sana Rahman,Closed,24,15.72,No,None,0,No,3,No,Performance issue,Access policy,APAC
 HD-260410-04056,2026-04-10 14:46,40,2026-04-11 10:49,P3,Hardware,Laptop,Chat,SMB,Service Desk L1,Karan Verma,Closed,24,20.06,No,None,1,No,4,No,Incident,Network condition,North America
@@ -2497,7 +2497,7 @@ HD-260611-02853,2026-06-11 16:42,43,2026-06-12 00:11,P3,Telephony,Call quality,E
 HD-260619-02468,2026-06-19 10:44,40,2026-06-19 15:42,P2,Printing & Peripherals,Peripheral setup,Chat,SMB,Service Desk L1,Aisha Khan,Closed,8,4.97,No,None,0,No,4,No,Incident,Hardware fault,EMEA
 HD-260813-02518,2026-08-13 13:47,31,2026-08-13 19:37,P2,Account Provisioning,Role change,Portal,Enterprise,Service Desk L1,Neha Thomas,Resolved,8,5.84,No,None,0,No,3,No,Incident,Network condition,APAC
 HD-260824-03115,2026-08-24 13:23,213,2026-08-26 10:45,P4,Account Provisioning,Role change,Chat,Enterprise,Service Desk L1,Imran Dar,Resolved,72,45.37,No,None,0,No,4,No,Service request,Hardware fault,APAC
-HD-260501-03532,2026-05-01 16:47,22,2026-05-02 14:59,P4,Performance,Disk space,Chat,Enterprise,Service Desk L1,Priya Shah,Resolved,72,22.2,No,None,0,No,5,No,Incident,User error,APAC
+HD-260501-03532,2026-05-01 16:47,22,2026-05-04 23:15,P4,Performance,Disk space,Chat,Enterprise,Service Desk L1,Priya Shah,Resolved,72,78.48,Yes,High queue volume,0,No,5,No,Incident,User error,APAC
 HD-260325-02749,2026-03-25 11:17,90,2026-03-25 23:35,P3,VPN & Remote Access,Remote desktop,Portal,Enterprise,Network Ops,Arjun Bhat,Resolved,24,12.3,No,None,0,No,4,No,How-to,Configuration,EMEA
 HD-260427-03850,2026-04-27 11:36,349,2026-04-29 23:05,P4,Email & Collaboration,Calendar,Portal,Mid-Market,Endpoint Ops,Neha Thomas,Resolved,72,59.49,No,None,1,No,4,Yes,Service request,User error,EMEA
 HD-260824-02464,2026-08-24 12:21,38,2026-08-26 11:10,P4,VPN & Remote Access,Remote desktop,Phone,Mid-Market,Network Ops,Zoya Hussain,Resolved,72,46.83,No,None,1,No,4,Yes,Access request,Access policy,EMEA
@@ -2529,7 +2529,7 @@ HD-260401-01654,2026-04-01 10:42,128,2026-04-01 21:01,P3,Endpoint Security,Secur
 HD-260722-04031,2026-07-22 15:35,82,2026-07-23 07:43,P3,Account Provisioning,New starter,Email,Enterprise,Identity & Access,Zoya Hussain,Resolved,24,16.14,No,None,3,Yes,4,No,Incident,Vendor issue,EMEA
 HD-260623-01439,2026-06-23 13:35,98,2026-06-25 02:27,P4,Software & Applications,License,Chat,Mid-Market,Service Desk L1,Imran Dar,Resolved,72,36.88,No,None,0,No,,No,Performance issue,Software defect,APAC
 HD-260312-02248,2026-03-12 14:38,57,2026-03-13 12:27,P3,Telephony,Softphone,Chat,Enterprise,Service Desk L2,Meera Joseph,Resolved,24,21.83,No,None,0,No,4,No,How-to,Configuration,EMEA
-HD-260520-03539,2026-05-20 16:56,303,2026-05-21 21:14,P4,Hardware,Keyboard/Mouse,Chat,SMB,Service Desk L1,Imran Dar,Resolved,72,28.3,No,None,1,No,3,No,Performance issue,Capacity,North America
+HD-260520-03539,2026-05-20 16:56,303,2026-05-24 08:03,P4,Hardware,Keyboard/Mouse,Chat,SMB,Service Desk L1,Imran Dar,Resolved,72,87.12,Yes,High queue volume,1,No,3,No,Performance issue,Capacity,North America
 HD-260708-03275,2026-07-08 12:03,63,2026-07-09 04:07,P4,Performance,High CPU,Portal,Mid-Market,Service Desk L1,Aisha Khan,Closed,72,16.08,No,None,0,No,4,No,Performance issue,User error,EMEA
 HD-260824-01688,2026-08-24 11:48,144,2026-08-24 20:56,P3,Telephony,Softphone,Chat,SMB,Network Ops,Deepak Nair,Closed,24,9.14,No,None,0,No,4,No,Incident,Configuration,North America
 HD-260323-03952,2026-03-23 10:07,148,2026-03-23 19:16,P3,Printing & Peripherals,Printer offline,Email,Enterprise,Identity & Access,Zoya Hussain,Resolved,24,9.16,No,None,0,No,5,Yes,Incident,Network condition,North America
@@ -2583,7 +2583,7 @@ HD-260810-02326,2026-08-10 19:01,52,,P4,Email & Collaboration,Mailbox,Chat,SMB,B
 HD-260619-02765,2026-06-19 10:37,288,,P4,Performance,High CPU,Phone,Enterprise,Endpoint Ops,Karan Verma,Pending,72,,No,None,1,No,,No,Service request,User error,North America
 HD-260702-04535,2026-07-02 12:36,51,2026-07-02 15:48,P2,Performance,Slow device,Phone,Internal,Service Desk L1,Aisha Khan,Resolved,8,3.2,No,None,0,Yes,3,No,Service request,Unknown,North America
 HD-260729-02614,2026-07-29 19:15,235,2026-07-30 13:01,P4,VPN & Remote Access,Split tunnel,Portal,Enterprise,Network Ops,Zoya Hussain,Resolved,72,17.77,No,None,0,Yes,3,No,Incident,Hardware fault,EMEA
-HD-260616-02559,2026-06-16 12:58,265,2026-06-18 04:43,P4,Endpoint Security,Security policy,Email,Mid-Market,Identity & Access,Zoya Hussain,Closed,72,39.75,No,None,0,No,,No,Incident,Hardware fault,North America
+HD-260616-02559,2026-06-16 12:58,265,2026-06-19 22:19,P4,Endpoint Security,Security policy,Email,Mid-Market,Identity & Access,Zoya Hussain,Closed,72,81.36,Yes,High queue volume,0,No,,No,Incident,Hardware fault,North America
 HD-260804-01875,2026-08-04 17:05,12,2026-08-05 08:16,P3,Cloud & SaaS,SSO,Email,Internal,Business Apps,Sana Rahman,Resolved,24,15.19,No,None,0,No,3,No,Incident,Software defect,APAC
 HD-260724-02741,2026-07-24 17:43,126,2026-07-25 14:57,P4,Printing & Peripherals,Peripheral setup,Chat,SMB,Network Ops,Arjun Bhat,Closed,72,21.24,No,None,0,No,3,No,Incident,Software defect,North America
 HD-260822-01010,2026-08-22 15:42,68,2026-08-23 06:37,P3,Endpoint Security,EDR alert,Email,Enterprise,Identity & Access,Nadia Ali,Resolved,24,14.92,No,None,0,No,3,No,Service request,Hardware fault,APAC
@@ -2633,7 +2633,7 @@ HD-260521-01068,2026-05-21 15:44,118,2026-05-22 15:43,P3,Performance,Slow device
 HD-260626-01125,2026-06-26 09:23,125,2026-06-27 03:00,P4,Account Provisioning,Role change,Portal,SMB,Identity & Access,Nadia Ali,Closed,72,17.63,No,None,0,No,3,No,Service request,Capacity,North America
 HD-260610-03878,2026-06-10 12:52,51,2026-06-10 22:38,P2,VPN & Remote Access,Split tunnel,Chat,Internal,Network Ops,Deepak Nair,Closed,8,9.77,Yes,Complex investigation,1,No,3,No,Service request,Capacity,North America
 HD-260729-04239,2026-07-29 12:48,102,2026-07-29 20:26,P3,Account Provisioning,Role change,Portal,Mid-Market,Identity & Access,Farah Latif,Resolved,24,7.64,No,None,0,No,,No,Incident,Network condition,APAC
-HD-260828-03186,2026-08-28 15:33,141,2026-08-29 05:55,P4,Cloud & SaaS,Integration,Email,Mid-Market,Business Apps,Sana Rahman,Resolved,72,14.38,No,None,0,Yes,5,No,Service request,Software defect,North America
+HD-260828-03186,2026-08-28 15:33,141,2026-08-31 19:09,P4,Cloud & SaaS,Integration,Email,Mid-Market,Business Apps,Sana Rahman,Resolved,72,75.6,Yes,High queue volume,0,Yes,5,No,Service request,Software defect,North America
 HD-260820-01737,2026-08-20 11:06,51,2026-08-21 10:05,P3,Account Provisioning,Role change,Chat,Mid-Market,Identity & Access,,Closed,24,22.99,No,None,1,No,,No,Access request,Network condition,North America
 HD-260327-01248,2026-03-27 13:55,36,,P3,Email & Collaboration,Teams/Meetings,Portal,Mid-Market,Business Apps,Imran Dar,Open,24,,No,None,1,No,,No,Access request,Hardware fault,APAC
 HD-260720-01159,2026-07-20 13:11,110,2026-07-21 13:29,P4,Access & Identity,Account locked,Chat,Internal,Identity & Access,Deepak Nair,Resolved,72,24.3,No,None,0,No,5,No,Service request,User error,North America
@@ -2686,7 +2686,7 @@ HD-260304-03903,2026-03-04 16:01,45,,P3,Endpoint Security,EDR alert,Email,Enterp
 HD-260802-02317,2026-08-02 12:51,29,2026-08-02 19:23,P2,,Mailbox,Portal,Mid-Market,Service Desk L1,Neha Thomas,Resolved,8,6.54,No,None,1,Yes,4,No,Incident,Network condition,APAC
 HD-260420-02856,2026-04-20 10:56,151,2026-04-21 02:24,P3,Software & Applications,Installation,Email,Internal,Service Desk L2,Arjun Bhat,Resolved,24,15.48,No,None,0,No,3,No,How-to,User error,EMEA
 HD-260401-01856,2026-04-01 12:45,165,2026-04-02 12:26,P3,Cloud & SaaS,Application outage,Portal,Internal,Service Desk L1,Aisha Khan,Resolved,24,23.69,No,None,0,No,3,No,How-to,Hardware fault,North America
-HD-260710-04280,2026-07-10 12:02,327,2026-07-11 03:38,P4,VPN & Remote Access,Split tunnel,Chat,Enterprise,Network Ops,Deepak Nair,Closed,72,15.6,No,None,0,No,4,No,Incident,Configuration,EMEA
+HD-260710-04280,2026-07-10 12:02,327,2026-07-14 00:16,P4,VPN & Remote Access,Split tunnel,Chat,Enterprise,Network Ops,Deepak Nair,Closed,72,84.24,Yes,High queue volume,0,No,4,No,Incident,Configuration,EMEA
 HD-260806-02528,2026-08-06 13:31,73,2026-08-07 05:49,P3,Telephony,Headset,Chat,Internal,Service Desk L2,Sana Rahman,Closed,24,16.31,No,None,0,No,4,No,Incident,Configuration,North America
 HD-260305-04306,2026-03-05 20:50,61,2026-03-06 06:07,P2,Hardware,Docking station,Email,Mid-Market,Service Desk L1,Karan Verma,Resolved,8,9.29,Yes,Vendor response,0,No,3,No,Performance issue,Access policy,EMEA
 HD-260409-01781,2026-04-09 14:16,49,2026-04-09 17:26,P2,Access & Identity,Permission request,Portal,Enterprise,Service Desk L1,Imran Dar,Resolved,8,3.17,No,None,0,Yes,5,No,Incident,User error,APAC
@@ -2735,7 +2735,7 @@ HD-260430-03454,2026-04-30 15:27,174,2026-04-30 23:33,P3,Endpoint Security,Secur
 HD-260331-04066,2026-03-31 16:56,166,2026-04-01 10:06,P3,VPN & Remote Access,VPN disconnect,Phone,Enterprise,Network Ops,Zoya Hussain,Closed,24,17.17,No,None,1,No,2,No,Incident,Configuration,APAC
 HD-260806-04233,2026-08-06 14:27,240,2026-08-07 12:00,P4,Account Provisioning,Role change,Portal,Internal,Service Desk L1,Rohan Mehta,Resolved,72,21.56,No,None,0,No,,No,Performance issue,User error,EMEA
 HD-260731-02655,2026-07-31 21:26,250,2026-08-01 16:26,P4,Performance,Disk space,Portal,Internal,Service Desk L2,Meera Joseph,Resolved,72,19,No,None,0,No,4,No,Access request,Network condition,North America
-HD-260518-01809,2026-05-18 10:07,166,2026-05-20 23:53,P4,Endpoint Security,Malware check,Portal,Internal,Identity & Access,Deepak Nair,Resolved,72,61.78,No,None,1,No,3,No,Service request,User error,EMEA
+HD-260518-01809,2026-05-18 10:07,166,2026-05-21 16:35,P4,Endpoint Security,Malware check,Portal,Internal,Identity & Access,Deepak Nair,Resolved,72,78.48,Yes,High queue volume,1,No,3,No,Service request,User error,EMEA
 HD-260414-02039,2026-04-14 16:46,256,2026-04-16 14:32,P4,Performance,High CPU,Email,SMB,Endpoint Ops,Sana Rahman,Resolved,72,45.77,No,None,0,No,,No,Incident,Configuration,EMEA
 HD-260519-04160,2026-05-19 15:42,188,2026-05-20 22:48,P4,Account Provisioning,Offboarding,Phone,SMB,Endpoint Ops,Neha Thomas,Closed,72,31.1,No,None,1,No,4,No,How-to,User error,North America
 HD-260320-02549,2026-03-20 08:48,57,2026-03-20 12:51,P2,Access & Identity,Password reset,Email,SMB,Service Desk L1,Karan Verma,Closed,8,4.05,No,None,0,Yes,5,No,Incident,Software defect,North America
@@ -2775,7 +2775,7 @@ HD-260512-03161,2026-05-12 09:02,316,2026-05-13 04:32,P4,Telephony,Extension,Ema
 HD-260819-03431,2026-08-19 15:47,32,2026-08-19 20:21,P2,Software & Applications,Installation,Chat,SMB,Business Apps,Imran Dar,Closed,8,4.58,No,None,0,Yes,5,No,Access request,Capacity,APAC
 HD-260306-02393,2026-03-06 17:08,190,2026-03-08 05:02,P4,Software & Applications,Version issue,Portal,Mid-Market,Service Desk L2,Vikram Patel,Resolved,72,35.91,No,None,1,No,4,No,Access request,Network condition,EMEA
 HD-260806-02748,2026-08-06 19:11,344,2026-08-07 15:25,P4,Endpoint Security,Device compliance,Email,Enterprise,Service Desk L1,Priya Shah,Resolved,72,20.24,No,None,1,No,3,No,Performance issue,Configuration,North America
-HD-260428-01539,2026-04-28 12:36,158,2026-04-29 20:03,P4,Network,Switch port,Email,Enterprise,Network Ops,Zoya Hussain,Closed,72,31.45,No,None,0,No,4,No,Incident,User error,EMEA
+HD-260428-01539,2026-04-28 12:36,158,2026-05-02 03:43,P4,Network,Switch port,Email,Enterprise,Network Ops,Zoya Hussain,Closed,72,87.12,Yes,High queue volume,0,No,4,No,Incident,User error,EMEA
 HD-260616-03695,2026-06-16 10:39,92,2026-06-17 09:24,P3,Telephony,Softphone,Chat,Enterprise,Network Ops,Deepak Nair,Resolved,24,22.76,No,None,0,No,3,No,Incident,Vendor issue,North America
 HD-260727-01434,2026-07-27 16:46,75,2026-07-28 07:41,P4,Account Provisioning,Offboarding,Email,SMB,Identity & Access,Nadia Ali,Closed,72,14.92,No,None,0,No,4,No,Service request,Hardware fault,North America
 HD-260501-04119,2026-05-01 18:59,68,,P3,Printing & Peripherals,Printer offline,Portal,Mid-Market,Service Desk L1,Imran Dar,Pending,24,,No,None,0,No,,No,Incident,User error,North America
@@ -2817,7 +2817,7 @@ HD-260309-01671,2026-03-09 11:00,158,2026-03-09 18:07,P3,Printing & Peripherals,
 HD-260617-02145,2026-06-17 11:11,194,2026-06-18 23:00,P4,Access & Identity,MFA issue,Email,Internal,Identity & Access,Farah Latif,Closed,72,35.83,No,None,0,No,3,No,How-to,User error,North America
 HD-260320-02325,2026-03-20 16:07,67,2026-03-21 13:07,P3,Email & Collaboration,Distribution list,Chat,Mid-Market,Service Desk L1,Imran Dar,Resolved,24,21.01,No,None,0,No,4,No,Incident,Hardware fault,EMEA
 HD-260813-03152,2026-08-13 17:20,60,2026-08-14 06:39,P3,Software & Applications,Installation,Email,Mid-Market,Business Apps,Neha Thomas,Closed,24,13.33,No,None,0,No,4,Yes,Incident,User error,EMEA
-HD-260402-03839,2026-04-02 10:36,170,2026-04-03 01:05,P4,Telephony,Softphone,Email,Mid-Market,Service Desk L2,Sana Rahman,Resolved,72,14.49,No,None,1,No,4,No,Incident,Access policy,EMEA
+HD-260402-03839,2026-04-02 10:36,170,2026-04-05 19:57,P4,Telephony,Softphone,Email,Mid-Market,Service Desk L2,Sana Rahman,Resolved,72,81.36,Yes,High queue volume,1,No,4,No,Incident,Access policy,EMEA
 HD-260323-04520,2026-03-23 10:06,127,2026-03-26 01:07,P4,Endpoint Security,Malware check,Phone,Mid-Market,Endpoint Ops,Vikram Patel,Resolved,72,63.02,No,None,1,No,4,No,Incident,Access policy,North America
 HD-260608-03110,2026-06-08 09:01,225,,P4,Performance,High CPU,Portal,Enterprise,Endpoint Ops,Karan Verma,Pending,72,,No,None,1,No,,No,Incident,Network condition,APAC
 HD-260306-03646,2026-03-06 14:46,252,2026-03-07 05:16,P4,Printing & Peripherals,Peripheral setup,Chat,SMB,Service Desk L1,Imran Dar,Resolved,72,14.51,No,None,0,Yes,5,No,Incident,Access policy,APAC
@@ -2857,7 +2857,7 @@ HD-260602-02977,2026-06-02 15:52,147,2026-06-04 03:58,P4,Cloud & SaaS,SSO,Phone,
 HD-260513-03907,2026-05-13 12:41,156,2026-05-14 17:07,P4,Telephony,Call quality,Email,Internal,Service Desk L2,Sana Rahman,Resolved,72,28.44,No,None,0,No,3,No,Incident,Unknown,APAC
 HD-260829-02504,2026-08-29 15:07,69,2026-08-30 06:41,P3,Printing & Peripherals,Peripheral setup,Phone,Mid-Market,Service Desk L1,Karan Verma,Resolved,24,15.58,No,None,0,No,4,No,Service request,Capacity,APAC
 HD-260309-01854,2026-03-09 15:25,95,2026-03-10 00:09,P3,Printing & Peripherals,Printer offline,Chat,Enterprise,Endpoint Ops,Sana Rahman,Resolved,24,8.74,No,None,0,Yes,4,No,Service request,User error,APAC
-HD-260604-04042,2026-06-04 14:38,115,2026-06-05 08:33,P4,Performance,High CPU,Email,SMB,Service Desk L2,Vikram Patel,Resolved,72,17.93,No,None,0,No,,No,Incident,Vendor issue,North America
+HD-260604-04042,2026-06-04 14:38,115,2026-06-07 18:14,P4,Performance,High CPU,Email,SMB,Service Desk L2,Vikram Patel,Resolved,72,75.6,Yes,High queue volume,0,No,,No,Incident,Vendor issue,North America
 HD-260720-04030,2026-07-20 16:57,11,2026-07-20 23:05,P1,Email & Collaboration,Distribution list,Chat,SMB,Identity & Access,Adil Mir,Resolved,4,6.14,Yes,Escalation delay,0,No,4,No,Incident,Vendor issue,North America
 HD-260303-01762,2026-03-03 14:40,93,2026-03-03 20:22,P3,Cloud & SaaS,Application outage,Portal,Enterprise,Business Apps,Karan Verma,Resolved,24,5.71,No,None,0,No,4,No,Incident,Access policy,North America
 HD-260320-01193,2026-03-20 21:17,63,2026-03-21 08:01,P3,Telephony,Call quality,Email,SMB,Network Ops,Zoya Hussain,Closed,24,10.74,No,None,0,No,4,No,Incident,Access policy,APAC
@@ -2882,7 +2882,7 @@ HD-260806-04539,2026-08-06 17:15,43,2026-08-07 12:06,P4,VPN & Remote Access,VPN 
 HD-260304-03044,2026-03-04 13:02,89,2026-03-04 21:47,P3,Access & Identity,Account locked,Email,Mid-Market,Identity & Access,Deepak Nair,Resolved,24,8.76,No,None,0,No,4,No,Service request,Configuration,North America
 HD-260817-01288,2026-08-17 14:09,273,2026-08-18 08:06,P4,Telephony,Headset,Phone,Internal,Service Desk L2,Meera Joseph,Closed,72,17.95,No,None,1,No,3,No,Incident,Software defect,North America
 HD-260630-04570,2026-06-30 11:13,275,2026-07-01 03:34,P4,Access & Identity,MFA issue,Chat,SMB,Endpoint Ops,Neha Thomas,Closed,72,16.35,No,None,0,Yes,4,No,Access request,Configuration,North America
-HD-260828-03976,2026-08-28 11:07,156,2026-08-29 01:26,P4,Email & Collaboration,Calendar,Portal,Internal,Service Desk L1,Imran Dar,Resolved,72,14.33,No,None,0,No,4,No,Incident,Configuration,EMEA
+HD-260828-03976,2026-08-28 11:07,156,2026-08-31 23:21,P4,Email & Collaboration,Calendar,Portal,Internal,Service Desk L1,Imran Dar,Resolved,72,84.24,Yes,High queue volume,0,No,4,No,Incident,Configuration,EMEA
 HD-260610-03226,2026-06-10 16:02,120,,P3,Access & Identity,Password reset,Portal,SMB,Identity & Access,Nadia Ali,Pending,24,,No,None,0,No,,No,Incident,Vendor issue,North America
 HD-260312-03513,2026-03-12 11:57,170,2026-03-13 18:19,P4,Account Provisioning,Role change,Chat,Mid-Market,Service Desk L1,Neha Thomas,Closed,72,30.37,No,None,1,No,4,No,Service request,User error,North America
 HD-260802-02447,2026-08-02 09:27,78,,P4,Account Provisioning,Offboarding,Chat,Internal,Identity & Access,Deepak Nair,Pending,72,,No,None,0,No,,No,How-to,Software defect,APAC
@@ -2930,7 +2930,7 @@ HD-260424-01001,2026-04-24 15:04,4,2026-04-24 18:11,P1,Software & Applications,L
 HD-260522-04442,2026-05-22 09:38,89,2026-05-23 05:20,P3,Email & Collaboration,Teams/Meetings,Portal,Mid-Market,Service Desk L2,Vikram Patel,Resolved,24,19.7,No,None,0,No,4,No,Service request,Software defect,EMEA
 HD-260310-03002,2026-03-10 16:52,312,2026-03-11 07:22,P4,Endpoint Security,Device compliance,Email,Internal,Endpoint Ops,Vikram Patel,Closed,72,14.51,No,None,2,No,4,No,How-to,Capacity,APAC
 HD-260728-04117,2026-07-28 11:51,110,2026-07-29 12:24,P3,Access & Identity,MFA issue,Chat,Mid-Market,Identity & Access,Zoya Hussain,Closed,24,24.56,Yes,Vendor response,0,No,3,No,Service request,Access policy,North America
-HD-260722-01660,2026-07-22 09:22,139,2026-07-24 18:11,P4,Account Provisioning,Access package,Phone,Enterprise,Identity & Access,Deepak Nair,Resolved,72,56.82,No,None,0,No,4,No,Service request,Configuration,North America
+HD-260722-01660,2026-07-22 09:22,139,2026-07-25 15:50,P4,Account Provisioning,Access package,Phone,Enterprise,Identity & Access,Deepak Nair,Resolved,72,78.48,Yes,High queue volume,0,No,4,No,Service request,Configuration,North America
 HD-260414-01468,2026-04-14 16:56,31,2026-04-15 05:56,P3,Access & Identity,Password reset,Portal,SMB,Identity & Access,Zoya Hussain,Resolved,24,13,No,None,0,No,5,No,Service request,Software defect,North America
 HD-260728-01623,2026-07-28 09:10,17,2026-07-28 16:50,P3,Email & Collaboration,Distribution list,Portal,SMB,Service Desk L1,Karan Verma,Resolved,24,7.68,No,None,1,No,4,No,Incident,User error,North America
 HD-260417-02306,2026-04-17 09:55,33,,P3,Account Provisioning,New starter,Phone,Enterprise,Endpoint Ops,Sana Rahman,Open,24,,No,None,1,No,,No,Service request,Network condition,APAC
@@ -2989,7 +2989,7 @@ HD-260713-03136,2026-07-13 11:31,102,2026-07-14 03:36,P3,Account Provisioning,Ne
 HD-260715-01373,2026-07-15 17:06,305,,P4,Printing & Peripherals,Printer offline,Portal,SMB,Service Desk L1,Karan Verma,Pending,72,,No,None,0,No,,No,Service request,Unknown,EMEA
 HD-260629-01182,2026-06-29 13:59,262,2026-07-01 17:32,P4,Network,Switch port,Portal,Mid-Market,Network Ops,Arjun Bhat,Closed,72,51.55,No,None,1,No,,No,Performance issue,Hardware fault,APAC
 HD-260527-01454,2026-05-27 20:18,65,,P2,Network,Switch port,Portal,Enterprise,Network Ops,Farah Latif,Pending,8,,No,None,1,Yes,,No,Performance issue,Configuration,EMEA
-HD-260630-03047,2026-06-30 14:27,61,2026-07-01 06:31,P4,Hardware,Laptop,Email,SMB,Identity & Access,Zoya Hussain,Closed,72,16.07,No,None,0,No,,No,Service request,Access policy,EMEA
+HD-260630-03047,2026-06-30 14:27,61,2026-07-04 05:34,P4,Hardware,Laptop,Email,SMB,Identity & Access,Zoya Hussain,Closed,72,87.12,Yes,High queue volume,0,No,,No,Service request,Access policy,EMEA
 HD-260719-01502,2026-07-19 15:58,176,2026-07-21 05:20,P4,Cloud & SaaS,Application outage,Email,Enterprise,Service Desk L2,Vikram Patel,Resolved,72,37.38,No,None,1,No,4,No,Access request,Hardware fault,EMEA
 HD-260601-01910,2026-06-01 12:37,268,2026-06-02 02:54,P4,Performance,High memory,Email,SMB,Identity & Access,Zoya Hussain,Resolved,72,14.29,No,None,0,No,,No,Incident,Unknown,North America
 HD-260819-03481,2026-08-19 09:59,179,2026-08-20 08:44,P4,Telephony,Extension,Chat,Mid-Market,Network Ops,Farah Latif,Closed,72,22.75,No,None,0,No,4,No,Service request,Software defect,North America
@@ -3044,7 +3044,7 @@ HD-260625-01136,2026-06-25 10:16,130,2026-06-28 05:07,P4,Performance,High memory
 HD-260428-01511,2026-04-28 09:55,48,2026-04-28 14:44,P2,VPN & Remote Access,VPN disconnect,Portal,Internal,Network Ops,Zoya Hussain,Resolved,8,4.83,No,None,0,No,4,No,Performance issue,Network condition,EMEA
 HD-260701-01547,2026-07-01 14:52,151,2026-07-01 21:26,P3,Access & Identity,Account locked,Portal,Enterprise,Service Desk L1,Imran Dar,Closed,24,6.57,No,None,0,No,3,No,Performance issue,User error,APAC
 HD-260506-03286,2026-05-06 11:51,116,,P3,Telephony,Extension,Portal,Mid-Market,Service Desk L2,Vikram Patel,Pending,24,,No,None,0,No,,No,Incident,Configuration,EMEA
-HD-260310-04578,2026-03-10 13:14,309,2026-03-11 08:23,P4,Network,Switch port,Portal,Enterprise,Network Ops,Zoya Hussain,Closed,72,19.15,No,None,0,No,,No,Incident,Vendor issue,APAC
+HD-260310-04578,2026-03-10 13:14,309,2026-03-13 22:35,P4,Network,Switch port,Portal,Enterprise,Network Ops,Zoya Hussain,Closed,72,81.36,Yes,High queue volume,0,No,,No,Incident,Vendor issue,APAC
 HD-260624-01832,2026-06-24 08:05,8,2026-06-24 10:57,P2,Cloud & SaaS,Application outage,Email,SMB,Service Desk L2,Vikram Patel,Resolved,8,2.88,No,None,1,No,5,No,Service request,Software defect,North America
 HD-260715-01777,2026-07-15 08:00,88,2026-07-16 03:06,P3,Endpoint Security,Security policy,Portal,SMB,Service Desk L1,Aisha Khan,Closed,24,19.11,No,None,0,No,4,No,Access request,Capacity,North America
 HD-260618-03754,2026-06-18 11:25,16,2026-06-18 21:11,P2,Access & Identity,Password reset,Portal,Internal,Endpoint Ops,Vikram Patel,Resolved,8,9.77,Yes,High queue volume,1,No,3,No,Incident,Configuration,EMEA
@@ -3084,7 +3084,7 @@ HD-260525-04152,2026-05-25 12:07,196,2026-05-26 05:28,P4,Software & Applications
 HD-260616-02568,2026-06-16 15:23,80,2026-06-17 14:05,P3,Network,DNS/DHCP,Email,Mid-Market,Network Ops,Deepak Nair,Closed,24,22.71,No,None,0,No,4,No,Service request,Capacity,APAC
 HD-260817-03817,2026-08-17 17:02,49,2026-08-18 09:26,P3,Telephony,Softphone,Chat,SMB,Service Desk L2,Vikram Patel,Resolved,24,16.4,No,None,0,No,3,No,How-to,User error,APAC
 HD-260813-04583,2026-08-13 14:12,123,2026-08-14 21:20,P4,Hardware,Docking station,Email,Enterprise,Endpoint Ops,Neha Thomas,Resolved,72,31.14,No,None,0,No,4,No,Incident,User error,North America
-HD-260407-03139,2026-04-07 14:14,84,2026-04-08 22:11,P4,Network,LAN connectivity,Chat,SMB,Network Ops,Deepak Nair,Resolved,72,31.96,No,None,0,No,4,No,Incident,Vendor issue,EMEA
+HD-260407-03139,2026-04-07 14:14,84,2026-04-10 17:50,P4,Network,LAN connectivity,Chat,SMB,Network Ops,Deepak Nair,Resolved,72,75.6,Yes,High queue volume,0,No,4,No,Incident,Vendor issue,EMEA
 HD-260416-04128,2026-04-16 17:32,146,2026-04-19 07:18,P4,VPN & Remote Access,Split tunnel,Email,Internal,Network Ops,Zoya Hussain,Closed,72,61.78,No,None,0,No,4,No,Service request,Configuration,North America
 HD-260819-03421,2026-08-19 15:07,30,2026-08-19 20:23,P2,Software & Applications,License,Portal,Mid-Market,Business Apps,Priya Shah,Resolved,8,5.27,No,None,0,No,4,No,Incident,User error,EMEA
 HD-260408-03970,2026-04-08 15:40,165,2026-04-09 16:08,P3,Hardware,Laptop,Email,Enterprise,Service Desk L2,Vikram Patel,Resolved,24,24.48,Yes,Vendor response,1,No,4,No,Service request,Configuration,APAC
@@ -3125,7 +3125,7 @@ HD-260408-01689,2026-04-08 11:30,42,2026-04-09 05:15,P3,Network,DNS/DHCP,Email,E
 HD-260817-04334,2026-08-17 16:05,19,2026-08-18 01:24,P2,Email & Collaboration,Teams/Meetings,Portal,Mid-Market,Identity & Access,Nadia Ali,Resolved,8,9.33,Yes,Complex investigation,0,No,3,Yes,Service request,User error,North America
 HD-260625-03868,2026-06-25 12:10,177,2026-06-25 18:41,P3,Endpoint Security,Malware check,Phone,Mid-Market,Service Desk L1,Imran Dar,Closed,24,6.53,No,None,0,No,4,No,Service request,Capacity,North America
 HD-260430-04590,2026-04-30 13:28,272,2026-05-01 17:02,P4,Access & Identity,Account locked,Portal,Enterprise,Endpoint Ops,Neha Thomas,Resolved,72,27.58,No,None,1,No,4,No,Service request,Configuration,North America
-HD-260813-01693,2026-08-13 08:37,141,2026-08-15 19:45,P4,Telephony,Headset,Email,Mid-Market,Network Ops,Deepak Nair,Resolved,72,59.14,No,None,1,No,3,No,Incident,Network condition,APAC
+HD-260813-01693,2026-08-13 08:37,141,2026-08-16 20:51,P4,Telephony,Headset,Email,Mid-Market,Network Ops,Deepak Nair,Resolved,72,84.24,Yes,High queue volume,1,No,3,No,Incident,Network condition,APAC
 HD-260330-03419,2026-03-30 14:09,39,2026-03-30 19:34,P2,Printing & Peripherals,Printer offline,Chat,Mid-Market,Service Desk L1,Imran Dar,Closed,8,5.43,No,None,0,No,3,No,Performance issue,Unknown,North America
 HD-260722-03323,2026-07-22 10:26,228,2026-07-23 09:36,P4,Access & Identity,Account locked,Phone,SMB,Identity & Access,Zoya Hussain,Closed,72,23.17,No,None,0,No,3,No,Service request,Software defect,North America
 HD-260523-01400,2026-05-23 12:04,278,2026-05-25 05:02,P4,Hardware,Keyboard/Mouse,Email,Mid-Market,Endpoint Ops,Vikram Patel,Resolved,72,40.98,No,None,0,No,4,No,Incident,Software defect,EMEA
@@ -3184,7 +3184,7 @@ HD-260630-03988,2026-06-30 18:04,129,2026-07-01 01:14,P3,Hardware,Keyboard/Mouse
 HD-260608-01167,2026-06-08 10:30,21,2026-06-08 16:01,P1,Software & Applications,Installation,Phone,Mid-Market,Service Desk L2,Meera Joseph,Resolved,4,5.52,Yes,Vendor response,0,Yes,3,No,How-to,Configuration,APAC
 HD-260327-03859,2026-03-27 11:19,73,,P3,Account Provisioning,New starter,Portal,Mid-Market,Identity & Access,Nadia Ali,Pending,24,,No,None,1,No,,No,Service request,Vendor issue,EMEA
 HD-260821-03329,2026-08-21 12:35,57,,P3,Account Provisioning,Access package,Portal,Mid-Market,Identity & Access,Deepak Nair,Pending,24,,No,None,0,Yes,,No,How-to,Access policy,APAC
-HD-260701-01748,2026-07-01 14:03,34,2026-07-04 08:57,P4,Software & Applications,Version issue,Portal,Enterprise,Business Apps,Neha Thomas,Resolved,72,66.9,No,None,0,No,2,No,Access request,Configuration,EMEA
+HD-260701-01748,2026-07-01 14:03,34,2026-07-04 20:31,P4,Software & Applications,Version issue,Portal,Enterprise,Business Apps,Neha Thomas,Resolved,72,78.48,Yes,High queue volume,0,No,2,No,Access request,Configuration,EMEA
 HD-260806-02366,2026-08-06 11:08,77,2026-08-07 02:35,P4,Performance,High CPU,Email,Internal,Endpoint Ops,Vikram Patel,Closed,72,15.45,No,None,0,No,4,No,Access request,Software defect,North America
 HD-260430-02755,2026-04-30 14:57,58,2026-04-30 20:23,P3,Account Provisioning,New starter,Phone,Internal,Identity & Access,Deepak Nair,Resolved,24,5.44,No,None,0,No,3,No,Incident,Hardware fault,North America
 HD-260508-03863,2026-05-08 10:00,102,2026-05-08 23:54,P3,Endpoint Security,Malware check,Chat,SMB,Identity & Access,Adil Mir,Closed,24,13.91,No,None,0,No,3,No,Access request,Hardware fault,APAC
@@ -3232,7 +3232,7 @@ HD-260408-01774,2026-04-08 10:20,42,2026-04-09 07:29,P3,Access & Identity,MFA is
 HD-260410-01210,2026-04-10 14:37,142,2026-04-11 06:10,P3,Hardware,Monitor,Portal,Enterprise,Service Desk L2,Meera Joseph,Resolved,24,15.55,No,None,2,No,4,Yes,Access request,Network condition,APAC
 HD-260402-02959,2026-04-02 15:47,55,2026-04-03 00:42,P3,Network,Wi-Fi,Chat,Mid-Market,Service Desk L2,Sana Rahman,Resolved,24,8.92,No,None,0,No,,No,Service request,User error,North America
 HD-260331-02689,2026-03-31 20:40,178,2026-04-01 17:42,P3,Access & Identity,Permission request,Email,SMB,Identity & Access,Adil Mir,Resolved,24,21.04,No,None,1,No,,No,Incident,Unknown,North America
-HD-260707-04394,2026-07-07 14:23,85,2026-07-08 06:00,P4,Cloud & SaaS,Application outage,Phone,Internal,Service Desk L2,Meera Joseph,Resolved,72,15.63,No,None,1,No,3,No,Incident,Vendor issue,North America
+HD-260707-04394,2026-07-07 14:23,85,2026-07-11 05:30,P4,Cloud & SaaS,Application outage,Phone,Internal,Service Desk L2,Meera Joseph,Resolved,72,87.12,Yes,High queue volume,1,No,3,No,Incident,Vendor issue,North America
 HD-260330-03137,2026-03-30 14:19,38,2026-03-30 23:09,P2,Account Provisioning,Access package,Portal,SMB,Endpoint Ops,Karan Verma,Closed,8,8.84,Yes,Vendor response,0,No,3,No,Incident,Capacity,APAC
 HD-260512-04351,2026-05-12 15:24,117,2026-05-14 05:58,P4,Cloud & SaaS,Application outage,Phone,Mid-Market,Business Apps,Sana Rahman,Resolved,72,38.58,No,None,0,No,5,No,Service request,Software defect,North America
 HD-260707-04285,2026-07-07 09:19,326,2026-07-08 20:25,P4,Performance,High memory,Portal,SMB,Service Desk L1,Priya Shah,Resolved,72,35.1,No,None,0,No,3,No,Incident,Access policy,APAC
@@ -3276,7 +3276,7 @@ HD-260422-03650,2026-04-22 15:20,32,2026-04-22 19:00,P2,Access & Identity,Accoun
 HD-260507-04040,2026-05-07 09:12,112,2026-05-08 09:18,P3,Endpoint Security,EDR alert,Email,SMB,Identity & Access,Nadia Ali,Resolved,24,24.1,Yes,Dependency delay,0,No,3,No,How-to,Software defect,APAC
 HD-260422-03543,2026-04-22 09:46,142,2026-04-25 06:17,P4,Performance,High memory,Chat,Enterprise,Service Desk L2,Vikram Patel,Resolved,72,68.52,No,None,0,No,3,No,Incident,Configuration,North America
 HD-260520-01047,2026-05-20 12:40,16,2026-05-20 18:03,P3,Hardware,Laptop,Email,Enterprise,Business Apps,Karan Verma,Closed,24,5.39,No,None,1,No,4,No,Access request,User error,APAC
-HD-260715-01960,2026-07-15 14:18,183,2026-07-16 04:39,P4,Endpoint Security,Malware check,Chat,Enterprise,Identity & Access,Deepak Nair,Resolved,72,14.35,No,None,0,No,5,No,Performance issue,Software defect,North America
+HD-260715-01960,2026-07-15 14:18,183,2026-07-18 23:39,P4,Endpoint Security,Malware check,Chat,Enterprise,Identity & Access,Deepak Nair,Resolved,72,81.36,Yes,High queue volume,0,No,5,No,Performance issue,Software defect,North America
 HD-260617-01319,2026-06-17 11:21,27,,P2,VPN & Remote Access,Remote desktop,Portal,Internal,Network Ops,Arjun Bhat,Open,8,,No,None,1,No,,No,Service request,Hardware fault,APAC
 HD-260618-04548,2026-06-18 12:34,65,2026-06-18 17:46,P2,Telephony,Headset,Portal,Mid-Market,Service Desk L2,Vikram Patel,Resolved,8,5.21,No,None,0,No,4,No,Access request,User error,North America
 HD-260616-01594,2026-06-16 16:47,146,2026-06-17 16:52,P3,Account Provisioning,Role change,Email,Mid-Market,Identity & Access,Adil Mir,Closed,24,24.09,Yes,Escalation delay,0,No,3,No,Access request,Access policy,North America
@@ -3330,7 +3330,7 @@ HD-260730-02068,2026-07-30 10:09,36,2026-07-30 13:15,P2,Email & Collaboration,Di
 HD-260806-03908,2026-08-06 16:23,82,2026-08-07 09:03,P3,Telephony,Headset,Portal,Enterprise,Service Desk L2,Arjun Bhat,Closed,24,16.67,No,None,0,No,4,No,Service request,Software defect,APAC
 HD-260624-01293,2026-06-24 09:29,131,,P4,Hardware,Docking station,Portal,Mid-Market,Identity & Access,Farah Latif,Pending,72,,No,None,0,No,,No,Service request,User error,APAC
 HD-260514-03129,2026-05-14 14:04,23,2026-05-15 04:23,P3,Performance,Disk space,Portal,Enterprise,Network Ops,Deepak Nair,Closed,24,14.32,No,None,0,No,3,No,Service request,Access policy,APAC
-HD-260303-03663,2026-03-03 11:30,30,2026-03-05 22:39,P4,Network,LAN connectivity,Email,SMB,Network Ops,Farah Latif,Resolved,72,59.15,No,None,2,No,,No,Service request,Configuration,EMEA
+HD-260303-03663,2026-03-03 11:30,30,2026-03-06 15:06,P4,Network,LAN connectivity,Email,SMB,Network Ops,Farah Latif,Resolved,72,75.6,Yes,High queue volume,2,No,,No,Service request,Configuration,EMEA
 HD-260820-01280,2026-08-20 14:36,249,2026-08-21 22:03,P4,Cloud & SaaS,Subscription,Email,Mid-Market,Business Apps,Imran Dar,Resolved,72,31.46,No,None,0,No,5,No,How-to,User error,North America
 HD-260818-04121,2026-08-18 18:11,17,,P3,Telephony,Extension,Portal,SMB,Network Ops,Deepak Nair,Open,24,,No,None,1,No,,No,Incident,Hardware fault,EMEA
 HD-260605-02513,2026-06-05 13:31,313,2026-06-07 02:26,P4,Performance,Disk space,Email,Internal,Service Desk L1,Aisha Khan,Closed,72,36.92,No,None,1,No,4,No,Incident,Capacity,APAC
@@ -3381,7 +3381,7 @@ HD-260713-03366,2026-07-13 19:34,115,,P4,Account Provisioning,Access package,Cha
 HD-260721-03943,2026-07-21 11:12,145,2026-07-22 02:36,P4,Software & Applications,Installation,Portal,Mid-Market,Service Desk L2,Arjun Bhat,Closed,72,15.41,No,None,0,No,3,No,Service request,Access policy,North America
 HD-260831-02686,2026-08-31 10:44,91,2026-09-01 01:03,P4,Endpoint Security,EDR alert,Email,Enterprise,Endpoint Ops,Sana Rahman,Resolved,72,14.33,No,None,0,No,4,No,Access request,User error,APAC
 HD-260425-01466,2026-04-25 15:59,147,2026-04-25 23:05,P3,Endpoint Security,Malware check,Portal,Enterprise,Identity & Access,Nadia Ali,Closed,24,7.11,No,None,1,No,4,No,Incident,Configuration,North America
-HD-260818-03082,2026-08-18 08:37,310,2026-08-19 01:47,P4,VPN & Remote Access,VPN login,Portal,SMB,Network Ops,Arjun Bhat,Resolved,72,17.17,No,None,0,No,3,No,Access request,Configuration,North America
+HD-260818-03082,2026-08-18 08:37,310,2026-08-21 20:51,P4,VPN & Remote Access,VPN login,Portal,SMB,Network Ops,Arjun Bhat,Resolved,72,84.24,Yes,High queue volume,0,No,3,No,Access request,Configuration,North America
 HD-260524-03022,2026-05-24 09:52,99,2026-05-24 16:16,P3,Hardware,Monitor,Email,Mid-Market,Business Apps,Neha Thomas,Resolved,24,6.41,No,None,0,No,5,No,Incident,Software defect,APAC
 HD-260305-01882,2026-03-05 11:37,97,2026-03-07 01:55,P4,Cloud & SaaS,Integration,Portal,Enterprise,Service Desk L1,Neha Thomas,Resolved,72,38.3,No,None,0,No,4,No,Incident,Network condition,APAC
 HD-260417-01620,2026-04-17 15:20,122,2026-04-17 22:06,P3,Cloud & SaaS,Application outage,Portal,Enterprise,Service Desk L1,Aisha Khan,Closed,24,6.77,No,None,0,No,4,No,Access request,Software defect,North America
@@ -3432,7 +3432,7 @@ HD-260527-01088,2026-05-27 15:46,157,,P3,Telephony,Extension,Email,Mid-Market,Ne
 HD-260320-04082,2026-03-20 09:49,164,2026-03-20 16:32,P3,Endpoint Security,Malware check,Phone,Mid-Market,Identity & Access,Farah Latif,Resolved,24,6.72,No,None,0,No,3,Yes,Service request,Configuration,EMEA
 HD-260817-04565,2026-08-17 08:08,26,2026-08-17 10:36,P2,Access & Identity,Password reset,Portal,Mid-Market,Service Desk L1,Aisha Khan,Resolved,8,2.48,No,None,0,No,,No,Access request,Network condition,EMEA
 HD-260309-03442,2026-03-09 10:21,180,2026-03-09 16:27,P3,Access & Identity,Account locked,Chat,Enterprise,Identity & Access,Farah Latif,Resolved,24,6.1,No,None,0,No,5,No,Incident,Access policy,North America
-HD-260611-03621,2026-06-11 10:14,140,2026-06-12 04:45,P4,Email & Collaboration,Calendar,Email,SMB,Service Desk L1,Rohan Mehta,Resolved,72,18.53,No,None,2,No,,No,Incident,Network condition,EMEA
+HD-260611-03621,2026-06-11 10:14,140,2026-06-14 16:42,P4,Email & Collaboration,Calendar,Email,SMB,Service Desk L1,Rohan Mehta,Resolved,72,78.48,Yes,High queue volume,2,No,,No,Incident,Network condition,EMEA
 HD-260409-02782,2026-04-09 16:48,22,2026-04-10 13:21,P3,Access & Identity,Account locked,Portal,Enterprise,Identity & Access,Nadia Ali,Resolved,24,20.56,No,None,0,No,4,No,Service request,Access policy,EMEA
 HD-260727-03591,2026-07-27 12:13,107,2026-07-28 03:16,P3,Email & Collaboration,Distribution list,Chat,Mid-Market,Service Desk L2,Meera Joseph,Resolved,24,15.05,No,None,0,Yes,3,No,Service request,Network condition,EMEA
 HD-260511-04235,2026-05-11 11:17,37,2026-05-11 13:29,P2,Network,DNS/DHCP,Portal,Internal,Service Desk L2,Vikram Patel,Closed,8,2.2,No,None,0,No,4,No,Service request,Network condition,EMEA
@@ -3495,7 +3495,7 @@ HD-260527-01646,2026-05-27 13:47,24,2026-05-27 20:54,P3,Telephony,Extension,Emai
 HD-260706-03596,2026-07-06 16:23,148,2026-07-06 23:30,P3,Network,LAN connectivity,Portal,Mid-Market,Network Ops,Zoya Hussain,Closed,24,7.13,No,None,0,No,3,No,Incident,Software defect,North America
 HD-260806-04226,2026-08-06 09:50,23,2026-08-06 17:41,P3,Performance,Disk space,Chat,Internal,Business Apps,Priya Shah,Resolved,24,7.85,No,None,0,No,4,No,How-to,Access policy,North America
 HD-260603-03823,2026-06-03 15:13,93,2026-06-04 07:13,P3,Telephony,Softphone,Portal,Internal,Service Desk L2,Vikram Patel,Closed,24,16.01,No,None,3,No,4,No,Service request,Capacity,North America
-HD-260803-01897,2026-08-03 16:59,283,2026-08-05 16:42,P4,Email & Collaboration,Mailbox,Portal,SMB,Business Apps,Priya Shah,Resolved,72,47.72,No,None,0,No,4,No,Access request,Capacity,EMEA
+HD-260803-01897,2026-08-03 16:59,283,2026-08-07 08:06,P4,Email & Collaboration,Mailbox,Portal,SMB,Business Apps,Priya Shah,Resolved,72,87.12,Yes,High queue volume,0,No,4,No,Access request,Capacity,EMEA
 HD-260305-04199,2026-03-05 20:27,15,2026-03-06 01:49,P3,Account Provisioning,Offboarding,Portal,Enterprise,Identity & Access,Adil Mir,Resolved,24,5.38,No,None,0,No,4,No,Performance issue,User error,North America
 HD-260720-03514,2026-07-20 15:26,74,2026-07-21 00:13,P3,Access & Identity,MFA issue,Chat,Mid-Market,Identity & Access,Adil Mir,Closed,24,8.79,No,None,1,No,4,No,Incident,User error,North America
 HD-260818-02331,2026-08-18 14:18,49,2026-08-18 21:03,P2,Endpoint Security,Device compliance,Chat,SMB,Identity & Access,Zoya Hussain,Resolved,8,6.75,No,None,2,Yes,4,No,Performance issue,User error,APAC
@@ -3540,7 +3540,7 @@ HD-260810-04591,2026-08-10 21:00,45,2026-08-11 05:07,P2,Performance,Disk space,C
 HD-260625-04278,2026-06-25 14:55,89,2026-06-26 05:48,P3,Cloud & SaaS,Application outage,Phone,SMB,Service Desk L2,Vikram Patel,Closed,24,14.89,No,None,1,No,,Yes,Access request,User error,EMEA
 HD-260414-03204,2026-04-14 12:38,133,2026-04-14 19:11,P3,Account Provisioning,Offboarding,Phone,Enterprise,Identity & Access,Adil Mir,Resolved,24,6.55,No,None,0,No,3,No,Incident,Capacity,EMEA
 HD-260408-02014,2026-04-08 11:30,19,2026-04-08 12:54,P1,Telephony,Call quality,Portal,SMB,Service Desk L2,Sana Rahman,Closed,4,1.4,No,None,1,No,5,No,Service request,Software defect,APAC
-HD-260506-03998,2026-05-06 16:44,190,2026-05-07 09:01,P4,Software & Applications,Application error,Portal,Mid-Market,Service Desk L2,Arjun Bhat,Resolved,72,16.29,No,None,2,No,4,No,Performance issue,Software defect,EMEA
+HD-260506-03998,2026-05-06 16:44,190,2026-05-10 02:05,P4,Software & Applications,Application error,Portal,Mid-Market,Service Desk L2,Arjun Bhat,Resolved,72,81.36,Yes,High queue volume,2,No,4,No,Performance issue,Software defect,EMEA
 HD-260416-03325,2026-04-16 14:43,38,2026-04-16 17:25,P2,Network,LAN connectivity,Email,Enterprise,Network Ops,Deepak Nair,Resolved,8,2.71,No,None,0,No,4,No,Service request,User error,North America
 HD-260717-01496,2026-07-17 09:30,130,2026-07-17 18:37,P3,Hardware,Laptop,Phone,Mid-Market,Identity & Access,Nadia Ali,Resolved,24,9.13,No,None,0,No,5,No,Incident,Configuration,APAC
 HD-260611-01750,2026-06-11 18:18,344,2026-06-13 13:30,P4,Network,LAN connectivity,Email,SMB,Network Ops,Arjun Bhat,Closed,72,43.21,No,None,1,No,3,No,Access request,Network condition,EMEA
@@ -3583,7 +3583,7 @@ HD-260403-04134,2026-04-03 12:51,27,,P3,Printing & Peripherals,Print queue,Email
 HD-260812-01407,2026-08-12 11:47,163,2026-08-12 17:27,P3,Hardware,Docking station,Email,SMB,Endpoint Ops,Neha Thomas,Closed,24,5.68,No,None,0,No,4,No,Access request,Network condition,North America
 HD-260413-02670,2026-04-13 11:23,261,2026-04-14 08:41,P4,Software & Applications,Application error,Portal,Mid-Market,Business Apps,Priya Shah,Closed,72,21.31,No,None,0,No,3,No,Incident,User error,APAC
 HD-260629-02043,2026-06-29 11:31,19,2026-06-30 05:59,P3,Printing & Peripherals,Scanner,Portal,Mid-Market,Service Desk L1,Imran Dar,Closed,24,18.48,No,None,0,No,3,No,How-to,Network condition,North America
-HD-260817-03714,2026-08-17 12:11,350,2026-08-18 07:08,P4,Telephony,Call quality,Portal,Internal,Network Ops,Arjun Bhat,Resolved,72,18.95,No,None,0,No,3,No,Service request,Hardware fault,EMEA
+HD-260817-03714,2026-08-17 12:11,350,2026-08-20 15:47,P4,Telephony,Call quality,Portal,Internal,Network Ops,Arjun Bhat,Resolved,72,75.6,Yes,High queue volume,0,No,3,No,Service request,Hardware fault,EMEA
 HD-260522-04043,2026-05-22 12:49,32,2026-05-22 15:41,P2,Email & Collaboration,Distribution list,Chat,Enterprise,Service Desk L1,Aisha Khan,Resolved,8,2.88,No,None,2,No,,No,Incident,Configuration,North America
 HD-260625-04273,2026-06-25 10:12,93,2026-06-25 19:07,P3,Software & Applications,Version issue,Portal,SMB,Business Apps,Karan Verma,Closed,24,8.93,No,None,0,No,4,No,Incident,Software defect,APAC
 HD-260410-02637,2026-04-10 13:08,8,2026-04-10 16:59,P2,Hardware,Laptop,Chat,Mid-Market,Service Desk L2,Sana Rahman,Resolved,8,3.86,No,None,3,No,3,No,Access request,User error,APAC
@@ -3652,7 +3652,7 @@ HD-260306-01552,2026-03-06 14:02,83,,P3,Telephony,Headset,Email,Mid-Market,Servi
 HD-260305-03716,2026-03-05 13:43,207,2026-03-07 06:01,P4,Software & Applications,Application error,Portal,Enterprise,Service Desk L2,Meera Joseph,Closed,72,40.3,No,None,0,No,4,No,How-to,Vendor issue,APAC
 HD-260514-03618,2026-05-14 11:43,216,2026-05-15 21:07,P4,Email & Collaboration,Calendar,Email,SMB,Service Desk L2,Vikram Patel,Resolved,72,33.41,No,None,0,No,5,No,Service request,User error,EMEA
 HD-260402-01877,2026-04-02 10:10,37,2026-04-02 18:23,P3,VPN & Remote Access,VPN login,Chat,Mid-Market,Network Ops,Arjun Bhat,Resolved,24,8.23,No,None,0,No,3,Yes,Service request,Hardware fault,North America
-HD-260820-04566,2026-08-20 14:35,208,2026-08-22 20:05,P4,Printing & Peripherals,Print queue,Portal,SMB,Network Ops,Arjun Bhat,Resolved,72,53.5,No,None,2,No,3,No,How-to,Hardware fault,EMEA
+HD-260820-04566,2026-08-20 14:35,208,2026-08-24 02:49,P4,Printing & Peripherals,Print queue,Portal,SMB,Network Ops,Arjun Bhat,Resolved,72,84.24,Yes,High queue volume,2,No,3,No,How-to,Hardware fault,EMEA
 HD-260616-02896,2026-06-16 10:54,55,2026-06-16 16:39,P2,Endpoint Security,EDR alert,Phone,Internal,Endpoint Ops,Vikram Patel,Resolved,8,5.76,No,None,0,No,,No,Incident,Configuration,North America
 HD-260311-04485,2026-03-11 17:28,59,2026-03-12 01:12,P3,Software & Applications,Installation,Chat,Internal,Business Apps,Sana Rahman,Closed,24,7.74,No,None,0,No,3,No,Access request,Unknown,APAC
 HD-260608-02041,2026-06-08 13:26,86,2026-06-09 01:20,P3,Printing & Peripherals,Printer offline,Portal,Enterprise,Service Desk L2,Sana Rahman,Closed,24,11.91,No,None,0,No,,No,Performance issue,User error,North America
