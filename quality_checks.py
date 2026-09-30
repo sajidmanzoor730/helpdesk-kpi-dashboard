@@ -10,11 +10,14 @@ def run_quality_checks():
         "ticket_id_unique": df["Ticket_ID"].is_unique,
         "created_at_present": df["Created_At"].notna().all(),
         "priority_valid": df["Priority"].isin(["P1", "P2", "P3", "P4"]).all(),
+        "channel_valid": df["Channel"].isin(["Portal", "Email", "Chat", "Phone"]).all(),
         "resolution_dates_valid": (
-            df["Resolved_At"].isna()
-            | (df["Resolved_At"] >= df["Created_At"])
+            df["Resolved_At"].isna() |
+            (df["Resolved_At"] >= df["Created_At"])
         ).all(),
         "sla_values_valid": df["SLA_Breach"].isin(["Yes", "No"]).all(),
+        "status_valid": df["Status"].isin(["Resolved", "Closed", "Pending", "Open"]).all(),
+        "csat_valid": df["CSAT"].dropna().between(1, 5).all(),
         "row_count_positive": len(df) > 0,
     }
 
