@@ -4,7 +4,7 @@ A small end-to-end analytics project: clean a messy helpdesk ticket export, calc
 
 > **Note:** The dataset is synthetic. I generated it to look like a real helpdesk export, including deliberate duplicates and missing values, so the cleaning steps are realistic.
 
-![Dashboard](dashboard.jpg)
+![Dashboard](Screenshot_2026-09-08-16-02-49-65_40deb401b9ffe8e1df2f1cc5ba480b12.jpg)
 
 ## What this project does
 
