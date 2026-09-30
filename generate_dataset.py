@@ -91,7 +91,7 @@ for i in range(N):
                         rng.integers(12, 180) if priority == "P3" else
                         rng.integers(20, 360))
 
-    resolution = round(target * (.16 + rng.random() ** 1.8 * .72) * complexity, 2)
+    resolution = round(target * (.0928 + rng.random() ** 1.8 * .4176) * complexity, 2)
     if status in {"Pending", "Open"}:
         resolution = np.nan
 
@@ -140,6 +140,20 @@ for i in range(N):
     })
 
 df = pd.DataFrame(rows)
+
+# Keep a small, deterministic tail of lower-priority SLA exceptions so the
+# dataset does not produce an unrealistically perfect P4 result.
+p4_mask = (df["Priority"] == "P4") & df["Status"].isin(["Resolved", "Closed"])
+p4_indexes = df.index[p4_mask]
+for position, row_index in enumerate(p4_indexes, start=1):
+    if position % 13 == 0:
+        resolution = round(sla_targets["P4"] * (1.05 + (position % 5) * 0.04), 2)
+        df.at[row_index, "Resolution_Hours"] = resolution
+        df.at[row_index, "SLA_Breach"] = "Yes"
+        df.at[row_index, "Breach_Reason"] = "High queue volume"
+        df.at[row_index, "Resolved_At"] = (
+            df.at[row_index, "Created_At"] + pd.Timedelta(hours=resolution)
+        )
 
 # Deliberate source-data issues for the ETL exercise.
 duplicates = df.sample(72, random_state=17)
