@@ -1,88 +1,132 @@
 # Power BI Semantic Model & Reporting Specification
 
-This document defines the Power BI implementation for the Helpdesk KPI Dashboard.
+## 1. Model purpose
+The reporting layer turns a ticket-level operational export into a reusable BI model for support operations reviews.
 
-## 1. Model design
-Use a star schema with FactTickets at the center.
+## 2. Semantic model
+Use a star schema with **FactTickets** at the center.
 
 ### FactTickets
 Grain: one row per unique Ticket_ID.
-Columns: Ticket_ID, Created_Date, Agent_Key, Category_Key, Priority_Key, Channel, Status, Resolution_Hours, SLA_Breach, CSAT, Is_Repeat.
+
+Key analytical fields:
+Ticket_ID, Created_Date, Priority_Key, Agent_Key, Category_Key, Channel_Key,
+Segment_Key, Region_Key, Status, First_Response_Minutes, Resolution_Hours,
+SLA_Breach, Breach_Reason, Reopen_Count, Escalated, CSAT, Is_Repeat,
+Contact_Reason and Root_Cause.
 
 ### Dimensions
-DimDate: Date, Year, Month, Month Number, Week, Day Name.
-DimAgent: Agent, Team.
-DimCategory: Category.
-DimPriority: Priority, Response Class, Target Hours.
+- **DimDate** — date, year, month, week and day.
+- **DimAgent** — agent and team.
+- **DimCategory** — category.
+- **DimPriority** — priority, response class and SLA target.
+- **DimChannel** — Portal, Email, Chat, Phone.
+- **DimSegment** — customer/account segment.
+- **DimRegion** — operating region.
 
-## 2. Relationships
-Recommended single-direction relationships:
-- DimDate[Date] 1 → * FactTickets[Created_Date]
-- DimAgent[Agent] 1 → * FactTickets[Agent]
-- DimCategory[Category] 1 → * FactTickets[Category]
-- DimPriority[Priority] 1 → * FactTickets[Priority]
+## 3. Relationships
+Use one-to-many, single-direction relationships from dimensions to FactTickets:
+- DimDate → FactTickets
+- DimAgent → FactTickets
+- DimCategory → FactTickets
+- DimPriority → FactTickets
+- DimChannel → FactTickets
+- DimSegment → FactTickets
+- DimRegion → FactTickets
 
-Use dimension attributes for slicers and grouping. Keep reusable business logic in measures.
+## 4. Core DAX measures
 
-## 3. Core DAX measures
-
+```DAX
 Tickets = COUNTROWS(FactTickets)
 
-Resolved Tickets = CALCULATE([Tickets], FactTickets[Status] IN {"Resolved", "Closed"})
+Resolved Tickets =
+CALCULATE([Tickets], FactTickets[Status] IN {"Resolved", "Closed"})
 
-SLA Adherence % = DIVIDE(CALCULATE([Resolved Tickets], FactTickets[SLA_Breach] = "No"), [Resolved Tickets])
+SLA Adherence % =
+DIVIDE(
+    CALCULATE([Resolved Tickets], FactTickets[SLA_Breach] = "No"),
+    [Resolved Tickets]
+)
 
-SLA Breaches = CALCULATE([Resolved Tickets], FactTickets[SLA_Breach] = "Yes")
+SLA Breaches =
+CALCULATE([Resolved Tickets], FactTickets[SLA_Breach] = "Yes")
 
-Average Resolution Hours = AVERAGEX(FILTER(FactTickets, FactTickets[Status] IN {"Resolved", "Closed"}), FactTickets[Resolution_Hours])
+Average Resolution Hours =
+AVERAGEX(
+    FILTER(FactTickets, FactTickets[Status] IN {"Resolved", "Closed"}),
+    FactTickets[Resolution_Hours]
+)
 
-Average CSAT = AVERAGEX(FILTER(FactTickets, FactTickets[Status] IN {"Resolved", "Closed"}), FactTickets[CSAT])
+Average First Response Minutes =
+AVERAGEX(
+    FILTER(FactTickets, FactTickets[Status] IN {"Resolved", "Closed"}),
+    FactTickets[First_Response_Minutes]
+)
 
-Repeat Ticket Rate % = DIVIDE(CALCULATE([Resolved Tickets], FactTickets[Is_Repeat] = "Yes"), [Resolved Tickets])
+Average CSAT =
+AVERAGEX(
+    FILTER(FactTickets, FactTickets[Status] IN {"Resolved", "Closed"}),
+    FactTickets[CSAT]
+)
 
-P1 SLA Breach % = DIVIDE(CALCULATE([SLA Breaches], FactTickets[Priority] = "P1"), CALCULATE([Resolved Tickets], FactTickets[Priority] = "P1"))
+Repeat Ticket Rate % =
+DIVIDE(
+    CALCULATE([Resolved Tickets], FactTickets[Is_Repeat] = "Yes"),
+    [Resolved Tickets]
+)
 
-## 4. Report pages
+Escalation Rate % =
+DIVIDE(
+    CALCULATE([Resolved Tickets], FactTickets[Escalated] = "Yes"),
+    [Resolved Tickets]
+)
+```
+
+## 5. Report pages
 
 ### Executive Overview
-KPI cards: Tickets, SLA Adherence %, Average Resolution Hours, Average CSAT, Repeat Ticket Rate %.
-Visuals: monthly ticket trend, SLA adherence by priority, ticket volume by category, team performance.
+KPI cards for tickets, SLA adherence, resolution time, first response, CSAT,
+repeat rate and escalation rate. Add monthly volume and SLA trend visuals.
 
 ### SLA & Operations
-Visuals: SLA breach rate by priority, SLA trend by month, resolution hours by priority, P1/P2 exception table.
+Priority-level breach rate, resolution hours, breach reasons and a P1/P2 exception table.
 
 ### Demand & Workload
-Visuals: tickets by category, tickets by channel, tickets by hour/day, repeat-ticket rate by category.
+Category, subcategory, channel, hour/day, customer segment and repeat-demand analysis.
 
 ### Team Performance
-Table: Team, Agent, Tickets, SLA %, Average Resolution Hours, Average CSAT.
-Apply a minimum-volume rule before comparing agent-level results.
+Team and agent table with ticket volume, SLA %, resolution hours, CSAT and escalation rate.
+Use a minimum-volume threshold before comparing individual agents.
 
-## 5. Slicers
-Date, Priority, Team, Category, Channel.
+### Data Quality
+Source rows, curated rows, duplicates removed, missing category/agent values,
+invalid dates, open/pending volume and last refresh timestamp.
 
-## 6. Data-quality page
-Expose source row count, curated row count, duplicate count, invalid-date count, unassigned-agent count, missing-category count and last refresh timestamp.
+## 6. Recommended slicers
+Date, Priority, Team, Category, Channel, Customer Segment and Region.
 
 ## 7. Performance considerations
-- Prefer a star schema over a wide flat reporting table.
-- Keep reusable logic in measures where practical.
+- Keep the model at a clear ticket-level grain.
+- Prefer reusable measures over repeated visual-level calculations.
 - Avoid unnecessary bi-directional relationships.
-- Remove unused columns before loading the model.
-- Pre-aggregate only when query volume requires it.
-- Monitor refresh duration and visual/query performance.
-- Validate KPI totals after every source refresh.
+- Remove unused columns before loading.
+- Validate KPI totals against SQL after refresh.
+- Monitor refresh duration and visual/query response time.
 
-## 8. Business-to-report mapping
-| Business need | Measure / visual |
+## 8. Business question → BI output
+
+| Business need | BI output |
 |---|---|
-| Are SLAs being met? | SLA Adherence % |
-| Which priorities create risk? | SLA Breach % by Priority |
-| Is resolution getting slower? | Average Resolution Hours + trend |
-| Where is repeat demand concentrated? | Repeat Ticket Rate by Category |
-| When is demand highest? | Tickets by Hour/Day |
-| Which teams need review? | Team performance table |
-| Are source data issues affecting reporting? | Data-quality page |
+| Are SLAs being met? | SLA Adherence % and breach trend |
+| Which priorities create risk? | Breach % by Priority |
+| Is response/resolution slowing? | First-response and resolution trends |
+| Where is repeat demand concentrated? | Repeat rate by Category/Subcategory |
+| Which channels generate demand? | Volume and SLA by Channel |
+| Which teams need review? | Team/Agent performance |
+| Why are SLAs missed? | Breach Reason analysis |
+| Are source issues affecting reporting? | Data-quality page |
 
 ## 9. Implementation note
-This repository documents the semantic-model and Power BI design. It should not claim an enterprise Power BI deployment, data warehouse, OLAP cube, or production refresh infrastructure unless those have actually been implemented.
+This repository documents the semantic-model and Power BI design for a portfolio demonstration.
+It does not claim enterprise Power BI deployment, a production data warehouse, OLAP cube,
+or live scheduled refresh infrastructure unless those components are actually implemented.
