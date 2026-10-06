@@ -1,6 +1,6 @@
 # 📊 Helpdesk Ticket Analytics Dashboard
 
-An end-to-end helpdesk analytics project built to demonstrate data cleaning, SQL analysis, KPI reporting, and interactive dashboard development.
+An end-to-end helpdesk analytics project focused on data cleaning, SQL analysis, KPI reporting, data validation, and interactive dashboard development.
 
 **Live Dashboard:** https://hedesk-dashboard.streamlit.app/
 
@@ -10,11 +10,11 @@ An end-to-end helpdesk analytics project built to demonstrate data cleaning, SQL
 
 ## 📌 Project Overview
 
-This project analyzes helpdesk ticket data to understand support performance, SLA adherence, customer satisfaction, repeat tickets, and resolution trends.
+This project analyzes structured helpdesk ticket data to understand support performance, SLA adherence, customer satisfaction, repeat tickets, resolution trends, and data quality.
 
-The workflow starts with a messy ticket export, cleans and validates the data using Python and Pandas, performs analytical queries using SQL, calculates operational KPIs, and presents the results through Power BI and Streamlit dashboards.
+The workflow starts with a structured ticket export, cleans and validates the data using Python and Pandas, performs analytical queries using SQL, calculates operational KPIs, and presents the results through Power BI and Streamlit dashboards.
 
-**Analytics workflow:**
+### Analytics Workflow
 
 **Raw Ticket Data → Data Cleaning → Data Validation → SQL Analysis → KPI Calculation → Power BI + Streamlit**
 
@@ -34,13 +34,17 @@ The cleaning process handles:
 - KPI preparation
 - Structured output for analysis
 
-The original project dataset contains intentionally introduced data-quality issues so the cleaning and validation workflow can be demonstrated.
+The raw export contains data-quality issues that are identified and addressed before the final KPI analysis.
 
 ### Dataset
 
 **File:** `Helpdesk_Tickets_Dataset_1000.xlsx`
 
-**Dataset type:** Synthetic sample data
+**Coverage:** March–August 2026
+
+**Raw records:** 3,672
+
+**Unique tickets after cleaning:** 3,600
 
 ### Main Fields
 
@@ -82,22 +86,22 @@ MTTR is used to analyze how long tickets take to resolve and how resolution time
 
 ### Data Quality
 
-Data-quality checks are performed before KPI reporting to ensure duplicate and invalid records do not distort the analysis.
+Data-quality checks are performed before KPI reporting to ensure duplicate, incomplete, or inconsistent records do not distort the analysis.
 
 ---
 
 ## 📊 Key Findings
 
-Based on the current project dataset, the analysis identified several support-performance patterns:
+The current analysis highlights several support-performance patterns:
 
-- SLA adherence is approximately **91.2%**.
-- Higher-priority P1 tickets show significantly higher SLA-breach rates than lower-priority tickets.
-- Average CSAT is approximately **3.73 / 5**.
-- Repeat tickets account for approximately **12%** of the analyzed records.
-- Resolution time varies by ticket priority.
-- Data cleaning and validation improve the reliability of the final analytical dataset.
+- SLA adherence: **90.5%**
+- P1 SLA breach rate: **36.5%**
+- P4 SLA breach rate: **7.7%**
+- Average CSAT: **3.77 / 5**
+- Repeat-ticket rate: **9.2%**
+- Source-data quality: **95.1%**
 
-> **Note:** These figures come from the current synthetic project dataset and are included to demonstrate the analytical workflow. They should not be interpreted as production business metrics.
+The analysis shows that higher-priority tickets experience greater SLA pressure, while data-quality checks help ensure that the final KPI reporting is based on a validated dataset.
 
 ---
 
@@ -116,22 +120,24 @@ The analysis includes:
 - Resolution-time analysis
 - Window functions
 
-Example SQL techniques include:
+### SQL Techniques
 
 - `ROW_NUMBER()`
 - `LAG()`
+- `RANK()`
+- `JOIN`
 - `GROUP BY`
 - `COUNT()`
 - `AVG()`
 - `CASE`
 
-Window functions are used to support duplicate handling and period-over-period analysis.
+`ROW_NUMBER()` is used for duplicate-ticket handling, while `LAG()` and other window functions support period-level and comparative analysis.
 
 ---
 
 ## 🐍 Python Analysis
 
-Python and Pandas are used for data preparation and analytical processing.
+Python and Pandas are used for data preparation, cleaning, validation, and analytical processing.
 
 The workflow includes:
 
@@ -143,7 +149,7 @@ The workflow includes:
 6. Cleaning the dataset
 7. Preparing analytical columns
 8. Calculating KPIs
-9. Passing the cleaned data into the dashboard workflow
+9. Passing the validated data into the dashboard workflow
 
 ---
 
@@ -173,7 +179,7 @@ The project also includes a live Streamlit dashboard for interactive exploration
 
 **https://hedesk-dashboard.streamlit.app/**
 
-The dashboard allows users to explore the cleaned ticket data and review the calculated support KPIs.
+The dashboard allows users to explore the cleaned ticket data and review calculated support KPIs.
 
 ---
 
@@ -192,11 +198,19 @@ Validation checks include:
 - Duplicate detection
 - Missing-value checks
 - Ticket ID validation
+- Date-field validation
+- Priority and SLA validation
 - Field consistency
 - KPI validation
 - Cleaned-data verification
 
-The project also includes testing and documentation to make the analytical workflow easier to reproduce and review.
+The validation workflow identified:
+
+- **72 duplicate ticket rows**
+- **66 blank Category values**
+- **43 blank Agent values**
+
+The resulting source-data quality score was **95.1%** before the final analytical workflow.
 
 ---
 
@@ -205,8 +219,9 @@ The project also includes testing and documentation to make the analytical workf
 The repository contains the main components used in the analytics workflow:
 
 - `clean_tickets.py` — data-cleaning workflow
-- `app.py` — Streamlit dashboard
 - `sql_analysis.sql` — SQL analysis
+- `app.py` — Streamlit dashboard
+- `generate_dataset.py` — reproducible data preparation script
 - `data_dictionary.md` — field definitions and data documentation
 - `requirements.txt` — Python dependencies
 - `tests/` — project tests
@@ -220,23 +235,33 @@ The repository contains the main components used in the analytics workflow:
 
 Clone the repository:
 
-`git clone https://github.com/sajidmanzoor730/helpdesk-kpi-dashboard.git`
+```bash
+git clone https://github.com/sajidmanzoor730/helpdesk-kpi-dashboard.git
+```
 
 Move into the project directory:
 
-`cd helpdesk-kpi-dashboard`
+```bash
+cd helpdesk-kpi-dashboard
+```
 
 Install the required packages:
 
-`pip install -r requirements.txt`
+```bash
+pip install -r requirements.txt
+```
 
 Run the data-cleaning workflow:
 
-`python clean_tickets.py`
+```bash
+python clean_tickets.py
+```
 
 Start the Streamlit dashboard:
 
-`streamlit run app.py`
+```bash
+streamlit run app.py
+```
 
 The dashboard will then be available through the local Streamlit URL shown in the terminal.
 
@@ -256,6 +281,7 @@ The dashboard will then be available through the local Streamlit URL shown in th
 - Aggregations
 - CTEs
 - Window Functions
+- JOINs
 - Data filtering
 - KPI calculations
 
@@ -302,7 +328,7 @@ It shows how to:
 
 **Clean → Validate → Analyze → Calculate KPIs → Visualize → Communicate**
 
-The project is particularly focused on operational analytics and support-performance reporting.
+The project is focused on operational analytics and support-performance reporting.
 
 Relevant areas include:
 
