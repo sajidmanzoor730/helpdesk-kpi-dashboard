@@ -1,12 +1,20 @@
-# 📊 Helpdesk Ticket Analytics Dashboard
+# 📊 Helpdesk KPI Analytics Dashboard
 
-An end-to-end helpdesk analytics project focused on data cleaning, SQL analysis, KPI reporting, data validation, and interactive dashboard development.
+**End-to-end Data Analyst project:** clean operational ticket data → validate quality → analyze with SQL/Python → calculate support KPIs → communicate findings through dashboards.
 
 **Live Dashboard:** https://hedesk-dashboard.streamlit.app/
+
+**Core skills demonstrated:** SQL · Python/Pandas · Power BI · KPI Reporting · Data Quality · Operational Analytics
 
 **Stack:** Python · Pandas · SQL · Power BI · Streamlit · Excel
 
 ---
+
+## 🎯 Business Problem
+
+Support teams need reliable answers to a few practical questions: Are tickets meeting SLA? Where is performance under pressure? Are repeat issues increasing? Can management trust the reported KPIs?
+
+This project treats the dashboard as the final step of the analysis, not the starting point. The source data is profiled, cleaned, validated, analyzed, and then converted into operational KPIs.
 
 ## 📌 Project Overview
 
@@ -38,7 +46,7 @@ The raw export contains data-quality issues that are identified and addressed be
 
 ### Dataset
 
-**File:** `Helpdesk_Tickets_Dataset_1000.xlsx`
+**Source files:** `Helpdesk_Tickets_Dataset_Raw.csv` and `Helpdesk_Tickets_Dataset_Raw.xlsx`
 
 **Coverage:** March–August 2026
 
@@ -90,9 +98,9 @@ Data-quality checks are performed before KPI reporting to ensure duplicate, inco
 
 ---
 
-## 📊 Key Findings
+## 💡 Key Findings & Business Takeaways
 
-The current analysis highlights several support-performance patterns:
+The analysis highlights several support-performance patterns:
 
 - SLA adherence: **90.5%**
 - P1 SLA breach rate: **36.5%**
@@ -101,7 +109,7 @@ The current analysis highlights several support-performance patterns:
 - Repeat-ticket rate: **9.2%**
 - Source-data quality: **95.1%**
 
-The analysis shows that higher-priority tickets experience greater SLA pressure, while data-quality checks help ensure that the final KPI reporting is based on a validated dataset.
+**Business takeaway:** P1 tickets have substantially higher SLA pressure than P4 tickets, so priority-level SLA monitoring is more useful than looking only at an overall SLA percentage. The analysis also shows why data-quality checks should happen before KPI reporting: duplicate and incomplete records can distort operational metrics.
 
 ---
 
@@ -185,6 +193,12 @@ The dashboard allows users to explore the cleaned ticket data and review calcula
 
 ## 🖼️ Dashboard Preview
 
+### Operational KPI Dashboard
+
+![Helpdesk KPI dashboard](dashboard.jpg)
+
+### Priority Distribution
+
 ![Priority distribution](priority_distribution.png)
 
 ---
@@ -224,7 +238,7 @@ The repository contains the main components used in the analytics workflow:
 - `generate_dataset.py` — reproducible data preparation script
 - `data_dictionary.md` — field definitions and data documentation
 - `requirements.txt` — Python dependencies
-- `tests/` — project tests
+- `tests/` — automated project tests
 - `docs/` — supporting documentation
 - `priority_distribution.png` — dashboard visualization
 - `README.md` — project documentation
@@ -322,13 +336,13 @@ The repository includes supporting documentation covering:
 
 ## 🎯 What This Project Demonstrates
 
-This project demonstrates an end-to-end analytics workflow rather than only dashboard creation.
+This project demonstrates an end-to-end **Data Analyst workflow**, rather than only dashboard creation.
 
 It shows how to:
 
 **Clean → Validate → Analyze → Calculate KPIs → Visualize → Communicate**
 
-The project is focused on operational analytics and support-performance reporting.
+The project is focused on operational analytics and support-performance reporting, with an emphasis on trustworthy KPI definitions and business interpretation.
 
 Relevant areas include:
 
