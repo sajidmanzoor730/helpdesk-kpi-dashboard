@@ -4,6 +4,8 @@
 
 **Live Dashboard:** https://hedesk-dashboard.streamlit.app/
 
+**Portfolio case study:** https://sajidmanzoor730.github.io/sajid-portfolio/helpdesk-kpi-dashboard.html
+
 **Core skills demonstrated:** SQL · Python/Pandas · Power BI · KPI Reporting · Data Quality · Operational Analytics
 
 **Stack:** Python · Pandas · SQL · Power BI · Streamlit · Excel
@@ -45,6 +47,8 @@ The cleaning process handles:
 The raw export contains data-quality issues that are identified and addressed before the final KPI analysis.
 
 ### Dataset
+
+**Disclosure:** This is a synthetic demonstration dataset created for portfolio analytics and validation. It is not a production company export or real customer data.
 
 **Source files:** `Helpdesk_Tickets_Dataset_Raw.csv` and `Helpdesk_Tickets_Dataset_Raw.xlsx`
 
