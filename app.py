@@ -93,7 +93,7 @@ with tab2:
         requests = request_view.sort_values(["Fiscal_Year", "Total_Count"], ascending=[False, False])
         st.bar_chart(requests.pivot_table(index="Item", columns="Fiscal_Year", values="Total_Count", aggfunc="sum", fill_value=0))
         st.dataframe(
-            requests[["Fiscal_Year", "Item", "Description", "Total_Count", "Percentage"]]
+            requests[["Fiscal_Year", "Item", "Total_Count", "Percentage"]]
             .sort_values(["Fiscal_Year", "Total_Count"], ascending=[False, False]),
             use_container_width=True,
             hide_index=True,
@@ -122,7 +122,7 @@ with tab4:
         st.info("No survey rows are included in the current filter selection.")
     else:
         st.dataframe(
-            survey_view[["Fiscal_Year", "Item", "Description", "Total_Count", "Percentage"]],
+            survey_view[["Fiscal_Year", "Item", "Total_Count", "Percentage"]],
             use_container_width=True,
             hide_index=True,
         )
