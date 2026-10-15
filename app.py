@@ -1,9 +1,9 @@
 import pandas as pd
 import streamlit as st
 
-from clean_tickets import load_and_clean
+from clean_tickets import SOURCE_URL, load_and_clean
 
-st.set_page_config(page_title="Helpdesk KPI Dashboard", page_icon="📊", layout="wide")
+st.set_page_config(page_title="Public IT Helpdesk Trends", page_icon="📊", layout="wide")
 
 
 @st.cache_data(ttl=3600)
@@ -11,148 +11,131 @@ def get_data():
     return load_and_clean()
 
 
-df, report = get_data()
+try:
+    df, report = get_data()
+except Exception as exc:
+    st.error("The official public dataset could not be loaded right now.")
+    st.markdown(f"Source: [Montgomery County MCG HelpIT Tickets]({SOURCE_URL})")
+    st.caption("Refresh the page in a little while. The dashboard does not silently fall back to generated data.")
+    st.exception(exc)
+    st.stop()
 
-st.title("Helpdesk Ticket KPI Dashboard")
+st.title("Public IT Helpdesk Trends")
 st.caption(
-    "Enterprise-style support operations analytics demonstration — "
-    "source export → Python ETL → quality controls → SQL/BI reporting."
+    "Analysis of published Montgomery County Government IT helpdesk summary data. "
+    "These are aggregated public counts, not individual ticket records."
 )
 
 with st.sidebar:
     st.header("Report filters")
-    min_d, max_d = df["Created_At"].min().date(), df["Created_At"].max().date()
-    date_range = st.date_input("Created between", (min_d, max_d),
-                               min_value=min_d, max_value=max_d)
-    priorities = st.multiselect("Priority", sorted(df["Priority"].unique()),
-                                default=sorted(df["Priority"].unique()))
-    teams = st.multiselect("Team", sorted(df["Team"].unique()),
-                           default=sorted(df["Team"].unique()))
-    channels = st.multiselect("Channel", sorted(df["Channel"].unique()),
-                              default=sorted(df["Channel"].unique()))
-    categories = st.multiselect("Category", sorted(df["Category"].unique()),
-                                default=sorted(df["Category"].unique()))
+    years = sorted(df["Fiscal_Year"].dropna().astype(int).unique().tolist())
+    selected_years = st.multiselect("Fiscal year", years, default=years)
+    groups = sorted(df["Report_Group"].dropna().unique().tolist())
+    selected_groups = st.multiselect("Report section", groups, default=groups)
 
-if len(date_range) == 2:
-    df = df[(df["Created_At"].dt.date >= date_range[0]) &
-            (df["Created_At"].dt.date <= date_range[1])]
+view = df[
+    df["Fiscal_Year"].isin(selected_years) &
+    df["Report_Group"].isin(selected_groups)
+].copy()
 
-df = df[
-    df["Priority"].isin(priorities) &
-    df["Team"].isin(teams) &
-    df["Channel"].isin(channels) &
-    df["Category"].isin(categories)
-]
-
-done = df[df["Status"].isin(["Resolved", "Closed"])]
-if done.empty:
-    st.warning("No resolved or closed tickets match these filters.")
+if view.empty:
+    st.warning("No published rows match these filters.")
     st.stop()
 
-c1, c2, c3, c4, c5, c6 = st.columns(6)
-c1.metric("Tickets", f"{len(df):,}")
-c2.metric("SLA adherence", f"{(done['SLA_Breach'] == 'No').mean():.1%}")
-c3.metric("Avg resolution", f"{done['Resolution_Hours'].mean():.1f} hrs")
-c4.metric("Avg CSAT", f"{done['CSAT'].mean():.2f} / 5")
-c5.metric("Repeat rate", f"{(done['Is_Repeat'] == 'Yes').mean():.1%}")
-c6.metric("Escalation rate", f"{(done['Escalated'] == 'Yes').mean():.1%}")
+source_view = view[view["Report_Group"].str.casefold().eq("ticket type by source")]
+request_view = view[view["Report_Group"].str.casefold().eq("top request")]
+department_view = view[view["Report_Group"].str.casefold().eq("contacts by department")]
+survey_view = view[view["Report_Group"].str.casefold().eq("surveys")]
+
+latest_year = int(view["Fiscal_Year"].max())
+source_total = source_view.loc[source_view["Fiscal_Year"].eq(latest_year), "Total_Count"].sum()
+top_request = request_view.sort_values("Total_Count", ascending=False).head(1)
+top_request_name = top_request.iloc[0]["Item"] if not top_request.empty else "—"
+top_request_count = int(top_request.iloc[0]["Total_Count"]) if not top_request.empty else 0
+
+c1, c2, c3, c4 = st.columns(4)
+c1.metric("Fiscal years in view", f"{view['Fiscal_Year'].nunique():,}")
+c2.metric(f"Source-count total · FY {latest_year}", f"{source_total:,.0f}" if pd.notna(source_total) else "—")
+c3.metric("Report rows", f"{len(view):,}")
+c4.metric("Largest listed request", f"{top_request_name}", help=f"{top_request_count:,} published count")
 
 tab1, tab2, tab3, tab4 = st.tabs(
-    ["Executive overview", "SLA & operations", "Demand & workload", "Team performance"]
+    ["Executive overview", "Request mix", "Contact channels & departments", "Survey records"]
 )
 
 with tab1:
     left, right = st.columns(2)
     with left:
-        st.subheader("Tickets by month")
-        st.line_chart(df.groupby("Month").size())
+        st.subheader("Published counts by report section")
+        section_totals = view.groupby("Report_Group")["Total_Count"].sum().sort_values(ascending=False)
+        st.bar_chart(section_totals)
+        st.caption("Sections overlap in meaning; do not add their totals together.")
     with right:
-        st.subheader("SLA breach rate by priority")
-        breach = done.groupby("Priority")["SLA_Breach"].apply(
-            lambda s: (s == "Yes").mean() * 100
-        ).round(1)
-        st.bar_chart(breach)
-    st.subheader("Ticket volume by category")
-    st.bar_chart(df["Category"].value_counts())
+        st.subheader("Largest listed requests")
+        if request_view.empty:
+            st.info("Select Top Request in the sidebar to see request types.")
+        else:
+            top = request_view.sort_values("Total_Count", ascending=False).head(10)
+            st.bar_chart(top.set_index("Item")["Total_Count"])
+    st.subheader("Rows in the selected public extract")
+    st.dataframe(
+        view[["Fiscal_Year", "Report_Group", "Item", "Total_Count", "Percentage"]]
+        .sort_values(["Fiscal_Year", "Report_Group", "Total_Count"], ascending=[False, True, False]),
+        use_container_width=True,
+        hide_index=True,
+    )
 
 with tab2:
-    left, right = st.columns(2)
-    with left:
-        st.subheader("Resolution hours by priority")
-        st.bar_chart(done.groupby("Priority")["Resolution_Hours"].mean().round(1))
-    with right:
-        st.subheader("SLA breach reason")
-        reasons = done[done["SLA_Breach"] == "Yes"]["Breach_Reason"].value_counts()
-        st.bar_chart(reasons)
-    st.subheader("High-priority exception queue")
-    exceptions = done[(done["SLA_Breach"] == "Yes") & done["Priority"].isin(["P1", "P2"])].copy()
-    exceptions["SLA_Variance_Hours"] = (
-        exceptions["Resolution_Hours"] - exceptions["SLA_Target_Hours"]
-    ).round(2)
-    st.dataframe(
-        exceptions[["Ticket_ID", "Created_At", "Priority", "Category", "Team",
-                    "Agent", "Resolution_Hours", "SLA_Target_Hours",
-                    "SLA_Variance_Hours"]]
-        .sort_values("SLA_Variance_Hours", ascending=False)
-        .head(50),
-        use_container_width=True, hide_index=True
-    )
+    st.subheader("Top request types")
+    if request_view.empty:
+        st.info("Select Top Request in the sidebar to see request types.")
+    else:
+        requests = request_view.sort_values(["Fiscal_Year", "Total_Count"], ascending=[False, False])
+        st.bar_chart(requests.pivot_table(index="Item", columns="Fiscal_Year", values="Total_Count", aggfunc="sum", fill_value=0))
+        st.dataframe(
+            requests[["Fiscal_Year", "Item", "Description", "Total_Count", "Percentage"]]
+            .sort_values(["Fiscal_Year", "Total_Count"], ascending=[False, False]),
+            use_container_width=True,
+            hide_index=True,
+        )
 
 with tab3:
     left, right = st.columns(2)
     with left:
-        st.subheader("Tickets by channel")
-        st.bar_chart(df["Channel"].value_counts())
+        st.subheader("Contact counts by source")
+        if source_view.empty:
+            st.info("Select Ticket Type By Source in the sidebar.")
+        else:
+            st.bar_chart(source_view.pivot_table(index="Item", columns="Fiscal_Year", values="Total_Count", aggfunc="sum", fill_value=0))
+            st.dataframe(source_view[["Fiscal_Year", "Item", "Total_Count", "Percentage"]], use_container_width=True, hide_index=True)
     with right:
-        st.subheader("Tickets by hour")
-        st.bar_chart(df.groupby("Hour").size())
-    st.subheader("Repeat-ticket rate by category")
-    repeat = done.groupby("Category")["Is_Repeat"].apply(
-        lambda s: (s == "Yes").mean() * 100
-    ).round(1).sort_values(ascending=False)
-    st.bar_chart(repeat)
+        st.subheader("Contacts by department")
+        if department_view.empty:
+            st.info("Select Contacts By Department in the sidebar.")
+        else:
+            st.bar_chart(department_view.pivot_table(index="Item", columns="Fiscal_Year", values="Total_Count", aggfunc="sum", fill_value=0))
+            st.dataframe(department_view[["Fiscal_Year", "Item", "Total_Count", "Percentage"]], use_container_width=True, hide_index=True)
 
 with tab4:
-    st.subheader("Agent performance — 20+ resolved tickets")
-    agents = (
-        done[done["Agent"] != "Unassigned"]
-        .groupby(["Team", "Agent"])
-        .agg(
-            tickets=("Ticket_ID", "count"),
-            sla_pct=("SLA_Breach", lambda s: round((s == "No").mean() * 100, 1)),
-            avg_resolution_hrs=("Resolution_Hours", lambda s: round(s.mean(), 1)),
-            avg_csat=("CSAT", lambda s: round(s.mean(), 2)),
-            escalations=("Escalated", lambda s: (s == "Yes").mean() * 100),
+    st.subheader("Published survey summary")
+    if survey_view.empty:
+        st.info("No survey rows are included in the current filter selection.")
+    else:
+        st.dataframe(
+            survey_view[["Fiscal_Year", "Item", "Description", "Total_Count", "Percentage"]],
+            use_container_width=True,
+            hide_index=True,
         )
-        .query("tickets >= 20")
-        .sort_values(["Team", "sla_pct"], ascending=[True, False])
-        .reset_index()
-    )
-    st.dataframe(agents, use_container_width=True, hide_index=True)
+    st.caption("The source contains survey summary counts, not individual CSAT ratings; this dashboard does not calculate average CSAT.")
 
-with st.expander("ETL & data-quality audit"):
-    st.write({
-        "Raw rows": report["raw_rows"],
-        "Raw columns": report["raw_columns"],
-        "Duplicates removed": report["duplicates_removed"],
-        "Blank category handled": report["blank_category"],
-        "Blank agent handled": report["blank_agent"],
-        "Invalid date records removed": report["bad_dates_removed"],
-        "Curated rows": report["clean_rows"],
-        "Unassigned agents": report["unassigned_agent"],
-        "Open / pending": report["open_or_pending"],
-        "Data quality": f"{report['data_quality_pct']}%",
-    })
-
-with st.expander("BI semantic model"):
+with st.expander("Data provenance and limitations"):
     st.markdown(
-        """
-        **Fact:** FactTickets — one row per unique ticket.
-
-        **Dimensions:** DimDate, DimAgent, DimCategory, DimPriority,
-        DimChannel, DimCustomerSegment and DimRegion.
-
-        **Reporting:** reusable measures support executive KPIs,
-        SLA exceptions, demand analysis and team performance.
+        f"""
+        - **Publisher:** Montgomery County, Maryland.
+        - **Dataset:** [MCG HelpIT Tickets]({SOURCE_URL}).
+        - **Data type:** published summary rows by fiscal year, report section, and item.
+        - **Refresh:** fetched from the official public endpoint when the dashboard cache expires.
+        - **Important limitation:** the source is aggregated. It does not expose individual ticket IDs, agent-level performance, response/resolution timestamps, SLA targets, or individual CSAT scores. Those KPIs are intentionally not reported here.
+        - **Quality checks:** {report['rows_loaded']} source rows loaded; {report['invalid_count_rows']} rows with missing or invalid counts excluded; {report['duplicate_rows']} duplicate summary rows removed.
         """
     )
