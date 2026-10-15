@@ -1,78 +1,78 @@
-"""ETL and validation layer for the Helpdesk KPI demonstration.
+"""Load and validate the official public MCG HelpIT summary dataset.
 
-The committed CSV is the primary source so the Streamlit app works directly
-from the repository. The generator can also create an Excel copy locally.
+The source is aggregated government reporting data, not individual ticket records.
+No synthetic fallback is used: if the public source is unavailable, the dashboard
+shows an error rather than quietly switching to generated data.
 """
+from io import BytesIO
+from urllib.request import Request, urlopen
 
-from pathlib import Path
 import pandas as pd
 
-RAW_CSV = "Helpdesk_Tickets_Dataset_Raw.csv"
-RAW_XLSX = "Helpdesk_Tickets_Dataset_Raw.xlsx"
-CLEAN_FILE = "Helpdesk_Tickets_Clean.csv"
+SOURCE_URL = "https://data.montgomerycountymd.gov/api/v3/views/qzr8-h9x6/export.csv?accessType=DOWNLOAD"
 
 
-def load_raw(path=None):
-    source = Path(path or RAW_CSV)
-    if source.suffix.lower() == ".xlsx":
-        return pd.read_excel(source, parse_dates=["Created_At", "Resolved_At"])
-    return pd.read_csv(source, parse_dates=["Created_At", "Resolved_At"])
+def _normalise_header(value):
+    return "".join(ch.lower() for ch in str(value) if ch.isalnum())
 
 
-def load_and_clean(path=None):
-    raw = load_raw(path)
-    report = {"raw_rows": len(raw), "raw_columns": len(raw.columns)}
+def load_and_clean():
+    request = Request(SOURCE_URL, headers={"User-Agent": "SajidHelpdeskPublicDataDashboard/1.0"})
+    with urlopen(request, timeout=30) as response:
+        payload = response.read()
+    raw = pd.read_csv(BytesIO(payload))
+    report = {"rows_loaded": len(raw), "invalid_count_rows": 0, "duplicate_rows": 0}
 
-    text_columns = [
-        "Ticket_ID", "Priority", "Category", "Subcategory", "Channel",
-        "Customer_Segment", "Team", "Agent", "Status", "SLA_Breach",
-        "Breach_Reason", "Escalated", "Is_Repeat", "Contact_Reason",
-        "Root_Cause", "Region",
-    ]
-    for column in text_columns:
-        if column in raw.columns:
-            raw[column] = raw[column].astype("string").str.strip()
+    aliases = {
+        "Fiscal_Year": {"fiscalyear"},
+        "Report_Group": {"tickettypename", "reportgroup", "reportsection"},
+        "Item": {"tickettypedescription", "item", "name"},
+        "Total_Count": {"totalcount", "count", "total"},
+        "Percentage": {"percentage", "percent"},
+    }
+    header_lookup = {_normalise_header(col): col for col in raw.columns}
+    selected = {}
+    for target, possible in aliases.items():
+        match = next((header_lookup[name] for name in possible if name in header_lookup), None)
+        if match is None:
+            raise ValueError(
+                f"Official source schema changed: could not identify {target}. "
+                f"Available columns: {list(raw.columns)}"
+            )
+        selected[target] = match
 
-    df = raw.drop_duplicates(subset="Ticket_ID", keep="first").copy()
-    report["duplicates_removed"] = report["raw_rows"] - len(df)
-
-    report["blank_category"] = int(df["Category"].isna().sum())
-    report["blank_agent"] = int(df["Agent"].isna().sum())
-    df["Category"] = df["Category"].fillna("Unknown")
-    df["Agent"] = df["Agent"].fillna("Unassigned")
-
-    bad_dates = df["Resolved_At"].notna() & (df["Resolved_At"] < df["Created_At"])
-    report["bad_dates_removed"] = int(bad_dates.sum())
-    df = df.loc[~bad_dates].copy()
-
-    df["Created_Date"] = df["Created_At"].dt.date
-    df["Month"] = df["Created_At"].dt.to_period("M").astype(str)
-    df["Week_Start"] = df["Created_At"].dt.to_period("W").dt.start_time
-    df["Hour"] = df["Created_At"].dt.hour
-    df["Day_Name"] = df["Created_At"].dt.day_name()
-    df["Is_Resolved"] = df["Status"].isin(["Resolved", "Closed"])
-    df["SLA_Met"] = df["SLA_Breach"].eq("No")
-    df["SLA_Variance_Hours"] = (
-        df["Resolution_Hours"] - df["SLA_Target_Hours"]
-    ).round(2)
-
-    report["clean_rows"] = len(df)
-    report["unassigned_agent"] = int((df["Agent"] == "Unassigned").sum())
-    report["unknown_category"] = int((df["Category"] == "Unknown").sum())
-    report["open_or_pending"] = int((~df["Is_Resolved"]).sum())
-    report["data_quality_pct"] = round(
-        100 * (1 - (report["duplicates_removed"] +
-                    report["blank_category"] +
-                    report["blank_agent"] +
-                    report["bad_dates_removed"]) / report["raw_rows"]), 1
+    description_source = next(
+        (header_lookup[name] for name in {"tickettypedescription", "description"} if name in header_lookup),
+        None,
     )
-    return df.reset_index(drop=True), report
+    if description_source and description_source != selected["Item"]:
+        raw["Description"] = raw[description_source].astype("string").fillna("")
+    else:
+        raw["Description"] = ""
 
+    df = raw.rename(columns={source: target for target, source in selected.items()}).copy()
+    df["Fiscal_Year"] = pd.to_numeric(df["Fiscal_Year"], errors="coerce")
+    df["Total_Count"] = pd.to_numeric(
+        df["Total_Count"].astype("string").str.replace(",", "", regex=False).str.replace("%", "", regex=False),
+        errors="coerce",
+    )
+    df["Percentage"] = pd.to_numeric(
+        df["Percentage"].astype("string").str.replace("%", "", regex=False).str.replace(",", "", regex=False),
+        errors="coerce",
+    )
+    df["Report_Group"] = df["Report_Group"].astype("string").str.strip()
+    df["Item"] = df["Item"].astype("string").str.strip()
+    df["Description"] = df["Description"].astype("string").fillna("").str.strip()
 
-if __name__ == "__main__":
-    clean, report = load_and_clean()
-    clean.to_csv(CLEAN_FILE, index=False)
-    print("ETL completed successfully")
-    for key, value in report.items():
-        print(f"{key}: {value}")
-    print(f"Saved: {CLEAN_FILE}")
+    invalid = df["Fiscal_Year"].isna() | df["Total_Count"].isna() | df["Report_Group"].eq("") | df["Item"].eq("")
+    report["invalid_count_rows"] = int(invalid.sum())
+    df = df.loc[~invalid].copy()
+    df["Fiscal_Year"] = df["Fiscal_Year"].astype(int)
+
+    before = len(df)
+    df = df.drop_duplicates(subset=["Fiscal_Year", "Report_Group", "Item", "Total_Count"], keep="first")
+    report["duplicate_rows"] = before - len(df)
+    report["rows_clean"] = len(df)
+    if df.empty:
+        raise ValueError("The official source returned no usable summary rows.")
+    return df.sort_values(["Fiscal_Year", "Report_Group", "Total_Count"], ascending=[False, True, False]).reset_index(drop=True), report
