@@ -104,6 +104,8 @@ Data-quality checks are performed before KPI reporting to ensure duplicate, inco
 
 ## 💡 Key Findings & Business Takeaways
 
+**Important:** Every metric below is calculated from the synthetic demonstration dataset described above. These are project results, not actual company/customer outcomes.
+
 The analysis highlights several support-performance patterns:
 
 - SLA adherence: **90.5%**
