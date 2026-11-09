@@ -44,8 +44,9 @@ The raw file intentionally includes 20 duplicate or null rows to practice data-q
 
 ## Screenshots
 
-![Priority distribution](assets/priority_distribution.png)
-![Table preview](assets/table_preview.png)
+![Priority distribution](priority_distribution.png)
+
+![Table preview](table_preview.png)
 
 ## How to run
 
@@ -63,7 +64,7 @@ streamlit run app.py
 | `clean_tickets.py` | Cleaning pipeline: duplicates, nulls, validation |
 | `app.py` | Streamlit dashboard |
 | `requirements.txt` | Python dependencies |
-| `assets/` | Output screenshots |
+| `priority_distribution.png`, `table_preview.png` | Output screenshots |
 
 ## What I practiced
 
