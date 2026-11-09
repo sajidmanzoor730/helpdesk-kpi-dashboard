@@ -2,7 +2,7 @@
 
 A Python project that cleans a raw helpdesk ticket export, calculates support KPIs, and presents them in an interactive Streamlit dashboard.
 
-**Stack:** Python · Pandas · SQL · Streamlit · Matplotlib
+**Stack:** Python · Pandas · Streamlit · Matplotlib
 
 **Live demo:** https://hedesk-dashboard.streamlit.app/
 
@@ -12,7 +12,7 @@ A Python project that cleans a raw helpdesk ticket export, calculates support KP
 
 ## Overview
 
-The project takes a messy ticket export and turns it into a clean dataset and a set of support metrics:
+The project turns a messy ticket export into a clean dataset and a set of support metrics:
 
 1,020 raw rows → 1,000 unique, clean tickets → 5 KPIs → interactive dashboard
 
@@ -40,14 +40,12 @@ The raw file intentionally includes 20 duplicate or null rows to practice data-q
 | P1 SLA breach rate | 30%, compared with about 5% for P3/P4 |
 | Average CSAT | 3.73 / 5 |
 | Repeat ticket rate | 12% |
-| Data quality after cleaning | 98% |
-
-Mean time to resolve (MTTR) rises with ticket priority level.
+| Rows kept after cleaning | 98% (1,000 of 1,020) |
 
 ## Screenshots
 
-![Priority distribution](priority_distribution.png)
-![Table preview](table_preview.png)
+![Priority distribution](assets/priority_distribution.png)
+![Table preview](assets/table_preview.png)
 
 ## How to run
 
@@ -65,12 +63,12 @@ streamlit run app.py
 | `clean_tickets.py` | Cleaning pipeline: duplicates, nulls, validation |
 | `app.py` | Streamlit dashboard |
 | `requirements.txt` | Python dependencies |
-| `priority_distribution.png`, `table_preview.png` | Output screenshots |
+| `assets/` | Output screenshots |
 
 ## What I practiced
 
 - Cleaning and validating a messy export with Pandas
-- Defining and calculating support KPIs (SLA adherence, CSAT, repeat rate, MTTR)
+- Defining and calculating support KPIs (SLA adherence, CSAT, repeat rate)
 - Presenting results in a dashboard for non-technical readers
 
 ## Author
