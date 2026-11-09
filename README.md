@@ -6,7 +6,7 @@ A Python project that cleans a raw helpdesk ticket export, calculates support KP
 
 **Live demo:** https://hedesk-dashboard.streamlit.app/
 
-> **Note:** This project uses a sample dataset created for practice. It does not contain employer or customer data.
+> **Dataset distinction:** The ticket-level dashboard in this repository uses a synthetic practice dataset and does not contain employer or customer data. The separate Montgomery County MCG HelpIT public-data case study uses aggregated government summaries; it does not provide ticket-level IDs, timestamps, SLA targets, agent records, or individual CSAT scores. Do not combine the two datasets or attribute the synthetic ticket KPIs below to the government source. See [public data source notes](docs/public-data-source.md).
 
 ---
 
