@@ -1,78 +1,103 @@
 # Helpdesk KPI Dashboard
 
-A Python project that cleans a raw helpdesk ticket export, calculates support KPIs, and presents them in an interactive Streamlit dashboard.
+A Python and Streamlit project for exploring published IT helpdesk reporting data. The live dashboard loads the official Montgomery County Government **MCG HelpIT Tickets** public dataset, validates the published summary rows, and provides fiscal-year and report-section views.
 
-**Stack:** Python · Pandas · Streamlit · Matplotlib
+**Stack:** Python · Pandas · Streamlit  
+**Live dashboard:** https://hedesk-dashboard.streamlit.app/  
+**Public source:** https://data.montgomerycountymd.gov/d/qzr8-h9x6
 
-**Live demo:** https://hedesk-dashboard.streamlit.app/
+> **Important data distinction:** The live dashboard uses aggregated public summary data. It is not a row-per-ticket export. This repository also retains an earlier synthetic ticket-level practice exercise. Do not combine the two sources or attribute the synthetic ticket KPI values to Montgomery County or a real employer.
 
-> **Dataset distinction:** The ticket-level dashboard in this repository uses a synthetic practice dataset and does not contain employer or customer data. The separate Montgomery County MCG HelpIT public-data case study uses aggregated government summaries; it does not provide ticket-level IDs, timestamps, SLA targets, agent records, or individual CSAT scores. Do not combine the two datasets or attribute the synthetic ticket KPIs below to the government source. See [public data source notes](docs/public-data-source.md).
+## Live dashboard overview
 
----
+The Streamlit app:
+1. Downloads the official public CSV when the one-hour cache expires.
+2. Normalizes source column names into a consistent reporting schema.
+3. Converts fiscal years, counts and percentages to numeric fields.
+4. Excludes rows missing required fields and removes duplicate summary rows.
+5. Provides filters for fiscal year and report section.
+6. Displays executive summaries, request mix, contact-source and department views, survey summary rows, and the selected source records.
 
-## Overview
+If the public source is unavailable or its required schema changes, the app displays an error. It does not silently switch to generated data.
 
-The project turns a messy ticket export into a clean dataset and a set of support metrics:
+## Public-data fields
 
-1,020 raw rows → 1,000 unique, clean tickets → 5 KPIs → interactive dashboard
-
-The raw file intentionally includes 20 duplicate or null rows to practice data-quality cleanup.
-
-## Dataset
-
-`Helpdesk_Tickets_Dataset_1000.xlsx` contains the following fields:
-
-| Field | Description |
+| Normalized field | Description |
 |---|---|
-| Ticket_ID | Unique ticket identifier |
-| Priority | P1 to P4 |
-| Category | Ticket category |
-| Status | Current ticket status |
-| SLA_Breach | Whether the SLA was breached |
-| CSAT | Customer satisfaction score, 1 to 5 |
-| Is_Repeat | Whether the ticket is a repeat issue |
+| `Fiscal_Year` | Fiscal year in the published report |
+| `Report_Group` | Report section or summary group |
+| `Item` | Request type, source, department or other listed item |
+| `Total_Count` | Published count |
+| `Percentage` | Published percentage where available |
+| `Description` | Optional source description |
 
-## KPIs
+## Data quality handling
 
-| KPI | Result |
-|---|---|
-| SLA adherence | 91.2% (breach rate 8.8%) |
-| P1 SLA breach rate | 30%, compared with about 5% for P3/P4 |
-| Average CSAT | 3.73 / 5 |
-| Repeat ticket rate | 12% |
-| Rows kept after cleaning | 98% (1,000 of 1,020) |
+The public-data loader:
+- Identifies source columns using normalized header aliases.
+- Raises a schema error if a required field cannot be mapped.
+- Converts numeric fields explicitly and excludes unusable rows.
+- Removes duplicate summary rows using fiscal year, report group, item and count.
+- Returns an audit report with loaded, invalid, duplicate and cleaned row counts.
 
-## Screenshots
+See [data_dictionary.md](data_dictionary.md) and [docs/public-data-source.md](docs/public-data-source.md).
 
-![Priority distribution](priority_distribution.png)
+## What the public source can—and cannot—measure
 
-![Table preview](table_preview.png)
+The published summaries support analysis of:
+- Request categories and counts.
+- Contact counts by source.
+- Published counts by department.
+- Survey summary rows.
+- Fiscal-year comparisons where categories are comparable.
 
-## How to run
+The public source does **not** provide individual ticket IDs, per-ticket created/resolved timestamps, SLA targets, agent-level outcomes or individual CSAT scores. Therefore, this live dashboard does not calculate MTTR, ticket-level SLA adherence, agent productivity, repeat-ticket rate or average CSAT from the public dataset.
+
+Do not add totals from different report groups together without checking their definitions; sections may overlap.
+
+## Legacy synthetic ticket exercise
+
+The repository retains files from an earlier synthetic ticket-level practice project, including `Helpdesk_Tickets_Dataset_Raw.csv`, `Helpdesk_Tickets_Dataset_Raw.xlsx` and `generate_dataset.py`. These are not loaded by the current live Streamlit app.
+
+The earlier exercise used 1,020 synthetic rows, including 20 intentional duplicate or null rows, and demonstrated ticket-level calculations such as SLA adherence, CSAT and repeat-ticket rate. Its reported sample values (91.2% SLA adherence, 3.73/5 average CSAT and 12% repeat-ticket rate) belong only to that synthetic exercise. They are not results from the official public dataset.
+
+The legacy SQL examples in `sql_analysis.sql` are also retained for learning and are not used to produce the live dashboard.
+
+## Run locally
+
+Python 3.10+ recommended.
 
 ```bash
+git clone https://github.com/sajidmanzoor730/helpdesk-kpi-dashboard.git
+cd helpdesk-kpi-dashboard
 pip install -r requirements.txt
-python clean_tickets.py
 streamlit run app.py
 ```
 
-## Project files
+The app requires internet access to retrieve the official public CSV.
+
+## Main files
 
 | File | Purpose |
 |---|---|
-| `Helpdesk_Tickets_Dataset_1000.xlsx` | Raw sample ticket export |
-| `clean_tickets.py` | Cleaning pipeline: duplicates, nulls, validation |
-| `app.py` | Streamlit dashboard |
+| `app.py` | Streamlit application and report views |
+| `clean_tickets.py` | Public CSV loading, normalization and validation |
 | `requirements.txt` | Python dependencies |
-| `priority_distribution.png`, `table_preview.png` | Output screenshots |
+| `data_dictionary.md` | Normalized field definitions and limitations |
+| `docs/public-data-source.md` | Public-source provenance and boundaries |
+| `bi_validation_and_monitoring.md` | BI validation and monitoring design notes |
+| `powerbi_model_spec.md` | Semantic model design notes |
+| `sql_analysis.sql` | Legacy synthetic-data SQL examples, not used by the live app |
 
-## What I practiced
+## What this project demonstrates
 
-- Cleaning and validating a messy export with Pandas
-- Defining and calculating support KPIs (SLA adherence, CSAT, repeat rate)
-- Presenting results in a dashboard for non-technical readers
+- Working with a published open-data source.
+- Building a resilient CSV ingestion and normalization step.
+- Applying explicit data-quality checks and duplicate handling.
+- Designing interactive Streamlit reporting views.
+- Separating supported measures from metrics the source cannot substantiate.
+- Documenting provenance and limitations for non-technical readers.
 
-## Author
+---
 
-**Sajid Manzoor**, Technical Support Engineer
-[LinkedIn](https://www.linkedin.com/in/sajid-manzoor-730zz)
+Built by **Sajid Manzoor** · Technical Support & Operations Analytics
